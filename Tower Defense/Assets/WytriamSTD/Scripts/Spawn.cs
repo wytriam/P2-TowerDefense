@@ -23,10 +23,11 @@ namespace WytriamSTD
 
         }
 
-        public void spawn()
+        public GameObject spawn()
         {
             GameObject go = Instantiate(spawnPrefab, gameObject.transform.position, gameObject.transform.rotation);
             go.transform.localScale = gameObject.transform.localScale;
+            return go;
         }
 
         public Vector3 getSpawnPos()
