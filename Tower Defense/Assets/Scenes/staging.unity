@@ -613,7 +613,7 @@ Prefab:
         type: 2}
       propertyPath: nextWaypoint
       value: 
-      objectReference: {fileID: 479162155}
+      objectReference: {fileID: 1459817910}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634824f7dfdaa064da43fa8a02e90a90, type: 2}
   m_IsPrefabParent: 0

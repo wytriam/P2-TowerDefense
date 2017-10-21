@@ -28,10 +28,11 @@ public class Enemy_Manager : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
-        GameObject other = coll.gameObject.transform.parent.gameObject;
+        GameObject other = coll.gameObject;
         if (other.tag == "Waypoint")
         {
             Debug.Log("Enemy_Manager::OnCollisionEnter() - Changing Waypoint");
+            other = coll.gameObject.transform.parent.gameObject;
             waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
         }
         else if (other.tag == "Tower")
@@ -44,14 +45,4 @@ public class Enemy_Manager : MonoBehaviour
             Debug.Log("Enemy_Manager::OnCollisionEnter() - Unknown Collision Detected");
         }
     }
-
-    void OnCollisionStay(Collision coll)
-    {
-        GameObject other = coll.gameObject.transform.parent.gameObject;
-        if (other.tag == "Waypoint")
-        {
-            Debug.Log("Enemy_Manager::OnCollisionStay() - Notice me sempai");
-        }
-    }
-
 }
