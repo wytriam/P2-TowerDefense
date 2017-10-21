@@ -36,14 +36,35 @@ public class Enemy_Manager : MonoBehaviour
             other = coll.gameObject.transform.parent.gameObject;
             waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
         }
-        else if (other.tag == "Tower")
+        else if (other.tag == "EndPoint")
         {
             Debug.Log("Enemy_Manager::OnCollisionEnter() - Destroying self");
             Destroy(this.gameObject);
         }
         else
         {
-            Debug.Log("Enemy_Manager::OnCollisionEnter() - Unknown Collision Detected");
+            Debug.Log("Enemy_Manager::OnCollisionEnter() - Unknown Collision Detected: " + other.tag);
+        }
+    }
+
+    public void OnTriggerEnter(Collider coll)
+    {
+        GameObject other = coll.gameObject;
+        if (other.tag == "Tower")
+        {
+            Debug.Log("Enemy_Manager::OnCollisionEnter() - Registering with Tower");
+            coll.gameObject.GetComponent<Tower_Manager>().register(this.gameObject);
+        }
+    }
+
+    public void OnTriggerExit(Collider coll)
+    {
+        GameObject other = coll.gameObject;
+        if (other.tag == "Tower")
+        {
+            // Tell tower enemy is out of range for firing
+            Debug.Log("Enemy_Manager::OnTriggerExit() - Deregistering with Tower");
+            coll.gameObject.GetComponent<Tower_Manager>().deregister(this.gameObject);
         }
     }
 }

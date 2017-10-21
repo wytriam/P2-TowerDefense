@@ -27,8 +27,11 @@ public class Projectile_Manager : MonoBehaviour
             if (target != null)
             {
                 Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
-                movement.y = lastPos.y;
                 gameObject.transform.position = movement;
+            }
+            else
+            {
+                Debug.Log("Projectile_Manager::Update() - No target found");
             }
         }
         else if (lastPos.y >= maxHeight)
@@ -47,6 +50,7 @@ public class Projectile_Manager : MonoBehaviour
 
     void findTarget()
     {
+        Debug.Log("Projectile_Manager::findTarget() - Looking for Target");
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Enemy");
         float distance = -1f;
         foreach (GameObject go in targets)
