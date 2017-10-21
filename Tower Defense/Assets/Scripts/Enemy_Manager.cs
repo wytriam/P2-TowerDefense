@@ -23,6 +23,7 @@ public class Enemy_Manager : MonoBehaviour
             Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, speed * Time.deltaTime);
             movement.y = lastPos.y;
             gameObject.transform.position = movement;
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
