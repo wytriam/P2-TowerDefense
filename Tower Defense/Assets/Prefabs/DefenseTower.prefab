@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 4162744598043328}
   - component: {fileID: 135559235009960298}
   - component: {fileID: 114162754611270912}
+  - component: {fileID: 114334521557917624}
   m_Layer: 0
   m_Name: DefenseTower
   m_TagString: Untagged
@@ -135,6 +136,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78a1351cd0eef74abd059ba2feaf194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 0}
+--- !u!114 &114334521557917624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1512384788298534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18d8040c6908f04098bd5edef44c959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPrefab: {fileID: 0}
+  spawnAtStart: 0
+  spawnWhenTriggered: 1
 --- !u!135 &135559235009960298
 SphereCollider:
   m_ObjectHideFlags: 1
