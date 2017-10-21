@@ -6,10 +6,12 @@ public class Projectile_Manager : MonoBehaviour
 {
     public float maxHeight = 6f; //after reach this height, the projectile finds the nearest enemy and attacks it
     public float speed = 4f;
+    public float life = 2f;
 
     private bool seekAndDestroy;
     private Vector3 lastPos;
     private GameObject target;
+    private float lifeTimer = 0f;
 
 
 	// Use this for initialization
@@ -22,6 +24,12 @@ public class Projectile_Manager : MonoBehaviour
 	void Update ()
     {
         lastPos = gameObject.transform.position;
+        lifeTimer += Time.fixedDeltaTime;
+        if (lifeTimer > life)
+        {
+            Destroy(gameObject);
+        }
+
         if (seekAndDestroy)
         {
             if (target != null)
@@ -31,7 +39,8 @@ public class Projectile_Manager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Projectile_Manager::Update() - No target found");
+                Debug.Log("Projectile_Manager::Update() - No target found; Destroying Self");
+                Destroy(gameObject);
             }
         }
         else if (lastPos.y >= maxHeight)
@@ -43,7 +52,7 @@ public class Projectile_Manager : MonoBehaviour
         else
         {
             // move up
-            Vector3 movement = new Vector3(0, speed / 2, 0);
+            Vector3 movement = new Vector3(0, 0.5f, 0);
             gameObject.transform.position += movement;
         }
 	}

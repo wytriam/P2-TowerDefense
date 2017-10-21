@@ -8,11 +8,13 @@ public class Enemy_Manager : MonoBehaviour
     public float speed = 2.0f;
     Vector3 lastPos;
 
+    private List<GameObject> nearbyTowers;
+
     // Use this for initialization
     void Start()
     {
-
-    }
+        nearbyTowers = new List<GameObject>();
+   }
 
     // Update is called once per frame
     void Update()
@@ -38,6 +40,7 @@ public class Enemy_Manager : MonoBehaviour
         }
         else if (other.tag == "EndPoint")
         {
+            //Need some way to tell any towers that have this targeted it is dead
             Debug.Log("Enemy_Manager::OnCollisionEnter() - Destroying self");
             Destroy(this.gameObject);
         }
@@ -52,8 +55,14 @@ public class Enemy_Manager : MonoBehaviour
         GameObject other = coll.gameObject;
         if (other.tag == "Tower")
         {
-            Debug.Log("Enemy_Manager::OnCollisionEnter() - Registering with Tower");
+            Debug.Log("Enemy_Manager::OnTriggerEnter() - Registering with Tower");
             coll.gameObject.GetComponent<Tower_Manager>().register(this.gameObject);
+            nearbyTowers.Add(other.gameObject);
+        }
+        if (other.tag == "Projectile")
+        {
+            Debug.Log("Enemy_Manager::OnTriggerEnter - Got hit by projectile");
+            Destroy(other.gameObject);
         }
     }
 
@@ -65,6 +74,13 @@ public class Enemy_Manager : MonoBehaviour
             // Tell tower enemy is out of range for firing
             Debug.Log("Enemy_Manager::OnTriggerExit() - Deregistering with Tower");
             coll.gameObject.GetComponent<Tower_Manager>().deregister(this.gameObject);
+            nearbyTowers.Remove(other.gameObject);
         }
+    }
+
+    public void OnDestroy()
+    {
+        foreach (GameObject tower in nearbyTowers)
+            tower.GetComponent<Tower_Manager>().deregister(gameObject);
     }
 }

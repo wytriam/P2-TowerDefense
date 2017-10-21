@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114406367681432198}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aa31ea28dfc130469a550ceb88a51b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHeight: 6
+  speed: 4
+  life: 5
 --- !u!135 &135501564228878852
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -195,7 +198,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1308953224557846}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
