@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - EndPoint
   - Projectile
+  - Button
+  - MenuPage
   layers:
   - Default
   - TransparentFX

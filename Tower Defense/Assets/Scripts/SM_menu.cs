@@ -6,17 +6,56 @@ using UnityEngine.SceneManagement;
 
 public class SM_menu : MonoBehaviour
 {
+    private GameObject returnButton;
+    private GameObject[] buttons;
+    private GameObject activePage;
+    private GameObject rulesPage;
+    private GameObject scorePage;
+    private GameObject creditsPage;
 
     // Use this for initialization
     void Start()
     {
+        buttons = GameObject.FindGameObjectsWithTag("Button");
+        foreach(GameObject button in buttons)
+        {
+            if (button.name.StartsWith("Return"))
+                returnButton = button;
+        }
+        returnButton.SetActive(false);
+        GameObject[] menuPages = GameObject.FindGameObjectsWithTag("MenuPage");
+        foreach(GameObject page in menuPages)
+        {
+            if (page.name.StartsWith("Credits"))
+                creditsPage = page;
+            else if (page.name.StartsWith("Scores"))
+                scorePage = page;
+            else if (page.name.StartsWith("Rules"))
+                rulesPage = page;
+            page.SetActive(false);
+        }
 
+        activePage = creditsPage;
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    void hideButtons()
+    {
+        foreach (GameObject button in buttons)
+            button.SetActive(false);
+        returnButton.SetActive(true);
+    }
+
+    void showButtons()
+    {
+        foreach (GameObject button in buttons)
+            button.SetActive(true);
+        returnButton.SetActive(false);
     }
 
     // Play button is pushed
@@ -29,18 +68,27 @@ public class SM_menu : MonoBehaviour
     public void highScores()
     {
         Debug.Log("SM_menu::highScores() - Button Pushed");
+        hideButtons();
+        activePage = scorePage;
+        activePage.SetActive(true);
     }
 
     // Rules button is pushed
     public void rules()
     {
         Debug.Log("SM_menu::rules() - Button Pushed");
+        hideButtons();
+        activePage = rulesPage;
+        activePage.SetActive(true);
     }
 
     // Credits button is pushed
     public void credits()
     {
         Debug.Log("SM_menu::credits() - Button Pushed");
+        hideButtons();
+        activePage = creditsPage;
+        activePage.SetActive(true);
     }
 
     // Exit button is pushed
@@ -56,5 +104,13 @@ public class SM_menu : MonoBehaviour
         #else
              Application.Quit();
         #endif
+    }
+
+    // Return to menu button is pushed
+    public void returnToMenu()
+    {
+        Debug.Log("SM_menu::returnToMenu() - Button Pushed");
+        showButtons();
+        activePage.SetActive(false);
     }
 }
