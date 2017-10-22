@@ -6,18 +6,19 @@ public class Tower_Manager : MonoBehaviour
 {
     public GameObject projectile;
     public float rateOfFire = 2.0f;
-    public bool fire = false;
 
     private WytriamSTD.Spawn spawnScript;
     private float timer = 0.0f;
     private List<GameObject> enemiesInRange;
+    private bool fire = false;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         spawnScript = GetComponent<WytriamSTD.Spawn>();
         spawnScript.setSpawnPrefab(projectile);
         enemiesInRange = new List<GameObject>();
+        timer = rateOfFire;
 	}
 	
 	// Update is called once per frame
@@ -34,6 +35,7 @@ public class Tower_Manager : MonoBehaviour
         }
         else
             timer = 0;
+
 	}
 
     public void register(GameObject enemy)
@@ -46,7 +48,10 @@ public class Tower_Manager : MonoBehaviour
     {
         enemiesInRange.Remove(enemy);
         if (enemiesInRange.Count == 0)
+        {
             fire = false;
+            timer = rateOfFire;
+        }
     }
 
     public void shoot()

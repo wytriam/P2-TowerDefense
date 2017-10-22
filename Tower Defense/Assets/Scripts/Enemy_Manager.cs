@@ -6,7 +6,9 @@ public class Enemy_Manager : MonoBehaviour
 {
     public GameObject waypoint;
     public float speed = 2.0f;
-    Vector3 lastPos;
+    public float health = 5f;
+
+    private Vector3 lastPos;
 
     private List<GameObject> nearbyTowers;
 
@@ -27,6 +29,11 @@ public class Enemy_Manager : MonoBehaviour
             gameObject.transform.position = movement;
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     void OnCollisionEnter(Collision coll)
@@ -63,6 +70,7 @@ public class Enemy_Manager : MonoBehaviour
         {
             Debug.Log("Enemy_Manager::OnTriggerEnter - Got hit by projectile");
             Destroy(other.gameObject);
+            health--;
         }
     }
 
