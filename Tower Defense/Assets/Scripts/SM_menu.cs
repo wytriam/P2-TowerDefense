@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SM_menu : MonoBehaviour
 {
+    public string NextSceneName;
+
     private GameObject returnButton;
     private GameObject[] buttons;
     private GameObject activePage;
@@ -62,6 +64,7 @@ public class SM_menu : MonoBehaviour
     public void play()
     {
         Debug.Log("SM_menu::play() - Button Pushed");
+        SceneManager.LoadScene(NextSceneName);
     }
 
     // High Scores button is pushed
