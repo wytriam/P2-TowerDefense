@@ -11,7 +11,6 @@ public class Ragdoll : Enemy_Manager {
     private Quaternion uprightRotation, rootNeutralRot, leftHipNeutralRot, rightHipNeutralRot, leftKneeNeutralRot, rightKneeNeutralRot, leftShoulderNeutralRot, rightShoulderNeutralRot, leftElbowNeutralRot, rightElbowNeutralRot, midSpineNeutralRot, neckNeutralRot;
     private float counter;
     private int foot = 0;
-    private bool right = false;
 
     void Awake(){
         uprightRotation = transform.rotation;
@@ -48,16 +47,9 @@ public class Ragdoll : Enemy_Manager {
 	void Update () {
         counter += Time.deltaTime;
         if(counter >= walkCycleSpeed){
-            if (foot == 0 && right) foot--;
-            else if (foot == 0 && !right) foot++;
-            else if (foot == -1){
-                foot++;
-                right = false;
-            }
-            else if(foot == 1){
-                foot--;
-                right = true;
-            }
+            if (foot == 0) foot++;
+            else if (foot == 1) foot -= 2;
+            else if (foot == -1) foot++;
             Walk(foot);
             counter = 0.0F;
         }
@@ -96,12 +88,10 @@ public class Ragdoll : Enemy_Manager {
     }
 
     void StepRight(){
-        rightHip.gameObject.transform.localRotation *= Quaternion.Euler(-1 * Time.deltaTime, 0, 0);
-        rightHip.gameObject.transform.position += Vector3.forward * Time.deltaTime;
+        rightHip.transform.localRotation *= Quaternion.Euler(0, 0, -1 * Time.deltaTime);
     }
 
     void StepLeft(){
-        leftHip.gameObject.transform.localRotation *= Quaternion.Euler(1 * Time.deltaTime, 0, 0);
-        leftHip.gameObject.transform.position += Vector3.forward * Time.deltaTime;
+
     }
 }

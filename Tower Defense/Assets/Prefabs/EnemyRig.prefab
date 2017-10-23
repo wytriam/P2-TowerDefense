@@ -7138,11 +7138,7 @@ MonoBehaviour:
   waypoint: {fileID: 0}
   speed: 2
   health: 5
-<<<<<<< HEAD
-  walkCycleSpeed: 2
-=======
   walkCycleSpeed: 0
->>>>>>> b845f3d3cefeb20a17d90eaa34b435f840539f33
   root: {fileID: 54614253798422442}
   leftHip: {fileID: 144488356168531440}
   rightHip: {fileID: 144479371814804244}
