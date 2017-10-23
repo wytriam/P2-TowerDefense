@@ -1,17 +1,57 @@
 fileFormatVersion: 2
-guid: 1605aa108295e524f9c2e5679e4f342e
-timeCreated: 1508624614
+guid: 663eef92a4af69748a96887d9428c033
+timeCreated: 1508637674
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: default
-    100002: //RootNode
-    400000: default
-    400002: //RootNode
-    2300000: default
-    3300000: default
-    4300000: default
+    100000: pasted__pasted__pasted__pCylinder1_pasted__pasted__group_pasted__group1_group2
+    100002: pasted__pasted__pCylinder1_pasted__group_group1
+    100004: pasted__pCylinder1_group
+    100006: pCone1
+    100008: pCone2
+    100010: pCube5_polySurface3
+    100012: pCube5_polySurface4
+    100014: pCylinder1
+    100016: polySurface2_pCube5
+    100018: //RootNode
+    400000: pasted__pasted__pasted__pCylinder1_pasted__pasted__group_pasted__group1_group2
+    400002: pasted__pasted__pCylinder1_pasted__group_group1
+    400004: pasted__pCylinder1_group
+    400006: pCone1
+    400008: pCone2
+    400010: pCube5_polySurface3
+    400012: pCube5_polySurface4
+    400014: pCylinder1
+    400016: polySurface2_pCube5
+    400018: //RootNode
+    2300000: pasted__pasted__pasted__pCylinder1_pasted__pasted__group_pasted__group1_group2
+    2300002: pasted__pasted__pCylinder1_pasted__group_group1
+    2300004: pasted__pCylinder1_group
+    2300006: pCone1
+    2300008: pCone2
+    2300010: pCube5_polySurface3
+    2300012: pCube5_polySurface4
+    2300014: pCylinder1
+    2300016: polySurface2_pCube5
+    3300000: pasted__pasted__pasted__pCylinder1_pasted__pasted__group_pasted__group1_group2
+    3300002: pasted__pasted__pCylinder1_pasted__group_group1
+    3300004: pasted__pCylinder1_group
+    3300006: pCone1
+    3300008: pCone2
+    3300010: pCube5_polySurface3
+    3300012: pCube5_polySurface4
+    3300014: pCylinder1
+    3300016: polySurface2_pCube5
+    4300000: pasted__pasted__pasted__pCylinder1_pasted__pasted__group_pasted__group1_group2
+    4300002: pasted__pasted__pCylinder1_pasted__group_group1
+    4300004: pasted__pCylinder1_group
+    4300006: pCone1
+    4300008: pCone2
+    4300010: pCube5_polySurface3
+    4300012: pCube5_polySurface4
+    4300014: pCylinder1
+    4300016: polySurface2_pCube5
   materials:
     importMaterials: 1
     materialName: 0
