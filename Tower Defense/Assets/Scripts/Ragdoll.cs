@@ -10,7 +10,8 @@ public class Ragdoll : Enemy_Manager {
     private Vector3 rootNeutralPos, leftHipNeutralPos, rightHipNeutralPos, leftKneeNeutralPos, rightKneeNeutralPos, leftShoulderNeutralPos, rightShoulderNeutralPos, leftElbowNeutralPos, rightElbowNeutralPos, midSpineNeutralPos, neckNeutralPos;
     private Quaternion uprightRotation, rootNeutralRot, leftHipNeutralRot, rightHipNeutralRot, leftKneeNeutralRot, rightKneeNeutralRot, leftShoulderNeutralRot, rightShoulderNeutralRot, leftElbowNeutralRot, rightElbowNeutralRot, midSpineNeutralRot, neckNeutralRot;
     private float counter;
-    private int foot = 0;
+    public int foot = 0;
+    private bool right = false;
 
     void Awake(){
         uprightRotation = transform.rotation;
@@ -47,9 +48,16 @@ public class Ragdoll : Enemy_Manager {
 	void Update () {
         counter += Time.deltaTime;
         if(counter >= walkCycleSpeed){
-            if (foot == 0) foot++;
-            else if (foot == 1) foot -= 2;
-            else if (foot == -1) foot++;
+            if (foot == 0 && right) foot--;
+            else if (foot == 0 && !right) foot++;
+            else if(foot == -1){
+                right = false;
+                foot++;
+            }
+            else if(foot == 1){
+                right = true;
+                foot--;
+            }
             Walk(foot);
             counter = 0.0F;
         }
@@ -88,10 +96,20 @@ public class Ragdoll : Enemy_Manager {
     }
 
     void StepRight(){
-        rightHip.transform.localRotation *= Quaternion.Euler(0, 0, -1 * Time.deltaTime);
+        rightHip.gameObject.transform.localRotation *= Quaternion.Euler(45, 0, 0);
+        rightHip.gameObject.transform.localPosition += -Vector3.forward * 0.002F;
+        leftHip.gameObject.transform.localRotation = leftHipNeutralRot;
+        leftHip.gameObject.transform.localPosition = leftHipNeutralPos;
+        root.gameObject.transform.localPosition = rootNeutralPos;
+        root.gameObject.transform.localRotation = rootNeutralRot;
     }
 
     void StepLeft(){
-
+        leftHip.gameObject.transform.localRotation *= Quaternion.Euler(45, 0, 0);
+        leftHip.gameObject.transform.localPosition += -Vector3.forward * 0.002F;
+        rightHip.gameObject.transform.localRotation = rightHipNeutralRot;
+        rightHip.gameObject.transform.localPosition = rightHipNeutralPos;
+        root.gameObject.transform.localPosition = rootNeutralPos;
+        root.gameObject.transform.localRotation = rootNeutralRot;
     }
 }
