@@ -58,4 +58,9 @@ public class Tower_Manager : MonoBehaviour
     {
         spawnScript.spawn();
     }
+
+    void OnMouseEnter()
+    {
+        Debug.Log("Tower_Manager::OnMouseEnter() - Tower clicked");
+    }
 }

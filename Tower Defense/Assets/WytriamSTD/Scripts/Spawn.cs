@@ -9,6 +9,7 @@ namespace WytriamSTD
         public GameObject spawnPrefab;
         public bool spawnAtStart;
         public bool spawnWhenTriggered;
+        public Vector3 spawnScale = Vector3.one;
 
         // Use this for initialization
         void Start()
@@ -26,7 +27,7 @@ namespace WytriamSTD
         public GameObject spawn()
         {
             GameObject go = Instantiate(spawnPrefab, gameObject.transform.position, gameObject.transform.rotation);
-            go.transform.localScale = gameObject.transform.localScale;
+            go.transform.localScale = spawnScale;
             return go;
         }
 

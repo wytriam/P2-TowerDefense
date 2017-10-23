@@ -31,6 +31,8 @@ public class Enemy_Manager : MonoBehaviour
         }
         if (health <= 0)
         {
+            foreach (GameObject tower in nearbyTowers)
+                tower.GetComponent<Tower_Manager>().deregister(gameObject);
             Destroy(gameObject);
         }
 
@@ -69,6 +71,7 @@ public class Enemy_Manager : MonoBehaviour
         if (other.tag == "Projectile")
         {
             Debug.Log("Enemy_Manager::OnTriggerEnter - Got hit by projectile");
+            other.gameObject.GetComponent<Projectile_Manager>().ParticlesOnDeath();
             Destroy(other.gameObject);
             health--;
         }
@@ -86,9 +89,4 @@ public class Enemy_Manager : MonoBehaviour
         }
     }
 
-    public void OnDestroy()
-    {
-        foreach (GameObject tower in nearbyTowers)
-            tower.GetComponent<Tower_Manager>().deregister(gameObject);
-    }
 }

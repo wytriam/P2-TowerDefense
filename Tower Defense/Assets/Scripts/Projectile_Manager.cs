@@ -7,6 +7,7 @@ public class Projectile_Manager : MonoBehaviour
     public float maxHeight = 6f; //after reach this height, the projectile finds the nearest enemy and attacks it
     public float speed = 4f;
     public float life = 2f;
+    public GameObject deathSplosion;
 
     private bool seekAndDestroy;
     private Vector3 lastPos;
@@ -76,5 +77,11 @@ public class Projectile_Manager : MonoBehaviour
                 distance = tempDis;
             }
         }
+        gameObject.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+    }
+
+    public void ParticlesOnDeath()
+    {
+        Instantiate(deathSplosion, lastPos, Quaternion.Euler(0, 0, 0));
     }
 }

@@ -9,7 +9,7 @@ public class SM_staging : WytriamSTD.Scene_Manager
     public GameObject enemySpawnPoint;
     public float enemiesPerSecond = 0.5f;
 
-    private WytriamSTD.Spawn spawnPoint;
+    protected WytriamSTD.Spawn spawnPoint;
 
 	// Use this for initialization
 	void Start ()
@@ -24,7 +24,7 @@ public class SM_staging : WytriamSTD.Scene_Manager
 		
 	}
 
-    void spawnEnemy()
+    protected void spawnEnemy()
     {
         int enemyIndex = Random.Range(0, enemyPrefabs.Length - 1);
         spawnPoint.setSpawnPrefab(enemyPrefabs[enemyIndex]);
