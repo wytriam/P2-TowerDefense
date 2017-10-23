@@ -184,6 +184,177 @@ ModelImporter:
     100352: transform8
     100354: transform9
     100356: UpperTorso
+    100358: Character1_Reference
+    100360: ChestEndEffector
+    100362: ChestOriginEffector
+    100364: Head 1
+    100366: Head2
+    100368: Head3
+    100370: Head4
+    100372: HeadEffector
+    100374: Hips 1
+    100376: Hips 2
+    100378: Hips 3
+    100380: HipsEffector
+    100382: LeftAnkleEffector
+    100384: LeftArm 1
+    100386: LeftArm 2
+    100388: LeftArm 3
+    100390: LeftElbowEffector
+    100392: LeftFoot 2
+    100394: LeftFoot 3
+    100396: LeftFoot 4
+    100398: LeftFootEffector
+    100400: LeftForeArm 2
+    100402: LeftForeArm 3
+    100404: LeftForeArm 4
+    100406: LeftHand 2
+    100408: LeftHand 3
+    100410: LeftHand 4
+    100412: LeftHip 1
+    100414: LeftHipEffector
+    100416: LeftKneeEffector
+    100418: LeftLeg 1
+    100420: LeftLeg 2
+    100422: LeftLeg 3
+    100424: LeftShoulder 1
+    100426: LeftShoulder 2
+    100428: LeftShoulder 3
+    100430: LeftShoulderEffector
+    100432: LeftToeBase 1
+    100434: LeftToeBase 2
+    100436: LeftUpLeg 1
+    100438: LeftUpLeg 2
+    100440: LeftUpLeg 3
+    100442: LeftWristEffector
+    100444: LEye
+    100446: LHand
+    100448: LHip
+    100450: LLArm
+    100452: LRoot
+    100454: LShin
+    100456: LTorso
+    100458: LUArm
+    100460: Mouth 1
+    100462: Neck 2
+    100464: Neck 3
+    100466: Neck 4
+    100468: polySurface17
+    100470: polySurface18
+    100472: polySurface19
+    100474: polySurface20
+    100476: polySurface21
+    100478: polySurface22
+    100480: polySurface39
+    100482: polySurface41
+    100484: polySurface42
+    100486: QuickRigCharacter2_Guides
+    100488: QuickRigCharacter3_Ctrl_LeftToeBase
+    100490: QuickRigCharacter3_Ctrl_Reference
+    100492: QuickRigCharacter3_Ctrl_RightToeBase
+    100494: QuickRigCharacter3_Guides
+    100496: QuickRigCharacter3_Head
+    100498: QuickRigCharacter3_Hips
+    100500: QuickRigCharacter3_LeftArm
+    100502: QuickRigCharacter3_LeftFoot
+    100504: QuickRigCharacter3_LeftForeArm
+    100506: QuickRigCharacter3_LeftHand
+    100508: QuickRigCharacter3_LeftLeg
+    100510: QuickRigCharacter3_LeftShoulder
+    100512: QuickRigCharacter3_LeftToeBase
+    100514: QuickRigCharacter3_LeftUpLeg
+    100516: QuickRigCharacter3_Neck
+    100518: QuickRigCharacter3_Reference
+    100520: QuickRigCharacter3_RightArm
+    100522: QuickRigCharacter3_RightFoot
+    100524: QuickRigCharacter3_RightForeArm
+    100526: QuickRigCharacter3_RightHand
+    100528: QuickRigCharacter3_RightLeg
+    100530: QuickRigCharacter3_RightShoulder
+    100532: QuickRigCharacter3_RightToeBase
+    100534: QuickRigCharacter3_RightUpLeg
+    100536: QuickRigCharacter3_Spine
+    100538: QuickRigCharacter3_Spine1
+    100540: QuickRigCharacter3_Spine2
+    100542: Reference 1
+    100544: Reference 2
+    100546: REye
+    100548: RFoot
+    100550: RHand
+    100552: RHip
+    100554: RightAnkleEffector
+    100556: RightArm 1
+    100558: RightArm 2
+    100560: RightArm 3
+    100562: RightElbowEffector
+    100564: RightFoot 2
+    100566: RightFoot 3
+    100568: RightFoot 4
+    100570: RightFootEffector
+    100572: RightForeArm 2
+    100574: RightForeArm 3
+    100576: RightForeArm 4
+    100578: RightHand 2
+    100580: RightHand 3
+    100582: RightHand 4
+    100584: RightHipEffector
+    100586: RightKneeEffector
+    100588: RightLeg 1
+    100590: RightLeg 2
+    100592: RightLeg 3
+    100594: RightShoulder 1
+    100596: RightShoulder 2
+    100598: RightShoulder 3
+    100600: RightShoulderEffector
+    100602: RightToeBase 1
+    100604: RightToeBase 2
+    100606: RightUpLeg 1
+    100608: RightUpLeg 2
+    100610: RightUpLeg 3
+    100612: RightUpperArm 1
+    100614: RightWristEffector
+    100616: RLArm
+    100618: RShin
+    100620: RUArm
+    100622: Spine 1
+    100624: Spine 2
+    100626: Spine 3
+    100628: Spine1 1
+    100630: Spine1 2
+    100632: Spine1 3
+    100634: Spine2 1
+    100636: Spine2 2
+    100638: Spine2 3
+    100640: transform32
+    100642: transform33
+    100644: transform34
+    100646: transform35
+    100648: transform36
+    100650: transform37
+    100652: transform38
+    100654: transform39
+    100656: transform40
+    100658: transform41
+    100660: transform42
+    100662: transform43
+    100664: transform44
+    100666: transform45
+    100668: transform46
+    100670: transform47
+    100672: transform48
+    100674: transform49
+    100676: transform50
+    100678: transform51
+    100680: transform52
+    100682: transform53
+    100684: transform54
+    100686: transform55
+    100688: transform56
+    100690: transform57
+    100692: transform58
+    100694: transform59
+    100696: transform60
+    100698: UTorso
     400000: //RootNode
     400002: group
     400004: group1
@@ -363,6 +534,177 @@ ModelImporter:
     400352: transform8
     400354: transform9
     400356: UpperTorso
+    400358: Character1_Reference
+    400360: ChestEndEffector
+    400362: ChestOriginEffector
+    400364: Head 1
+    400366: Head2
+    400368: Head3
+    400370: Head4
+    400372: HeadEffector
+    400374: Hips 1
+    400376: Hips 2
+    400378: Hips 3
+    400380: HipsEffector
+    400382: LeftAnkleEffector
+    400384: LeftArm 1
+    400386: LeftArm 2
+    400388: LeftArm 3
+    400390: LeftElbowEffector
+    400392: LeftFoot 2
+    400394: LeftFoot 3
+    400396: LeftFoot 4
+    400398: LeftFootEffector
+    400400: LeftForeArm 2
+    400402: LeftForeArm 3
+    400404: LeftForeArm 4
+    400406: LeftHand 2
+    400408: LeftHand 3
+    400410: LeftHand 4
+    400412: LeftHip 1
+    400414: LeftHipEffector
+    400416: LeftKneeEffector
+    400418: LeftLeg 1
+    400420: LeftLeg 2
+    400422: LeftLeg 3
+    400424: LeftShoulder 1
+    400426: LeftShoulder 2
+    400428: LeftShoulder 3
+    400430: LeftShoulderEffector
+    400432: LeftToeBase 1
+    400434: LeftToeBase 2
+    400436: LeftUpLeg 1
+    400438: LeftUpLeg 2
+    400440: LeftUpLeg 3
+    400442: LeftWristEffector
+    400444: LEye
+    400446: LHand
+    400448: LHip
+    400450: LLArm
+    400452: LRoot
+    400454: LShin
+    400456: LTorso
+    400458: LUArm
+    400460: Mouth 1
+    400462: Neck 2
+    400464: Neck 3
+    400466: Neck 4
+    400468: polySurface17
+    400470: polySurface18
+    400472: polySurface19
+    400474: polySurface20
+    400476: polySurface21
+    400478: polySurface22
+    400480: polySurface39
+    400482: polySurface41
+    400484: polySurface42
+    400486: QuickRigCharacter2_Guides
+    400488: QuickRigCharacter3_Ctrl_LeftToeBase
+    400490: QuickRigCharacter3_Ctrl_Reference
+    400492: QuickRigCharacter3_Ctrl_RightToeBase
+    400494: QuickRigCharacter3_Guides
+    400496: QuickRigCharacter3_Head
+    400498: QuickRigCharacter3_Hips
+    400500: QuickRigCharacter3_LeftArm
+    400502: QuickRigCharacter3_LeftFoot
+    400504: QuickRigCharacter3_LeftForeArm
+    400506: QuickRigCharacter3_LeftHand
+    400508: QuickRigCharacter3_LeftLeg
+    400510: QuickRigCharacter3_LeftShoulder
+    400512: QuickRigCharacter3_LeftToeBase
+    400514: QuickRigCharacter3_LeftUpLeg
+    400516: QuickRigCharacter3_Neck
+    400518: QuickRigCharacter3_Reference
+    400520: QuickRigCharacter3_RightArm
+    400522: QuickRigCharacter3_RightFoot
+    400524: QuickRigCharacter3_RightForeArm
+    400526: QuickRigCharacter3_RightHand
+    400528: QuickRigCharacter3_RightLeg
+    400530: QuickRigCharacter3_RightShoulder
+    400532: QuickRigCharacter3_RightToeBase
+    400534: QuickRigCharacter3_RightUpLeg
+    400536: QuickRigCharacter3_Spine
+    400538: QuickRigCharacter3_Spine1
+    400540: QuickRigCharacter3_Spine2
+    400542: Reference 1
+    400544: Reference 2
+    400546: REye
+    400548: RFoot
+    400550: RHand
+    400552: RHip
+    400554: RightAnkleEffector
+    400556: RightArm 1
+    400558: RightArm 2
+    400560: RightArm 3
+    400562: RightElbowEffector
+    400564: RightFoot 2
+    400566: RightFoot 3
+    400568: RightFoot 4
+    400570: RightFootEffector
+    400572: RightForeArm 2
+    400574: RightForeArm 3
+    400576: RightForeArm 4
+    400578: RightHand 2
+    400580: RightHand 3
+    400582: RightHand 4
+    400584: RightHipEffector
+    400586: RightKneeEffector
+    400588: RightLeg 1
+    400590: RightLeg 2
+    400592: RightLeg 3
+    400594: RightShoulder 1
+    400596: RightShoulder 2
+    400598: RightShoulder 3
+    400600: RightShoulderEffector
+    400602: RightToeBase 1
+    400604: RightToeBase 2
+    400606: RightUpLeg 1
+    400608: RightUpLeg 2
+    400610: RightUpLeg 3
+    400612: RightUpperArm 1
+    400614: RightWristEffector
+    400616: RLArm
+    400618: RShin
+    400620: RUArm
+    400622: Spine 1
+    400624: Spine 2
+    400626: Spine 3
+    400628: Spine1 1
+    400630: Spine1 2
+    400632: Spine1 3
+    400634: Spine2 1
+    400636: Spine2 2
+    400638: Spine2 3
+    400640: transform32
+    400642: transform33
+    400644: transform34
+    400646: transform35
+    400648: transform36
+    400650: transform37
+    400652: transform38
+    400654: transform39
+    400656: transform40
+    400658: transform41
+    400660: transform42
+    400662: transform43
+    400664: transform44
+    400666: transform45
+    400668: transform46
+    400670: transform47
+    400672: transform48
+    400674: transform49
+    400676: transform50
+    400678: transform51
+    400680: transform52
+    400682: transform53
+    400684: transform54
+    400686: transform55
+    400688: transform56
+    400690: transform57
+    400692: transform58
+    400694: transform59
+    400696: transform60
+    400698: UTorso
     2000000: left
     4300000: Mouth
     4300002: RightEye
@@ -383,6 +725,24 @@ ModelImporter:
     4300032: RightForeArm
     4300034: RightHand
     4300036: Head
+    4300038: LHip
+    4300040: LRoot
+    4300042: LTorso
+    4300044: REye
+    4300046: RLArm
+    4300048: RUArm
+    4300050: LUArm
+    4300052: RHand
+    4300054: RShin
+    4300056: UTorso
+    4300058: LShin
+    4300060: RHip
+    4300062: RFoot
+    4300064: LHand
+    4300066: LLArm
+    4300068: polySurface39
+    4300070: LEye
+    4300072: Head4
     7400000: Take 001
     9500000: //RootNode
     13700000: Head
@@ -404,6 +764,24 @@ ModelImporter:
     13700032: RightShin
     13700034: RightUpperArm
     13700036: UpperTorso
+    13700038: Head4
+    13700040: LEye
+    13700042: LHand
+    13700044: LHip
+    13700046: LLArm
+    13700048: LRoot
+    13700050: LShin
+    13700052: LTorso
+    13700054: LUArm
+    13700056: polySurface39
+    13700058: REye
+    13700060: RFoot
+    13700062: RHand
+    13700064: RHip
+    13700066: RLArm
+    13700068: RShin
+    13700070: RUArm
+    13700072: UTorso
   materials:
     importMaterials: 1
     materialName: 0
