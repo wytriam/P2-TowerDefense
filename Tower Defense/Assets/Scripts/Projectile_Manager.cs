@@ -52,7 +52,7 @@ public class Projectile_Manager : MonoBehaviour
         else
         {
             // move up
-            Vector3 movement = new Vector3(0, 0.5f, 0);
+            Vector3 movement = new Vector3(0, 10f, 0) * Time.deltaTime;
             gameObject.transform.position += movement;
         }
 	}
