@@ -59,7 +59,6 @@ public class Ragdoll : Enemy_Manager {
         if (foot == 1) StepRight();
         if (foot == -1) StepLeft();
         if (foot == 0) Neutral();
-        transform.position += Vector3.forward * Time.deltaTime * speed;
     }
 
     void Neutral(){
@@ -89,7 +88,7 @@ public class Ragdoll : Enemy_Manager {
     }
 
     void StepRight(){
-
+        rightHip.transform.localRotation *= Quaternion.Euler(0, 0, -1 * Time.deltaTime);
     }
 
     void StepLeft(){
