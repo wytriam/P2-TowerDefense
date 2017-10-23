@@ -7,6 +7,7 @@ public class SM_staging : WytriamSTD.Scene_Manager
     public GameObject[] enemyPrefabs;
     public GameObject firstWaypoint;
     public GameObject enemySpawnPoint;
+    public float enemiesPerSecond = 0.5f;
 
     private WytriamSTD.Spawn spawnPoint;
 
@@ -14,9 +15,7 @@ public class SM_staging : WytriamSTD.Scene_Manager
 	void Start ()
     {
         spawnPoint = enemySpawnPoint.GetComponent<WytriamSTD.Spawn>();
-        spawnPoint.setSpawnPrefab(enemyPrefabs[0]);
-        GameObject enemy = spawnPoint.spawn();
-        enemy.GetComponent<Enemy_Manager>().waypoint = firstWaypoint;
+        spawnEnemy();
     }
 	
 	// Update is called once per frame
@@ -24,4 +23,13 @@ public class SM_staging : WytriamSTD.Scene_Manager
     {
 		
 	}
+
+    void spawnEnemy()
+    {
+        spawnPoint.setSpawnPrefab(enemyPrefabs[Random.Range(0, enemyPrefabs.Length -1)]);
+        GameObject enemy = spawnPoint.spawn();
+        enemy.GetComponent<Enemy_Manager>().waypoint = firstWaypoint;
+        Invoke("spawnEnemy", 1 / enemiesPerSecond);
+
+    }
 }
