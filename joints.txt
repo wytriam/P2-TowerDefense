@@ -1,0 +1,7 @@
+JOINTS:
+pelvis->leftLeg->leftKnee
+pelvis->rightLeg->rightKnee
+pelvis->spine
+spine->leftShoulder->leftElbow
+spine->rightShoulder->rightElbow
+spine->head
