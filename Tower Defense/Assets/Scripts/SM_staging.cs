@@ -26,7 +26,8 @@ public class SM_staging : WytriamSTD.Scene_Manager
 
     void spawnEnemy()
     {
-        spawnPoint.setSpawnPrefab(enemyPrefabs[Random.Range(0, enemyPrefabs.Length -1)]);
+        int enemyIndex = Random.Range(0, enemyPrefabs.Length - 1);
+        spawnPoint.setSpawnPrefab(enemyPrefabs[enemyIndex]);
         GameObject enemy = spawnPoint.spawn();
         enemy.GetComponent<Enemy_Manager>().waypoint = firstWaypoint;
         Invoke("spawnEnemy", 1 / enemiesPerSecond);
