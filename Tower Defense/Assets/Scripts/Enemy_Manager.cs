@@ -38,7 +38,7 @@ public class Enemy_Manager : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
-        GameObject other = coll.gameObject;
+        GameObject other = coll.gameObject.transform.root.gameObject;
         if (other.tag == "Waypoint")
         {
             Debug.Log("Enemy_Manager::OnCollisionEnter() - Changing Waypoint");
@@ -59,7 +59,7 @@ public class Enemy_Manager : MonoBehaviour
 
     public void OnTriggerEnter(Collider coll)
     {
-        GameObject other = coll.gameObject;
+        GameObject other = coll.gameObject.transform.root.gameObject;
         if (other.tag == "Tower")
         {
             Debug.Log("Enemy_Manager::OnTriggerEnter() - Registering with Tower");
@@ -76,7 +76,7 @@ public class Enemy_Manager : MonoBehaviour
 
     public void OnTriggerExit(Collider coll)
     {
-        GameObject other = coll.gameObject;
+        GameObject other = coll.gameObject.transform.root.gameObject;
         if (other.tag == "Tower")
         {
             // Tell tower enemy is out of range for firing
