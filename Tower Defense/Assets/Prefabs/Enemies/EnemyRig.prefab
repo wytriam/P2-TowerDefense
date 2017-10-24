@@ -7150,6 +7150,7 @@ MonoBehaviour:
   rightElbow: {fileID: 144527411185946524}
   midSpine: {fileID: 144016140012239204}
   neck: {fileID: 144711523240997678}
+  foot: 0
 --- !u!135 &135492814342382746
 SphereCollider:
   m_ObjectHideFlags: 1
