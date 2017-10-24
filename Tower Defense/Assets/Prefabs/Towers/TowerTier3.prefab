@@ -104,6 +104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4691269530387850}
+  - component: {fileID: 114596193973993996}
   m_Layer: 11
   m_Name: TowerTier3
   m_TagString: Untagged
@@ -687,3 +688,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1519316166433472}
   m_Mesh: {fileID: 4300000, guid: 663eef92a4af69748a96887d9428c033, type: 3}
+--- !u!114 &114596193973993996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870785239807794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7f8cb8a0d767c48a004a96d8eb2548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradesToPrefab: {fileID: 1208884352219288, guid: 9667c0bc1a4c691448fd874d726e62b0,
+    type: 2}
+  costToUpgrade: 0

@@ -54,6 +54,15 @@ public class Tower_Manager : MonoBehaviour
         }
     }
 
+    public void deregisterAll()
+    {
+        foreach (GameObject enemy in enemiesInRange)
+        {
+            deregister(enemy);
+            enemy.GetComponent<Enemy_Manager>().deregisterTower(gameObject);
+        }
+    }
+
     public void shoot()
     {
         spawnScript.spawn();
