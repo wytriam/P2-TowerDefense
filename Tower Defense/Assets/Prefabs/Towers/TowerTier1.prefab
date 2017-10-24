@@ -19,7 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4856508846341326}
-  - component: {fileID: 114340400522099912}
+  - component: {fileID: 114228219233006760}
+  - component: {fileID: 65801042063451820}
   m_Layer: 11
   m_Name: TowerTier1
   m_TagString: Untagged
@@ -154,7 +155,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1191324122584164}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 18, y: 0, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4672340968478392}
@@ -328,7 +329,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1946487020291076}
   m_Mesh: {fileID: 4300002, guid: d182e8a4db421cf4997b4a96abc72882, type: 3}
---- !u!114 &114340400522099912
+--- !u!65 &65801042063451820
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1191324122584164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.5, z: 2}
+  m_Center: {x: 0, y: 1.1, z: 0}
+--- !u!114 &114228219233006760
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -336,8 +349,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1191324122584164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b78a1351cd0eef74abd059ba2feaf194, type: 3}
+  m_Script: {fileID: 11500000, guid: bd7f8cb8a0d767c48a004a96d8eb2548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  rateOfFire: 2
+  upgradesToPrefab: {fileID: 1588081942744776, guid: 3fc11b9c679b4884b91f2a215344aad7,
+    type: 2}
+  costToUpgrade: 100
