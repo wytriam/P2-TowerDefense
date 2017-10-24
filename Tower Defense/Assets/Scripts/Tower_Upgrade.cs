@@ -31,6 +31,13 @@ public class Tower_Upgrade : MonoBehaviour
         upgrade.transform.position = gameObject.transform.position;
         upgrade.transform.rotation = gameObject.transform.rotation;
         upgrade.transform.localScale = gameObject.transform.localScale;
+
+        // check to see if Tower_Manager exists
+        // If it does, deregister all enemies that tower is aware of
+        Tower_Manager tm = gameObject.GetComponent<Tower_Manager>();
+        if (tm != null)
+            tm.deregisterAll();
+
         // delete the old tower
         Destroy(gameObject);
 

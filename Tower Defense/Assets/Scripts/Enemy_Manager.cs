@@ -38,6 +38,11 @@ public class Enemy_Manager : MonoBehaviour
 
     }
 
+    public void deregisterTower(GameObject tower)
+    {
+        nearbyTowers.Remove(tower);
+    }
+
     void OnCollisionEnter(Collision coll)
     {
         GameObject other = coll.gameObject.transform.root.gameObject;
