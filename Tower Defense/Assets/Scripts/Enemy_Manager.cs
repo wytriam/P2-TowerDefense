@@ -7,15 +7,18 @@ public class Enemy_Manager : MonoBehaviour
     public GameObject waypoint;
     public float speed = 2.0f;
     public float health = 5f;
+    public float manaForKill = 10f;
 
     private Vector3 lastPos;
 
     private List<GameObject> nearbyTowers;
+    private Mana mana;
 
     // Use this for initialization
     void Start()
     {
         nearbyTowers = new List<GameObject>();
+        mana = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Mana>();
    }
 
     // Update is called once per frame
@@ -33,6 +36,7 @@ public class Enemy_Manager : MonoBehaviour
         {
             foreach (GameObject tower in nearbyTowers)
                 tower.GetComponent<Tower_Manager>().deregister(gameObject);
+            mana.currentMana += manaForKill;
             Destroy(gameObject);
         }
 

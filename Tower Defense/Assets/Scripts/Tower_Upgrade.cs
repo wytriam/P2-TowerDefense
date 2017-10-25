@@ -25,10 +25,10 @@ public class Tower_Upgrade : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (scene_manager.GetComponent<SM_level_1>().currentMana >= costToUpgrade)
+        if (scene_manager.GetComponent<Mana>().currentMana >= costToUpgrade)
         {
             upgrade();
-            scene_manager.GetComponent<SM_level_1>().currentMana -= costToUpgrade;
+            scene_manager.GetComponent<Mana>().currentMana -= costToUpgrade;
         }
     }
 

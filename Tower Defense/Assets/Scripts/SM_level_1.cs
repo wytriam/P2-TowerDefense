@@ -5,23 +5,21 @@ using UnityEngine.UI;
 
 public class SM_level_1 : SM_staging
 {
-    public float startingMana;
-    public float currentMana;
-    public float manaPerSecond;
     public Text manaDisplay;
+
+    private Mana mana;
 
     void Start()
     {
         spawnPoint = enemySpawnPoint.GetComponent<WytriamSTD.Spawn>();
         spawnEnemy();
-        currentMana = startingMana;
+        mana = GetComponent<Mana>();
     }
 
     // Update is called once per frame
     void Update ()
     {
-        currentMana += (manaPerSecond) * Time.fixedDeltaTime;
-        manaDisplay.text = "Mana: " + currentMana.ToString("F2");
+        manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
 
 	}
 }
