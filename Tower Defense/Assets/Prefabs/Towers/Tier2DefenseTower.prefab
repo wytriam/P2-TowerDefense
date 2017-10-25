@@ -689,7 +689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradesToPrefab: {fileID: 1208884352219288, guid: 9667c0bc1a4c691448fd874d726e62b0,
     type: 2}
-  costToUpgrade: 100
+  costToUpgrade: 1000
   scene_manager: {fileID: 0}
 --- !u!135 &135724602847733994
 SphereCollider:

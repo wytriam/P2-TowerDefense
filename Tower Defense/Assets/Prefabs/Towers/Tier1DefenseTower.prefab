@@ -588,7 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradesToPrefab: {fileID: 1847229740819916, guid: d692f489387ac5c479fb0689d2af61cf,
     type: 2}
-  costToUpgrade: 100
+  costToUpgrade: 250
   scene_manager: {fileID: 0}
 --- !u!114 &114852314189801260
 MonoBehaviour:
