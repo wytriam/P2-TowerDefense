@@ -756,6 +756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164787770}
   - component: {fileID: 1164787771}
+  - component: {fileID: 1164787772}
   m_Layer: 0
   m_Name: SM_scene_1
   m_TagString: SceneManager
@@ -792,10 +793,21 @@ MonoBehaviour:
   firstWaypoint: {fileID: 833400905}
   enemySpawnPoint: {fileID: 993505832}
   enemiesPerSecond: 0.5
-  startingMana: 100
+  startingMana: 150
   currentMana: 0
   manaPerSecond: 7
   manaDisplay: {fileID: 1122740809}
+--- !u!114 &1164787772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1164787769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63382c15bcc213441a7577ec600cdf79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1387992384
 Prefab:
   m_ObjectHideFlags: 0

@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 135226861404723366}
   - component: {fileID: 114037116720006292}
   - component: {fileID: 114758765113190360}
+  - component: {fileID: 65542381439420598}
   m_Layer: 11
   m_Name: Tier3DefenseTower 1
   m_TagString: Tower
@@ -921,6 +922,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1437374529178080}
   m_Mesh: {fileID: 4300004, guid: 663eef92a4af69748a96887d9428c033, type: 3}
+--- !u!65 &65542381439420598
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208884352219288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.5, z: 2}
+  m_Center: {x: 0, y: 1.1, z: 0}
 --- !u!114 &114037116720006292
 MonoBehaviour:
   m_ObjectHideFlags: 1
