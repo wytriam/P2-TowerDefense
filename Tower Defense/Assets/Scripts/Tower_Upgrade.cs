@@ -7,10 +7,14 @@ public class Tower_Upgrade : MonoBehaviour
     public GameObject upgradesToPrefab;
     public float costToUpgrade = 100f;
 
-	// Use this for initialization
-	void Start ()
+    [HideInInspector]
+    public GameObject scene_manager;
+
+
+    // Use this for initialization
+    void Start ()
     {
-		
+        scene_manager = GameObject.FindGameObjectWithTag("SceneManager");
 	}
 	
 	// Update is called once per frame
@@ -21,7 +25,11 @@ public class Tower_Upgrade : MonoBehaviour
 
     void OnMouseDown()
     {
-        upgrade();
+        if (scene_manager.GetComponent<SM_level_1>().currentMana >= costToUpgrade)
+        {
+            upgrade();
+            scene_manager.GetComponent<SM_level_1>().currentMana -= costToUpgrade;
+        }
     }
 
     public void upgrade()

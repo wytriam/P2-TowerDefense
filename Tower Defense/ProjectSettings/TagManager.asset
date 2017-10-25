@@ -12,6 +12,7 @@ TagManager:
   - Projectile
   - Button
   - MenuPage
+  - SceneManager
   layers:
   - Default
   - TransparentFX
