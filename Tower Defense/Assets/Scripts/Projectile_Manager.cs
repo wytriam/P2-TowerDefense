@@ -13,10 +13,16 @@ public class Projectile_Manager : MonoBehaviour
     private Vector3 lastPos;
     private GameObject target;
     private float lifeTimer = 0f;
+    private AudioSource sound;
 
+    void Awake()
+    {
+        sound = GetComponent<AudioSource>();
+        sound.Play();
+    }
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         seekAndDestroy = false;
 	}
