@@ -56,8 +56,11 @@ public class Tower_Manager : MonoBehaviour
 
     public void deregisterAll()
     {
-        foreach (GameObject enemy in enemiesInRange)
+        //foreach (GameObject enemy in enemiesInRange)
+        int iteratations = enemiesInRange.Count;
+        for (int i=0;i<iteratations;i++)
         {
+            GameObject enemy = enemiesInRange[0];
             deregister(enemy);
             enemy.GetComponent<Enemy_Manager>().deregisterTower(gameObject);
         }
