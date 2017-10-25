@@ -31,6 +31,7 @@ public class Enemy_Manager : MonoBehaviour
             movement.y = lastPos.y;
             gameObject.transform.position = movement;
             gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            gameObject.transform.LookAt(waypoint.transform);
         }
         if (health <= 0)
         {
