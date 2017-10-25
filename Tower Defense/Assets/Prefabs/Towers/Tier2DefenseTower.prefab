@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 135724602847733994}
   - component: {fileID: 114033727367219556}
   - component: {fileID: 114061719436371700}
+  - component: {fileID: 114288246743046882}
   m_Layer: 11
   m_Name: Tier2DefenseTower
   m_TagString: Tower
@@ -662,6 +663,20 @@ MonoBehaviour:
   spawnAtStart: 0
   spawnWhenTriggered: 0
   spawnScale: {x: 1, y: 1, z: 1}
+--- !u!114 &114288246743046882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847229740819916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7f8cb8a0d767c48a004a96d8eb2548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradesToPrefab: {fileID: 1208884352219288, guid: 9667c0bc1a4c691448fd874d726e62b0,
+    type: 2}
+  costToUpgrade: 100
 --- !u!135 &135724602847733994
 SphereCollider:
   m_ObjectHideFlags: 1
