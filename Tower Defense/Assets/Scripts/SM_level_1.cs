@@ -11,6 +11,8 @@ public class SM_level_1 : SM_staging
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         spawnPoint = enemySpawnPoint.GetComponent<WytriamSTD.Spawn>();
         spawnEnemy();
         mana = GetComponent<Mana>();
@@ -19,6 +21,16 @@ public class SM_level_1 : SM_staging
     // Update is called once per frame
     void Update ()
     {
+        if (Input.GetKeyDown("escape"))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
         manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
 
 	}
