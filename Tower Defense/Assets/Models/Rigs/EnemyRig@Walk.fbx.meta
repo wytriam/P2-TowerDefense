@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 849178bffa44f0b428bde7024b015f0b
-timeCreated: 1508893067
+guid: 0d1f2eec8744c6e43868a20b479f566c
+timeCreated: 1508967639
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -185,7 +185,7 @@ ModelImporter:
     400174: Spine1
     400176: Spine2
     400178: Spine3
-    7400000: LeftFootForward
+    7400000: Walk
     9500000: //RootNode
     11100000: //RootNode
   externalObjects: {}
@@ -216,10 +216,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: LeftFootForward
+      name: Walk
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 23
+      lastFrame: 43
       wrapMode: 2
       orientationOffsetY: 0
       level: 0
@@ -227,7 +227,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
