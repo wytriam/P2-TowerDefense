@@ -502,6 +502,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1895735812723720, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1, type: 2}
+      propertyPath: m_Name
+      value: Enemy SpawnPoint
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1, type: 2}
   m_IsPrefabParent: 0
@@ -758,6 +762,7 @@ GameObject:
   - component: {fileID: 1164787771}
   - component: {fileID: 1164787772}
   - component: {fileID: 1164787773}
+  - component: {fileID: 1164787774}
   m_Layer: 0
   m_Name: SM_scene_1
   m_TagString: SceneManager
@@ -789,13 +794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a748f632b727feb44a0e16fc106fd3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
-  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
-  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
-  firstWaypoint: {fileID: 833400905}
-  enemySpawnPoint: {fileID: 993505832}
-  enemiesPerSecond: 0.5
   manaDisplay: {fileID: 1122740809}
 --- !u!114 &1164787772
 MonoBehaviour:
@@ -810,7 +808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMana: 0
   startingMana: 150
-  manaPerSecond: 10
+  manaPerSecond: 1
 --- !u!114 &1164787773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,6 +822,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sun: {fileID: 302921299}
   speed: 0
+--- !u!114 &1164787774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1164787769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7704c6920c62c54ea739131b0df84d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - {fileID: 1444617143573354, guid: 5655955ba35ab0540a0950b834793736, type: 2}
+  - {fileID: 1902838978933046, guid: 52a4d4e64eed3d8468da2a64183589f4, type: 2}
+  firstWaypoint: {fileID: 833400905}
+  enemySpawnPoint: {fileID: 993505832}
+  enemiesPerSecond: 0.5
+  spawnAllowed: 1
 --- !u!1001 &1387992384
 Prefab:
   m_ObjectHideFlags: 0
@@ -1381,6 +1397,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114193093096602352, guid: 8e15c551e62fda14c90b2e6cf15ba116,
+        type: 2}
+      propertyPath: nextWaypoint
+      value: 
+      objectReference: {fileID: 833400905}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e15c551e62fda14c90b2e6cf15ba116, type: 2}
   m_IsPrefabParent: 0

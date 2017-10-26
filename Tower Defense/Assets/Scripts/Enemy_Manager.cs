@@ -53,15 +53,17 @@ public class Enemy_Manager : MonoBehaviour
         GameObject other = coll.gameObject.transform.root.gameObject;
         if (other.tag == "Waypoint")
         {
-            Debug.Log("Enemy_Manager::OnCollisionEnter() - Changing Waypoint");
+            //Debug.Log("Enemy_Manager::OnCollisionEnter() - Changing Waypoint");
             other = coll.gameObject.transform.parent.gameObject;
             waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
         }
         else if (other.tag == "EndPoint")
         {
-            //Need some way to tell any towers that have this targeted it is dead
-            Debug.Log("Enemy_Manager::OnCollisionEnter() - Destroying self");
-            Destroy(this.gameObject);
+            Debug.Log("Enemy_Manager::OnCollisionEnter() - Moving to Beginning of Course");
+            mana.currentMana -= 2*health;
+            other = coll.gameObject;
+            waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
+            gameObject.transform.position = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Waves>().enemySpawnPoint.gameObject.transform.position;
         }
         else
         {

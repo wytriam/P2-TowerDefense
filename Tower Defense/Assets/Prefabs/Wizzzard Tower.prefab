@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4559406759892252}
   - component: {fileID: 33735295736385070}
   - component: {fileID: 23758391680852420}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TowerRoofLip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4342557440263850}
   - component: {fileID: 33375410810501638}
   - component: {fileID: 23979097495050992}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,9 +53,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4310827262706518}
-  m_Layer: 0
+  - component: {fileID: 114193093096602352}
+  - component: {fileID: 65328794669345644}
+  m_Layer: 10
   m_Name: Wizzzard Tower
-  m_TagString: Untagged
+  m_TagString: EndPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +72,7 @@ GameObject:
   - component: {fileID: 4359989234783414}
   - component: {fileID: 33035864848595062}
   - component: {fileID: 23360955270498148}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Window2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +89,7 @@ GameObject:
   - component: {fileID: 4790106261066572}
   - component: {fileID: 33083224613129836}
   - component: {fileID: 23317511491520926}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TowerRoof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +106,7 @@ GameObject:
   - component: {fileID: 4301754745116034}
   - component: {fileID: 33109454847536138}
   - component: {fileID: 23797089006864062}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Window3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +123,7 @@ GameObject:
   - component: {fileID: 4718831715260758}
   - component: {fileID: 33594429057005362}
   - component: {fileID: 23658923677463390}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Window1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +140,7 @@ GameObject:
   - component: {fileID: 4076697674039100}
   - component: {fileID: 33046733982124346}
   - component: {fileID: 23624130596224212}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TowerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +157,7 @@ GameObject:
   - component: {fileID: 4523755142028524}
   - component: {fileID: 33384665885891424}
   - component: {fileID: 23727641353197006}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TowerTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +174,7 @@ GameObject:
   - component: {fileID: 4170876008750788}
   - component: {fileID: 33395844495522936}
   - component: {fileID: 23753210946803596}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +191,7 @@ GameObject:
   - component: {fileID: 4357533079694556}
   - component: {fileID: 33577339118449264}
   - component: {fileID: 23827588841845600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TowerBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,8 +243,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1239570404820600}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.189184, y: 0.1, z: 1.223556}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4170876008750788}
@@ -759,3 +761,27 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1085974491864974}
   m_Mesh: {fileID: 4300008, guid: 6c112facc000d6a4f96be2b6e15cfb6d, type: 3}
+--- !u!65 &65328794669345644
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239570404820600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 12, z: 5}
+  m_Center: {x: 0, y: 6, z: 0}
+--- !u!114 &114193093096602352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239570404820600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38727fa2364d599478068df3d66ed2d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextWaypoint: {fileID: 0}
