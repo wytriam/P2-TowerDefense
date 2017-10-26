@@ -18,9 +18,12 @@ public class Waves : MonoBehaviour
         spawnPoint = enemySpawnPoint.GetComponent<WytriamSTD.Spawn>();
     }
 
-    public void spawnWave(GameObject waveObject)
+    public void spawnWave(GameObject waveObject, int index)
     {
         GameObject[] wave = waveObject.GetComponent<Wave>().enemyPrefabs;
+        spawnEnemy(wave[index]);
+        if (index < wave.Length)
+            Invoke("spawnWave", 1 / enemiesPerSecond);
     }
 
     void spawnEnemy(GameObject enemyPrefab)
