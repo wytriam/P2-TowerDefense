@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 74fdc8349ef125d4cb81e010e44cdf33
-timeCreated: 1508884095
+guid: 849178bffa44f0b428bde7024b015f0b
+timeCreated: 1508893067
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -61,59 +61,40 @@ ModelImporter:
     100106: Character_Ctrl_Spine3
     100108: //RootNode
     100110: Head
-    100112: Head 1
-    100114: LeftAnkle
-    100116: LeftArm
-    100118: LeftArm 1
-    100120: LeftArmWiggle
-    100122: LeftElbow
-    100124: LeftElbowWiggle
-    100126: LeftEye
-    100128: LeftFoot
-    100130: LeftForeArm
-    100132: LeftHand
-    100134: LeftHandFlexor
-    100136: LeftHip
-    100138: LeftHipWiggle
-    100140: LeftKnee
-    100142: LeftKneeWiggle
-    100144: LeftShin
-    100146: LeftShoulder
-    100148: LeftThigh
-    100150: LeftToeFlexor
-    100152: LeftWrist
-    100154: LowerAbdomen
-    100156: Meshes
-    100158: Mouth
-    100160: Neck
-    100162: Neck2
-    100164: Pelvis
-    100166: RightAnkle
-    100168: RightArm
-    100170: RightArm 1
-    100172: RightArmWiggle
-    100174: RightElbow
-    100176: RightElbowWiggle
-    100178: RightEye
-    100180: RightFoot
-    100182: RightForeArm
-    100184: RightHand
-    100186: RightHandFlexor
-    100188: RightHip
-    100190: RightHipWiggle
-    100192: RightKnee
-    100194: RightKneeWiggle
-    100196: RightShin
-    100198: RightShoulder
-    100200: RightThigh
-    100202: RightToeFlexor
-    100204: RightWrist
-    100206: Skeleton
-    100208: Spine
-    100210: Spine1
-    100212: Spine2
-    100214: Spine3
-    100216: UpperAbdomen
+    100112: LeftAnkle
+    100114: LeftArm
+    100116: LeftArmWiggle
+    100118: LeftElbow
+    100120: LeftElbowWiggle
+    100122: LeftHandFlexor
+    100124: LeftHip
+    100126: LeftHipWiggle
+    100128: LeftKnee
+    100130: LeftKneeWiggle
+    100132: LeftShoulder
+    100134: LeftToeFlexor
+    100136: LeftWrist
+    100138: Neck
+    100140: Neck2
+    100142: Pelvis
+    100144: RightAnkle
+    100146: RightArm
+    100148: RightArmWiggle
+    100150: RightElbow
+    100152: RightElbowWiggle
+    100154: RightHandFlexor
+    100156: RightHip
+    100158: RightHipWiggle
+    100160: RightKnee
+    100162: RightKneeWiggle
+    100164: RightShoulder
+    100166: RightToeFlexor
+    100168: RightWrist
+    100170: Skeleton
+    100172: Spine
+    100174: Spine1
+    100176: Spine2
+    100178: Spine3
     400000: Character_Ctrl_ChestEndEffector
     400002: Character_Ctrl_ChestOriginEffector
     400004: Character_Ctrl_Head
@@ -170,102 +151,44 @@ ModelImporter:
     400106: Character_Ctrl_Spine3
     400108: //RootNode
     400110: Head
-    400112: Head 1
-    400114: LeftAnkle
-    400116: LeftArm
-    400118: LeftArm 1
-    400120: LeftArmWiggle
-    400122: LeftElbow
-    400124: LeftElbowWiggle
-    400126: LeftEye
-    400128: LeftFoot
-    400130: LeftForeArm
-    400132: LeftHand
-    400134: LeftHandFlexor
-    400136: LeftHip
-    400138: LeftHipWiggle
-    400140: LeftKnee
-    400142: LeftKneeWiggle
-    400144: LeftShin
-    400146: LeftShoulder
-    400148: LeftThigh
-    400150: LeftToeFlexor
-    400152: LeftWrist
-    400154: LowerAbdomen
-    400156: Meshes
-    400158: Mouth
-    400160: Neck
-    400162: Neck2
-    400164: Pelvis
-    400166: RightAnkle
-    400168: RightArm
-    400170: RightArm 1
-    400172: RightArmWiggle
-    400174: RightElbow
-    400176: RightElbowWiggle
-    400178: RightEye
-    400180: RightFoot
-    400182: RightForeArm
-    400184: RightHand
-    400186: RightHandFlexor
-    400188: RightHip
-    400190: RightHipWiggle
-    400192: RightKnee
-    400194: RightKneeWiggle
-    400196: RightShin
-    400198: RightShoulder
-    400200: RightThigh
-    400202: RightToeFlexor
-    400204: RightWrist
-    400206: Skeleton
-    400208: Spine
-    400210: Spine1
-    400212: Spine2
-    400214: Spine3
-    400216: UpperAbdomen
-    4300000: LowerAbdomen
-    4300002: UpperAbdomen
-    4300004: LeftHand
-    4300006: LeftForeArm
-    4300008: LeftFoot
-    4300010: LeftArm
-    4300012: LeftShin
-    4300014: LeftThigh
-    4300016: RightThigh
-    4300018: RightHand
-    4300020: RightForeArm
-    4300022: RightFoot
-    4300024: RightShin
-    4300026: RightArm
-    4300028: Head
-    4300030: Mouth
-    4300032: RightEye
-    4300034: LeftEye
+    400112: LeftAnkle
+    400114: LeftArm
+    400116: LeftArmWiggle
+    400118: LeftElbow
+    400120: LeftElbowWiggle
+    400122: LeftHandFlexor
+    400124: LeftHip
+    400126: LeftHipWiggle
+    400128: LeftKnee
+    400130: LeftKneeWiggle
+    400132: LeftShoulder
+    400134: LeftToeFlexor
+    400136: LeftWrist
+    400138: Neck
+    400140: Neck2
+    400142: Pelvis
+    400144: RightAnkle
+    400146: RightArm
+    400148: RightArmWiggle
+    400150: RightElbow
+    400152: RightElbowWiggle
+    400154: RightHandFlexor
+    400156: RightHip
+    400158: RightHipWiggle
+    400160: RightKnee
+    400162: RightKneeWiggle
+    400164: RightShoulder
+    400166: RightToeFlexor
+    400168: RightWrist
+    400170: Skeleton
+    400172: Spine
+    400174: Spine1
+    400176: Spine2
+    400178: Spine3
+    7400000: LeftFootForward
     9500000: //RootNode
-    13700000: Head
-    13700002: LeftArm
-    13700004: LeftEye
-    13700006: LeftFoot
-    13700008: LeftForeArm
-    13700010: LeftHand
-    13700012: LeftShin
-    13700014: LeftThigh
-    13700016: LowerAbdomen
-    13700018: Mouth
-    13700020: RightArm
-    13700022: RightEye
-    13700024: RightFoot
-    13700026: RightForeArm
-    13700028: RightHand
-    13700030: RightShin
-    13700032: RightThigh
-    13700034: UpperAbdomen
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: c8b163c15f1748a4999eb87981a9718c, type: 2}
+    11100000: //RootNode
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -291,7 +214,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: LeftFootForward
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 23
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -334,10 +285,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
