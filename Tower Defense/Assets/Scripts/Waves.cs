@@ -12,24 +12,28 @@ public class Waves : MonoBehaviour
     public bool spawnAllowed = true;
 
     private WytriamSTD.Spawn spawnPoint;
+    private GameObject currentPrefab;
 
     void Start()
     {
         spawnPoint = enemySpawnPoint.GetComponent<WytriamSTD.Spawn>();
     }
 
-    public void spawnWave(GameObject waveObject, int index)
+    public void spawnWave(GameObject waveObject)
     {
         GameObject[] wave = waveObject.GetComponent<Wave>().enemyPrefabs;
-        spawnEnemy(wave[index]);
-        if (index < wave.Length)
-            Invoke("spawnWave", 1 / enemiesPerSecond);
+
+        for (int i=0;i<wave.Length;i++)
+        {
+            currentPrefab = currentPrefab = wave[i];
+            Invoke("spawnEnemy", (1 / enemiesPerSecond) * i);
+        }
     }
 
-    void spawnEnemy(GameObject enemyPrefab)
+    void spawnEnemy()
     {
         if (!spawnAllowed) return;
-        spawnPoint.setSpawnPrefab(enemyPrefab);
+        spawnPoint.setSpawnPrefab(currentPrefab);
         GameObject enemy = spawnPoint.spawn();
         enemy.GetComponent<Enemy_Manager>().waypoint = firstWaypoint;
     }
