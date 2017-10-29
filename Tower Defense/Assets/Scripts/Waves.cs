@@ -33,20 +33,23 @@ public class Waves : MonoBehaviour
     IEnumerator spawnWaves()
     {
         Debug.Log("Waves::spawnWaves()");
+        while (index < waves.Length)
+        {
+            if (index % waveCapacity == 0 && index != 0)
+                GetComponent<WytriamSTD.Scene_Manager>().announce("Next Wave!");
+            currentPrefab = waves[index];
+            spawnEnemy();
+            index++;
+            if (index % waveCapacity == 0 && index != 0)
+            {
+                Debug.Log("Waiting " + timeBetweenWaves + " before spawning next wave.");
+                yield return new WaitForSeconds(timeBetweenWaves);
+            }
+            Debug.Log("Spawning new enemy in " + 1 / enemiesPerSecond + " seconds");
+            yield return new WaitForSeconds(1 / enemiesPerSecond);
+        }
         // Stop spawning waves if we're out of enemies
         if (index > waves.Length)
             StopCoroutine("spawnWaves");
-        if (index % waveCapacity == 0 && index != 0)
-            GetComponent<WytriamSTD.Scene_Manager>().announce("Next Wave!");
-        currentPrefab = waves[index];
-        spawnEnemy();
-        index++;
-        if (index % waveCapacity == 0 && index != 0)
-        {
-            Debug.Log("Waiting " + timeBetweenWaves + " before spawning next wave.");
-            yield return new WaitForSeconds(timeBetweenWaves);
-        }
-        Debug.Log("Spawning new enemy in " + 1 / enemiesPerSecond + " seconds");
-        yield return new WaitForSeconds(1/enemiesPerSecond);
     }
 }
