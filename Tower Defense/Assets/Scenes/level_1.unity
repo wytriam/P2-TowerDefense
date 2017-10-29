@@ -555,7 +555,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4748320942818636, guid: 634824f7dfdaa064da43fa8a02e90a90, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.63
       objectReference: {fileID: 0}
     - target: {fileID: 4748320942818636, guid: 634824f7dfdaa064da43fa8a02e90a90, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1082,20 +1082,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
+  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
   - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
   - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
-  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
-  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
-  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
-  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
+  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
   firstWaypoint: {fileID: 833400905}
   enemySpawnPoint: {fileID: 993505832}
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
-  waveCapacity: 5
+  enemiesPerWave: 5
+  isSpawning: 0
 --- !u!1 &1281724181
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,7 +1363,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4748320942818636, guid: 634824f7dfdaa064da43fa8a02e90a90, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -30
+      value: -28.22
       objectReference: {fileID: 0}
     - target: {fileID: 4748320942818636, guid: 634824f7dfdaa064da43fa8a02e90a90, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1563,7 +1559,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4748320942818636, guid: 634824f7dfdaa064da43fa8a02e90a90, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -30
+      value: -30.66
       objectReference: {fileID: 0}
     - target: {fileID: 4748320942818636, guid: 634824f7dfdaa064da43fa8a02e90a90, type: 2}
       propertyPath: m_LocalRotation.x
