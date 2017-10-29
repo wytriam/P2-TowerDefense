@@ -13,13 +13,16 @@ public class Enemy_Manager : MonoBehaviour
 
     private List<GameObject> nearbyTowers;
     private Mana mana;
+    private EnemyCounter enemycounter;
 
     // Use this for initialization
     void Start()
     {
         nearbyTowers = new List<GameObject>();
         mana = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Mana>();
-   }
+        enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
+        enemycounter.register(gameObject);
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,6 +41,7 @@ public class Enemy_Manager : MonoBehaviour
             foreach (GameObject tower in nearbyTowers)
                 tower.GetComponent<Tower_Manager>().deregister(gameObject);
             mana.currentMana += manaForKill;
+            enemycounter.deregister(gameObject);
             Destroy(gameObject);
         }
 
@@ -59,7 +63,7 @@ public class Enemy_Manager : MonoBehaviour
         }
         else if (other.tag == "EndPoint")
         {
-            Debug.Log("Enemy_Manager::OnCollisionEnter() - Moving to Beginning of Course");
+            //Debug.Log("Enemy_Manager::OnCollisionEnter() - Moving to Beginning of Course");
             mana.currentMana -= 2*health;
             other = coll.gameObject;
             waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
@@ -67,7 +71,7 @@ public class Enemy_Manager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Enemy_Manager::OnCollisionEnter() - Unknown Collision Detected: " + other.tag);
+            //Debug.Log("Enemy_Manager::OnCollisionEnter() - Unknown Collision Detected: " + other.tag);
         }
     }
 
@@ -76,13 +80,13 @@ public class Enemy_Manager : MonoBehaviour
         GameObject other = coll.gameObject.transform.root.gameObject;
         if (other.tag == "Tower")
         {
-            Debug.Log("Enemy_Manager::OnTriggerEnter() - Registering with Tower");
+            //Debug.Log("Enemy_Manager::OnTriggerEnter() - Registering with Tower");
             coll.gameObject.GetComponent<Tower_Manager>().register(this.gameObject);
             nearbyTowers.Add(other.gameObject);
         }
         if (other.tag == "Projectile")
         {
-            Debug.Log("Enemy_Manager::OnTriggerEnter - Got hit by projectile");
+            //Debug.Log("Enemy_Manager::OnTriggerEnter - Got hit by projectile");
             other.gameObject.GetComponent<Projectile_Manager>().ParticlesOnDeath();
             Destroy(other.gameObject);
             health--;
@@ -95,7 +99,7 @@ public class Enemy_Manager : MonoBehaviour
         if (other.tag == "Tower")
         {
             // Tell tower enemy is out of range for firing
-            Debug.Log("Enemy_Manager::OnTriggerExit() - Deregistering with Tower");
+            //Debug.Log("Enemy_Manager::OnTriggerExit() - Deregistering with Tower");
             coll.gameObject.GetComponent<Tower_Manager>().deregister(this.gameObject);
             nearbyTowers.Remove(other.gameObject);
         }

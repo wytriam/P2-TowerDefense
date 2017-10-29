@@ -40,7 +40,7 @@ public class Projectile_Manager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Projectile_Manager::Update() - No target found; Destroying Self");
+                //Debug.Log("Projectile_Manager::Update() - No target found; Destroying Self");
                 Destroy(gameObject);
             }
         }
@@ -60,7 +60,7 @@ public class Projectile_Manager : MonoBehaviour
 
     void findTarget()
     {
-        Debug.Log("Projectile_Manager::findTarget() - Looking for Target");
+        //Debug.Log("Projectile_Manager::findTarget() - Looking for Target");
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Enemy");
         float distance = -1f;
         foreach (GameObject go in targets)

@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SM_level_1 : SM_staging
+public class SM_level_1 : WytriamSTD.Scene_Manager
 {
     public Text manaDisplay;
 
     private Mana mana;
     private Waves waves;
-    private List<GameObject> enemies;
+    private EnemyCounter enemies;
 
     void Start()
     {
         mana = GetComponent<Mana>();
         waves = GetComponent<Waves>();
-
-        enemies = new List<GameObject>();
+        enemies = GetComponent<EnemyCounter>();
 
         waves.StartCoroutine("spawnWaves");
     }
@@ -24,19 +23,10 @@ public class SM_level_1 : SM_staging
     void FixedUpdate()
     {
         manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
-	}
-
-    public void register(GameObject enemy)
-    {
-        enemies.Add(enemy);
-    }
-
-    public void deregister(GameObject enemy)
-    {
-        enemies.Remove(enemy);
-        if (enemies.Count == 0 && !waves.isSpawning)
+        if(!waves.isSpawning && enemies.allEnemiesKilled)
         {
             announce("You win!");
         }
-    }
+	}
+
 }
