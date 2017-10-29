@@ -22,10 +22,18 @@ public class SM_level_1 : WytriamSTD.Scene_Manager
 
     void FixedUpdate()
     {
-        manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
-        if(!waves.isSpawning && enemies.allEnemiesKilled)
+        if (!mana.noMana)
         {
-            announce("You win!");
+            manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
+            if (!waves.isSpawning && enemies.allEnemiesKilled)
+            {
+                announce("You win!");
+            }
+
+            if (mana.noMana)
+            {
+                announce("You Lose.");
+            }
         }
 	}
 
