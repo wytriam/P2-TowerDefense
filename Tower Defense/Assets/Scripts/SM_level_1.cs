@@ -15,7 +15,7 @@ public class SM_level_1 : SM_staging
         mana = GetComponent<Mana>();
         waves = GetComponent<Waves>();
 
-        waves.spawnWave(waves.waves[0]);
+        waves.StartCoroutine("spawnWaves");
     }
 
     // Update is called once per frame

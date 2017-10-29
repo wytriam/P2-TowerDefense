@@ -30,7 +30,7 @@ namespace WytriamSTD
 
         public void announce(string announcement)
         {
-            Debug.Log("Scene_Manager::announce() - " + announcement);
+            //Debug.Log("Scene_Manager::announce() - " + announcement);
             Announcements.getInstance().DisplayAnnouncement(announcement);
         }
     }

@@ -66,7 +66,7 @@ namespace WytriamSTD
         // Display an announcement to the screen. If this announcement is not on the log, it will be added to the log
         public void DisplayAnnouncement(string announcement)
         {
-            Debug.Log("Announcements::DisplayAnnouncement() - " + announcement);
+            //Debug.Log("Announcements::DisplayAnnouncement() - " + announcement);
             anncmntText.text = announcement;
             anncmntText.enabled = true;
             if (!announcementLog.Contains(announcement))

@@ -17,12 +17,6 @@ public class Tower_Upgrade : MonoBehaviour
         scene_manager = GameObject.FindGameObjectWithTag("SceneManager");
 	}
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
-
     void OnMouseDown()
     {
         if (scene_manager.GetComponent<Mana>().currentMana >= costToUpgrade)
@@ -48,6 +42,5 @@ public class Tower_Upgrade : MonoBehaviour
 
         // delete the old tower
         Destroy(gameObject);
-
     }
 }
