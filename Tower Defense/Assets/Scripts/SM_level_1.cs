@@ -9,18 +9,34 @@ public class SM_level_1 : SM_staging
 
     private Mana mana;
     private Waves waves;
+    private List<GameObject> enemies;
 
     void Start()
     {
         mana = GetComponent<Mana>();
         waves = GetComponent<Waves>();
 
+        enemies = new List<GameObject>();
+
         waves.StartCoroutine("spawnWaves");
     }
 
-    // Update is called once per frame
-    void Update ()
+    void FixedUpdate()
     {
         manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
 	}
+
+    public void register(GameObject enemy)
+    {
+        enemies.Add(enemy);
+    }
+
+    public void deregister(GameObject enemy)
+    {
+        enemies.Remove(enemy);
+        if (enemies.Count == 0 && !waves.isSpawning)
+        {
+            announce("You win!");
+        }
+    }
 }

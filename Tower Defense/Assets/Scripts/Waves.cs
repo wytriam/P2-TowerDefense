@@ -12,9 +12,13 @@ public class Waves : MonoBehaviour
     public float timeBetweenWaves = 5f;
     public int waveCapacity; // how many monsters are in a wave
 
+    [HideInInspector]
+    public bool isSpawning = false;
+
     private WytriamSTD.Spawn spawnPoint;
     private GameObject currentPrefab;
     private int index;
+    private int spawnCount;
 
     void Awake()
     {
@@ -27,27 +31,30 @@ public class Waves : MonoBehaviour
         spawnPoint.setSpawnPrefab(currentPrefab);
         GameObject enemy = spawnPoint.spawn();
         enemy.GetComponent<Enemy_Manager>().waypoint = firstWaypoint;
+        spawnCount++;
     }
 
     // Co-routine to handle spawning waves
     IEnumerator spawnWaves()
     {
-        Debug.Log("Waves::spawnWaves()");
+        isSpawning = true;
         while (index < waves.Length)
         {
             if (index % waveCapacity == 0 && index != 0)
                 GetComponent<WytriamSTD.Scene_Manager>().announce("Next Wave!");
             currentPrefab = waves[index];
             spawnEnemy();
-            index++;
-            if (index % waveCapacity == 0 && index != 0)
+            if (spawnCount % waveCapacity == 0)
             {
-                Debug.Log("Waiting " + timeBetweenWaves + " before spawning next wave.");
-                yield return new WaitForSeconds(timeBetweenWaves);
+                index++;
+                spawnCount = 0;
             }
-            Debug.Log("Spawning new enemy in " + 1 / enemiesPerSecond + " seconds");
-            yield return new WaitForSeconds(1 / enemiesPerSecond);
+            if (index % waveCapacity == 0 && index != 0)
+                yield return new WaitForSeconds(timeBetweenWaves);
+            else
+                yield return new WaitForSeconds(1 / enemiesPerSecond);
         }
+        isSpawning = false;
         // Stop spawning waves if we're out of enemies
         if (index > waves.Length)
             StopCoroutine("spawnWaves");
