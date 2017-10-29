@@ -31,9 +31,7 @@ public class Enemy_Manager : MonoBehaviour
         if (waypoint != null)
         {
             Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, speed * Time.deltaTime);
-            movement.y = lastPos.y;
             gameObject.transform.position = movement;
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             gameObject.transform.LookAt(waypoint.transform);
         }
         if (health <= 0)
@@ -52,29 +50,6 @@ public class Enemy_Manager : MonoBehaviour
         nearbyTowers.Remove(tower);
     }
 
-    void OnCollisionEnter(Collision coll)
-    {
-        GameObject other = coll.gameObject.transform.root.gameObject;
-        if (other.tag == "Waypoint")
-        {
-            //Debug.Log("Enemy_Manager::OnCollisionEnter() - Changing Waypoint");
-            other = coll.gameObject.transform.parent.gameObject;
-            waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
-        }
-        else if (other.tag == "EndPoint")
-        {
-            //Debug.Log("Enemy_Manager::OnCollisionEnter() - Moving to Beginning of Course");
-            mana.currentMana -= 2*health;
-            other = coll.gameObject;
-            waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
-            gameObject.transform.position = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Waves>().enemySpawnPoint.gameObject.transform.position;
-        }
-        else
-        {
-            //Debug.Log("Enemy_Manager::OnCollisionEnter() - Unknown Collision Detected: " + other.tag);
-        }
-    }
-
     public void OnTriggerEnter(Collider coll)
     {
         GameObject other = coll.gameObject.transform.root.gameObject;
@@ -91,6 +66,25 @@ public class Enemy_Manager : MonoBehaviour
             Destroy(other.gameObject);
             health--;
         }
+        if (other.tag == "Waypoint")
+        {
+            Debug.Log("Enemy_Manager::OnTriggerEnter() - Changing Waypoint");
+            other = coll.gameObject.transform.parent.gameObject;
+            waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
+        }
+        else if (other.tag == "EndPoint")
+        {
+            //Debug.Log("Enemy_Manager::OnTriggerEnter() - Moving to Beginning of Course");
+            mana.currentMana -= 2 * health;
+            other = coll.gameObject;
+            waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
+            gameObject.transform.position = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Waves>().enemySpawnPoint.gameObject.transform.position;
+        }
+        else
+        {
+            //Debug.Log("Enemy_Manager::OnTriggerEnter() - Unknown Collision Detected: " + other.tag);
+        }
+
     }
 
     public void OnTriggerExit(Collider coll)
