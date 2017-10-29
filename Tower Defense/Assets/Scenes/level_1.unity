@@ -1074,7 +1074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMana: 0
   startingMana: 150
-  manaPerSecond: 5
+  manaPerSecond: 1
+  noMana: 0
 --- !u!114 &1164787773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,7 +1116,7 @@ MonoBehaviour:
   firstWaypoint: {fileID: 833400905}
   enemySpawnPoint: {fileID: 993505832}
   enemiesPerSecond: 0.5
-  timeBetweenWaves: 5
+  timeBetweenWaves: 10
   enemiesPerWave: 5
   isSpawning: 0
 --- !u!114 &1164787775
