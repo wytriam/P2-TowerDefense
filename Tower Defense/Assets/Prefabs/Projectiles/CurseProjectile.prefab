@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 135501564228878852}
   - component: {fileID: 114406367681432198}
   m_Layer: 9
-  m_Name: DoTProjectile
+  m_Name: CurseProjectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,9 +194,9 @@ MonoBehaviour:
   speed: 20
   duration: 2
   damageOnHit: 0
-  deathSplosion: {fileID: 1808461087675824, guid: 9ae8530cc8b08d34d837ec1376ded39a,
+  deathSplosion: {fileID: 1808461087675824, guid: 9f2135a4decec7f43999e47bad8e9197,
     type: 2}
-  effect: {fileID: 1102865810745554, guid: 2d1f8e43f92d1b148a0d7b7b092a514d, type: 2}
+  effect: {fileID: 1034810208734110, guid: 60d9b1f42e50fa846bc93eacc1e4b63d, type: 2}
 --- !u!135 &135501564228878852
 SphereCollider:
   m_ObjectHideFlags: 1

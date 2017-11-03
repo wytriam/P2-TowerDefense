@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114510333591718594}
   - component: {fileID: 135175204747148100}
   m_Layer: 12
-  m_Name: EmptyEffect
+  m_Name: CurseEffect
   m_TagString: Effect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   DoTdamage: 1
   slowing: 0
   effectDuration: 5
-  curse: 0
+  curse: 1
   enemy: {fileID: 0}
 --- !u!135 &135175204747148100
 SphereCollider:

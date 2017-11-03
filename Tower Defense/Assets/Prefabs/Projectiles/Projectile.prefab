@@ -196,7 +196,7 @@ MonoBehaviour:
   damageOnHit: 1
   deathSplosion: {fileID: 1808461087675824, guid: 82db8eab252d70d4eba47abb8ee48a9c,
     type: 2}
-  effect: {fileID: 0}
+  effect: {fileID: 1034810208734110, guid: 610f94287c864294394ccc58c569662a, type: 2}
 --- !u!135 &135501564228878852
 SphereCollider:
   m_ObjectHideFlags: 1

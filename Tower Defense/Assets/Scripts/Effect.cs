@@ -35,14 +35,16 @@ public class Effect : MonoBehaviour
         {
             // put effect here
             if (damageOverTime)
-            {
                 enemy.health -= DoTdamage;
-            }
+            if (curse)
+                enemy.cursed = true;
             timer += 1;
             if (timer > effectDuration)
             {
                 if (slowing)
                     enemy.speed *= 2;
+                if (curse)
+                    enemy.cursed = false;
                 Destroy(gameObject);
             }
             yield return new WaitForSeconds(1);

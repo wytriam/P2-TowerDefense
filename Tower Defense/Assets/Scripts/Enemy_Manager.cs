@@ -9,6 +9,9 @@ public class Enemy_Manager : MonoBehaviour
     public float health = 5f;
     public float manaForKill = 10f;
 
+    [HideInInspector]
+    public bool cursed = false;
+
     private Vector3 lastPos;
 
     private List<GameObject> nearbyTowers;
@@ -65,6 +68,8 @@ public class Enemy_Manager : MonoBehaviour
             Projectile_Manager p = other.gameObject.GetComponent<Projectile_Manager>();
             p.ParticlesOnDeath();
             health -= p.damageOnHit;
+            if (cursed)
+                health -= p.damageOnHit;
             Instantiate(p.effect, gameObject.transform);
             Destroy(other.gameObject);
         }
