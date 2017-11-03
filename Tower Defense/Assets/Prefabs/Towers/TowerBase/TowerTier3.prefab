@@ -702,4 +702,7 @@ MonoBehaviour:
   upgradesToPrefab: {fileID: 1208884352219288, guid: 9667c0bc1a4c691448fd874d726e62b0,
     type: 2}
   costToUpgrade: 0
+  towerTier: 3
+  upgradeMenu: {fileID: 1367075704552578, guid: 78cab92501124aa47986259326ca68ac,
+    type: 2}
   scene_manager: {fileID: 0}

@@ -6,6 +6,8 @@ public class Tower_Upgrade : MonoBehaviour
 {
     public GameObject upgradesToPrefab;
     public float costToUpgrade = 100f;
+    public int towerTier;
+    public GameObject upgradeMenu;
 
     [HideInInspector]
     public GameObject scene_manager;
@@ -20,13 +22,7 @@ public class Tower_Upgrade : MonoBehaviour
     void OnMouseDown()
     {
         // OPEN MENU
-        // SET costToUpgrade AND upgradesToPrefab FROM MENU
-
-        if (scene_manager.GetComponent<Mana>().currentMana >= costToUpgrade)
-        {
-            upgrade();
-            scene_manager.GetComponent<Mana>().currentMana -= costToUpgrade;
-        }
+        upgradeMenu.GetComponent<UpgradeMenu>().openMenu(this, towerTier);
     }
 
     public void setCostandPrefab(int cost, GameObject towerPrefab)
@@ -35,7 +31,16 @@ public class Tower_Upgrade : MonoBehaviour
         upgradesToPrefab = towerPrefab; 
     }
 
-    public void upgrade()
+    public void checkUpgrade()
+    {
+        if (scene_manager.GetComponent<Mana>().currentMana >= costToUpgrade)
+        {
+            upgrade();
+            scene_manager.GetComponent<Mana>().currentMana -= costToUpgrade;
+        }
+    }
+
+    private void upgrade()
     {
         // create the new tower based on the prefab and set it's transform to be equivalent to this transform
         GameObject upgrade = Instantiate(upgradesToPrefab);
