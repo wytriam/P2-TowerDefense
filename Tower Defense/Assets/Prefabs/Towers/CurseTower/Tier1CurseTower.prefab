@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7f8cb8a0d767c48a004a96d8eb2548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradesToPrefab: {fileID: 1847229740819916, guid: d692f489387ac5c479fb0689d2af61cf,
+  upgradesToPrefab: {fileID: 1847229740819916, guid: 0d84342ce8a090640ab5a2d4be5bee2a,
     type: 2}
   costToUpgrade: 250
   scene_manager: {fileID: 0}
