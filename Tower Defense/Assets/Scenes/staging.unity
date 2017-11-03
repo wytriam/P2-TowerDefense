@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.4964127, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -378,6 +378,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e15c551e62fda14c90b2e6cf15ba116, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &414996749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 414996750}
+  m_Layer: 12
+  m_Name: Effect
+  m_TagString: Effect
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &414996750
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 414996749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &571504480
 Prefab:
   m_ObjectHideFlags: 0
@@ -388,12 +416,12 @@ Prefab:
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 293
+      value: 329
       objectReference: {fileID: 0}
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 163
+      value: 185
       objectReference: {fileID: 0}
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
@@ -641,7 +669,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89f76e7bf4adfc4b96a5b7311b37e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLights: []
   sun: {fileID: 806272050}
+  dayLengthMultiplier: 0
   speed: 10
 --- !u!1001 &806786593
 Prefab:
@@ -988,12 +1018,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2239265839fd8994099c4e7fed7d4507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
-  - {fileID: 0}
-  firstWaypoint: {fileID: 1921176112}
-  enemySpawnPoint: {fileID: 1705049639}
-  enemiesPerSecond: 0.5
 --- !u!4 &1283528283
 Transform:
   m_ObjectHideFlags: 0
@@ -1266,11 +1290,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1705049639 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1895735812723720, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1705049638}
 --- !u!1001 &1921176110
 Prefab:
   m_ObjectHideFlags: 0
@@ -1333,11 +1352,6 @@ Prefab:
 --- !u!4 &1921176111 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4748320942818636, guid: 634824f7dfdaa064da43fa8a02e90a90,
-    type: 2}
-  m_PrefabInternal: {fileID: 1921176110}
---- !u!1 &1921176112 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1166135819782936, guid: 634824f7dfdaa064da43fa8a02e90a90,
     type: 2}
   m_PrefabInternal: {fileID: 1921176110}
 --- !u!1 &1927088677

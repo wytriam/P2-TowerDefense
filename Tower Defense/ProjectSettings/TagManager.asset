@@ -13,6 +13,7 @@ TagManager:
   - Button
   - MenuPage
   - SceneManager
+  - Effect
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Projectiles
   - Waypoint
   - TowerRange
-  - 
+  - Effect
   - 
   - 
   - 
