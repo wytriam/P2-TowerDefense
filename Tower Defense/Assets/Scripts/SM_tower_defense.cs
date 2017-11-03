@@ -57,7 +57,7 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
         {
             announce("You win!");
             saveScore();
-            Invoke("openNextLevel", 3);
+            openNextLevel();
         }
 
         if (mana.noMana)
@@ -65,7 +65,6 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
             announce("You Lose.");
             saveScore();
             resetScore();
-            Time.timeScale = 0;
             openGameOver();
         }
     }

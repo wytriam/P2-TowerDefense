@@ -19,6 +19,7 @@ public class NextLevelMenu : MonoBehaviour
 
     public void openMenu()
     {
+        Time.timeScale = 0;
         menu.SetActive(true);
         sm.manaDisplay.enabled = false;
         sm.scoreDisplay.enabled = false;
@@ -27,6 +28,7 @@ public class NextLevelMenu : MonoBehaviour
 
     public void closeMenu()
     {
+        Time.timeScale = 1;
         menu.SetActive(false);
         sm.manaDisplay.enabled = true;
         sm.scoreDisplay.enabled = true;
