@@ -6,8 +6,10 @@ public class Projectile_Manager : MonoBehaviour
 {
     public float maxHeight = 6f; //after reach this height, the projectile finds the nearest enemy and attacks it
     public float speed = 4f;
-    public float life = 2f;
+    public float duration = 2f;
+    public int damageOnHit = 1;
     public GameObject deathSplosion;
+    public GameObject effect;
 
     private bool seekAndDestroy;
     private Vector3 lastPos;
@@ -26,7 +28,7 @@ public class Projectile_Manager : MonoBehaviour
     {
         lastPos = gameObject.transform.position;
         lifeTimer += Time.fixedDeltaTime;
-        if (lifeTimer > life)
+        if (lifeTimer > duration)
         {
             Destroy(gameObject);
         }

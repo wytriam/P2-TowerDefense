@@ -62,9 +62,12 @@ public class Enemy_Manager : MonoBehaviour
         if (other.tag == "Projectile")
         {
             //Debug.Log("Enemy_Manager::OnTriggerEnter - Got hit by projectile");
-            other.gameObject.GetComponent<Projectile_Manager>().ParticlesOnDeath();
+            Projectile_Manager p = other.gameObject.GetComponent<Projectile_Manager>();
+            p.ParticlesOnDeath();
+            health -= p.damageOnHit;
+            if (p.effect == null)
+                Instantiate(p.effect, gameObject.transform);
             Destroy(other.gameObject);
-            health--;
         }
         if (other.tag == "Waypoint")
         {

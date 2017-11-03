@@ -8,6 +8,7 @@ public class Effect : MonoBehaviour
     public float DoTdamage = 1;
     public bool slowing;
     public float effectDuration = 5f;
+    public bool curse;
 
     [HideInInspector]
     public Enemy_Manager enemy;
