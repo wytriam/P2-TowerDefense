@@ -15,11 +15,13 @@ public class UpgradeMenu : MonoBehaviour {
 
     private GameObject menu;
     private int towerTier;
+    //private SM_tower_defense sm;
     
     // Use this for initialization
 	void Start ()
     {
         menu = transform.GetChild(0).gameObject;
+        //sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
         menu.SetActive(false);
 	}
 	
