@@ -10,7 +10,7 @@ public class Enemy_Manager : MonoBehaviour
     public float manaForKill = 10f;
 
     [HideInInspector]
-    public bool cursed = false;
+    public float damageMultiplier = 1f;
 
     private Vector3 lastPos;
 
@@ -67,9 +67,7 @@ public class Enemy_Manager : MonoBehaviour
             //Debug.Log("Enemy_Manager::OnTriggerEnter - Got hit by projectile");
             Projectile_Manager p = other.gameObject.GetComponent<Projectile_Manager>();
             p.ParticlesOnDeath();
-            health -= p.damageOnHit;
-            if (cursed)
-                health -= p.damageOnHit;
+            health -= p.damageOnHit * damageMultiplier;
             Instantiate(p.effect, gameObject.transform);
             Destroy(other.gameObject);
         }

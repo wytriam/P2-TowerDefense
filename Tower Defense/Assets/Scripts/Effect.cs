@@ -9,6 +9,7 @@ public class Effect : MonoBehaviour
     public bool slowing;
     public float effectDuration = 5f;
     public bool curse;
+    public float curseIntensity = 2f;
 
     [HideInInspector]
     public Enemy_Manager enemy;
@@ -31,20 +32,20 @@ public class Effect : MonoBehaviour
     {
         if (slowing)
             enemy.speed /= 2;
+        if (curse)
+            enemy.damageMultiplier *= 2;
         while (true)
         {
             // put effect here
             if (damageOverTime)
                 enemy.health -= DoTdamage;
-            if (curse)
-                enemy.cursed = true;
             timer += 1;
             if (timer > effectDuration)
             {
                 if (slowing)
                     enemy.speed *= 2;
                 if (curse)
-                    enemy.cursed = false;
+                    enemy.damageMultiplier /= 2;
                 Destroy(gameObject);
             }
             yield return new WaitForSeconds(1);
