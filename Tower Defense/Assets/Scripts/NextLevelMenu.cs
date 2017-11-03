@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverMenu : MonoBehaviour {
-
+public class NextLevelMenu : MonoBehaviour
+{
     private GameObject menu;
     protected SM_tower_defense sm;
 
     // Use this for initialization
     void Start()
     {
-        menu = transform.GetChild(1).gameObject;
+        menu = transform.GetChild(2).gameObject;
         sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
         menu.SetActive(false);
     }
@@ -35,4 +35,9 @@ public class GameOverMenu : MonoBehaviour {
         SceneManager.LoadScene("menu");
     }
 
+
+    public void nextLevel()
+    {
+        SceneManager.LoadScene(sm.nextSceneName);
+    }
 }
