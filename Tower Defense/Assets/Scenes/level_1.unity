@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMana: 0
-  startingMana: 1
+  startingMana: 150
   manaPerSecond: 1
   noMana: 0
 --- !u!114 &1164787773
@@ -1516,16 +1516,6 @@ Prefab:
     - target: {fileID: 4859141137633138, guid: 069225ef39f64214f98152f97fba8180, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114410105622428928, guid: 069225ef39f64214f98152f97fba8180,
-        type: 2}
-      propertyPath: speed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114410105622428928, guid: 069225ef39f64214f98152f97fba8180,
-        type: 2}
-      propertyPath: sprintMultiplier
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 069225ef39f64214f98152f97fba8180, type: 2}
