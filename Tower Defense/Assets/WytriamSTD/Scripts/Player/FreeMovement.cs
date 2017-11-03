@@ -31,6 +31,10 @@ public class FreeMovement : MonoBehaviour
             moveDirection.y = -speed;
         if (Input.GetKey(KeyCode.LeftShift))
             moveDirection *= sprintMultiplier;
-        characterController.Move(moveDirection * Time.deltaTime);
+
+        if (Time.timeScale == 1)
+            characterController.Move(moveDirection * Time.deltaTime);
+        else if(Time.timeScale == 0)
+            characterController.Move(moveDirection * 0.0167f);
     }
 }
