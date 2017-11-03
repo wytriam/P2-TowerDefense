@@ -543,6 +543,12 @@ Prefab:
       propertyPath: scene_manager
       value: 
       objectReference: {fileID: 1164787769}
+    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
+        type: 2}
+      propertyPath: upgradesToPrefab
+      value: 
+      objectReference: {fileID: 1022675881010706, guid: 8500141388651ae44893a0ce07fcb279,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1c48cea3a98b548a1854942402c44d, type: 2}
   m_IsPrefabParent: 0

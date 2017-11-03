@@ -40,7 +40,11 @@ public class Effect : MonoBehaviour
             }
             timer += 1;
             if (timer > effectDuration)
+            {
+                if (slowing)
+                    enemy.speed *= 2;
                 Destroy(gameObject);
+            }
             yield return new WaitForSeconds(1);
         }
     }

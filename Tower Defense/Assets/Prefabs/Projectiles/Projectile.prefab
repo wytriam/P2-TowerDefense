@@ -192,9 +192,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 6
   speed: 20
-  life: 5
+  duration: 2
+  damageOnHit: 1
   deathSplosion: {fileID: 1808461087675824, guid: 82db8eab252d70d4eba47abb8ee48a9c,
     type: 2}
+  effect: {fileID: 0}
 --- !u!135 &135501564228878852
 SphereCollider:
   m_ObjectHideFlags: 1

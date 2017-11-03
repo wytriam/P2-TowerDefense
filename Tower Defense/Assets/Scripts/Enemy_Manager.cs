@@ -65,8 +65,7 @@ public class Enemy_Manager : MonoBehaviour
             Projectile_Manager p = other.gameObject.GetComponent<Projectile_Manager>();
             p.ParticlesOnDeath();
             health -= p.damageOnHit;
-            if (p.effect == null)
-                Instantiate(p.effect, gameObject.transform);
+            Instantiate(p.effect, gameObject.transform);
             Destroy(other.gameObject);
         }
         if (other.tag == "Waypoint")
