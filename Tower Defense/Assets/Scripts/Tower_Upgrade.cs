@@ -7,6 +7,7 @@ public class Tower_Upgrade : MonoBehaviour
     public GameObject upgradesToPrefab;
     public float costToUpgrade = 100f;
     public int towerTier;
+    public bool useMenu = false;
     public GameObject upgradeMenu;
 
     [HideInInspector]
@@ -21,8 +22,10 @@ public class Tower_Upgrade : MonoBehaviour
 	
     void OnMouseDown()
     {
-        // OPEN MENU
-        upgradeMenu.GetComponent<UpgradeMenu>().openMenu(this, towerTier);
+        if (useMenu)
+            upgradeMenu.GetComponent<UpgradeMenu>().openMenu(this, towerTier);
+        else
+            checkUpgrade();
     }
 
     public void setCostandPrefab(int cost, GameObject towerPrefab)

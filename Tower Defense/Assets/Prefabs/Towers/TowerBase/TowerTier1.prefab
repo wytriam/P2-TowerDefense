@@ -356,6 +356,7 @@ MonoBehaviour:
     type: 2}
   costToUpgrade: 100
   towerTier: 1
+  useMenu: 1
   upgradeMenu: {fileID: 1367075704552578, guid: 78cab92501124aa47986259326ca68ac,
     type: 2}
   scene_manager: {fileID: 0}
