@@ -20,8 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4184829075567646}
   - component: {fileID: 114915832203585310}
+  - component: {fileID: 135828014155047812}
   m_Layer: 12
-  m_Name: Effect
+  m_Name: DoTEffect
   m_TagString: Effect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,4 +55,17 @@ MonoBehaviour:
   damageOverTime: 1
   DoTdamage: 1
   slowing: 0
+  effectDuration: 5
   enemy: {fileID: 0}
+--- !u!135 &135828014155047812
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102865810745554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
