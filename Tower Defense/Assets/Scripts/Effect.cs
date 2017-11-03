@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Effect : MonoBehaviour
 {
-    public bool damageOverTime;
-    public float DoTdamage = 1;
-    public bool slowing;
     public float effectDuration = 5f;
+    public bool damageOverTime;
+    public bool slowing;
     public bool curse;
+    public float DoTdamage = 1;
     public float curseIntensity = 2f;
 
     [HideInInspector]
@@ -38,7 +38,7 @@ public class Effect : MonoBehaviour
         {
             // put effect here
             if (damageOverTime)
-                enemy.health -= DoTdamage;
+                enemy.health -= DoTdamage * enemy.damageMultiplier;
             timer += 1;
             if (timer > effectDuration)
             {

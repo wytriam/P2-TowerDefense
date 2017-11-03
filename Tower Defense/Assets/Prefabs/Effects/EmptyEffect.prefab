@@ -52,11 +52,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289c11aab825806459248f113dd94e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effectDuration: 0
   damageOverTime: 0
-  DoTdamage: 1
   slowing: 0
-  effectDuration: 5
   curse: 0
+  DoTdamage: 1
+  curseIntensity: 2
   enemy: {fileID: 0}
 --- !u!135 &135175204747148100
 SphereCollider:

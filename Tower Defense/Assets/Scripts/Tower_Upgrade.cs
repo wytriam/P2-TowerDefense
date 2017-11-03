@@ -19,11 +19,20 @@ public class Tower_Upgrade : MonoBehaviour
 	
     void OnMouseDown()
     {
+        // OPEN MENU
+        // SET costToUpgrade AND upgradesToPrefab FROM MENU
+
         if (scene_manager.GetComponent<Mana>().currentMana >= costToUpgrade)
         {
             upgrade();
             scene_manager.GetComponent<Mana>().currentMana -= costToUpgrade;
         }
+    }
+
+    public void setCostandPrefab(int cost, GameObject towerPrefab)
+    {
+        costToUpgrade = cost;
+        upgradesToPrefab = towerPrefab; 
     }
 
     public void upgrade()
