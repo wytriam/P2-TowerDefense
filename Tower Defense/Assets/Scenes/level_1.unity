@@ -256,7 +256,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.8451259, b: 0.47794116, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 100
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -728,12 +728,12 @@ Prefab:
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 278
+      value: 331
       objectReference: {fileID: 0}
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 156.5
+      value: 205.5
       objectReference: {fileID: 0}
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
@@ -964,7 +964,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.8451259, b: 0.47794116, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 100
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1149,12 +1149,12 @@ Prefab:
     - target: {fileID: 224957646096052806, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 278
+      value: 331
       objectReference: {fileID: 0}
     - target: {fileID: 224957646096052806, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 156.5
+      value: 205.5
       objectReference: {fileID: 0}
     - target: {fileID: 224285529581539974, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -1179,12 +1179,12 @@ Prefab:
     - target: {fileID: 224401626732552374, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 278
+      value: 331
       objectReference: {fileID: 0}
     - target: {fileID: 224401626732552374, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 156.5
+      value: 205.5
       objectReference: {fileID: 0}
     - target: {fileID: 224979164605659554, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -1194,12 +1194,12 @@ Prefab:
     - target: {fileID: 224257395194325092, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 278
+      value: 331
       objectReference: {fileID: 0}
     - target: {fileID: 224257395194325092, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 156.5
+      value: 205.5
       objectReference: {fileID: 0}
     - target: {fileID: 224218547617822246, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -1210,6 +1210,16 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 141.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224669628368456836, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 331
+      objectReference: {fileID: 0}
+    - target: {fileID: 224669628368456836, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 205.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6245de837eb96b745a66237c901c6c14, type: 2}
@@ -1254,7 +1264,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.8451259, b: 0.47794116, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 100
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1545,7 +1555,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.8451259, b: 0.47794116, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 100
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1733,7 +1743,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 0.8451259, b: 0.47794116, a: 1}
   m_Intensity: 1
-  m_Range: 50
+  m_Range: 100
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
