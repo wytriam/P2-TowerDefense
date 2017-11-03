@@ -10,13 +10,27 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     public Text scoreDisplay;
     public GameObject menus;
 
+    [HideInInspector]
+    public float score;
+
     private Mana mana;
     private Waves waves;
     private EnemyCounter enemies;
 
+    void Awake()
+    {
+        // If the PlayerPrefs score already exists, read it
+        if (PlayerPrefs.HasKey("score"))
+        {
+            score = PlayerPrefs.GetFloat("score");
+        }
+        // Assign the score to score
+        PlayerPrefs.SetFloat("score", score);
+    }
+
     void Start()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 0;
 
         mana = GetComponent<Mana>();
         waves = GetComponent<Waves>();
@@ -25,21 +39,43 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
         waves.StartCoroutine("spawnWaves");
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            toggleTime();
+
+        if(!mana.noMana)
+            score += (mana.manaPerSecond) * Time.fixedDeltaTime;
+
+    }
+
     void FixedUpdate()
     {
         manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
+        scoreDisplay.text = "Score: " + score.ToString("F2");
         if (!waves.isSpawning && enemies.allEnemiesKilled)
         {
             announce("You win!");
+            saveScore();
             Invoke("openNextLevel", 3);
         }
 
         if (mana.noMana)
         {
             announce("You Lose.");
+            saveScore();
+            resetScore();
             Time.timeScale = 0;
             openGameOver();
         }
+    }
+
+    void toggleTime()
+    {
+        if (Time.timeScale == 0)
+            Time.timeScale = 1;
+        else if (Time.timeScale == 1)
+            Time.timeScale = 0;
     }
 
     void openNextLevel()
@@ -50,5 +86,44 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     void openGameOver()
     {
         menus.GetComponent<GameOverMenu>().openMenu();
+    }
+
+    void saveScore()
+    {
+        PlayerPrefs.SetFloat("score", score);
+        float temp = score;
+        if (PlayerPrefs.HasKey("HighScore1"))
+        {
+            if (temp > PlayerPrefs.GetFloat("HighScore1"))
+            {
+                float temp1 = PlayerPrefs.GetFloat("HighScore1");
+                PlayerPrefs.SetFloat("HighScore1", temp);
+                temp = temp1;
+            }
+        }
+        if (PlayerPrefs.HasKey("HighScore2"))
+        {
+            if (temp > PlayerPrefs.GetFloat("HighScore2"))
+            {
+                float temp1 = PlayerPrefs.GetFloat("HighScore2");
+                PlayerPrefs.SetFloat("HighScore2", temp);
+                temp = temp1;
+            }
+        }
+        if (PlayerPrefs.HasKey("HighScore3"))
+        {
+            if (temp > PlayerPrefs.GetFloat("HighScore3"))
+            {
+                float temp1 = PlayerPrefs.GetFloat("HighScore3");
+                PlayerPrefs.SetFloat("HighScore3", temp);
+                temp = temp1;
+            }
+        }
+    }
+
+    void resetScore()
+    {
+        score = 0;
+        PlayerPrefs.SetFloat("score", 0);
     }
 }

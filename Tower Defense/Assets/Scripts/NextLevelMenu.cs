@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class NextLevelMenu : MonoBehaviour
@@ -21,6 +22,7 @@ public class NextLevelMenu : MonoBehaviour
         menu.SetActive(true);
         sm.manaDisplay.enabled = false;
         sm.scoreDisplay.enabled = false;
+        menu.GetComponentInChildren<Text>().text = "Score: " + sm.score.ToString("F2");
     }
 
     public void closeMenu()

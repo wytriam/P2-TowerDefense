@@ -17,6 +17,7 @@ public class Enemy_Manager : MonoBehaviour
     private List<GameObject> nearbyTowers;
     private Mana mana;
     private EnemyCounter enemycounter;
+    private SM_tower_defense sm;
 
     // Use this for initialization
     void Start()
@@ -24,6 +25,7 @@ public class Enemy_Manager : MonoBehaviour
         nearbyTowers = new List<GameObject>();
         mana = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Mana>();
         enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
+        sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
         enemycounter.register(gameObject);
     }
 
@@ -42,6 +44,7 @@ public class Enemy_Manager : MonoBehaviour
             foreach (GameObject tower in nearbyTowers)
                 tower.GetComponent<Tower_Manager>().deregister(gameObject);
             mana.currentMana += manaForKill;
+            sm.score += (int)manaForKill;
             enemycounter.deregister(gameObject);
             Destroy(gameObject);
         }

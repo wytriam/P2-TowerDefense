@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour {
@@ -13,6 +14,7 @@ public class GameOverMenu : MonoBehaviour {
     {
         menu = transform.GetChild(1).gameObject;
         sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
+        menu.GetComponentInChildren<Text>().text = "Score: " + sm.score.ToString("F2");
         menu.SetActive(false);
     }
 

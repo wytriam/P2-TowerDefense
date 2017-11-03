@@ -15,6 +15,23 @@ public class SM_menu : MonoBehaviour
     private GameObject scorePage;
     private GameObject creditsPage;
 
+    void Awake()
+    {
+        // initialize high scores
+        if (!PlayerPrefs.HasKey("HighScore1"))
+        {
+            PlayerPrefs.SetFloat("HighScore1", 0);
+        }
+        if (!PlayerPrefs.HasKey("HighScore2"))
+        {
+            PlayerPrefs.SetFloat("HighScore2", 0);
+        }
+        if (!PlayerPrefs.HasKey("HighScore3"))
+        {
+            PlayerPrefs.SetFloat("HighScore3", 0);
+        }
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -73,6 +90,9 @@ public class SM_menu : MonoBehaviour
         Debug.Log("SM_menu::highScores() - Button Pushed");
         hideButtons();
         activePage = scorePage;
+        activePage.GetComponent<Text>().text = "1. " + PlayerPrefs.GetFloat("HighScore1").ToString("F2") + "\n" +
+                                               "2. " + PlayerPrefs.GetFloat("HighScore2").ToString("F2") + "\n" +
+                                               "3. " + PlayerPrefs.GetFloat("HighScore3").ToString("F2");
         activePage.SetActive(true);
     }
 
