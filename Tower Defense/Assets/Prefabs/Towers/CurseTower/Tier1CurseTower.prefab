@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78a1351cd0eef74abd059ba2feaf194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1308953224557846, guid: 814a4d6c05b83b44994f54890446a127, type: 2}
+  projectile: {fileID: 1308953224557846, guid: 832dd79cf0bbb7f4b9938ffc31016bff, type: 2}
   rateOfFire: 0.5
 --- !u!135 &135516200341722392
 SphereCollider:
