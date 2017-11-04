@@ -205,7 +205,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 4294967294
   m_IsActive: 1
 --- !u!154 &44488017
 TerrainCollider:
@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMana: 0
   startingMana: 300
-  manaPerSecond: 1
+  manaPerSecond: 5
   noMana: 0
 --- !u!114 &1548397605
 MonoBehaviour:
