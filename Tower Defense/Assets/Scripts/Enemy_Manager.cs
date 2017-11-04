@@ -12,6 +12,12 @@ public class Enemy_Manager : MonoBehaviour
     [HideInInspector]
     public float damageMultiplier = 1f;
 
+    [HideInInspector]
+    public GameObject firstWaypoint;
+
+    [HideInInspector]
+    public Vector3 spawnPos;
+
     private Vector3 lastPos;
 
     private List<GameObject> nearbyTowers;
@@ -85,8 +91,8 @@ public class Enemy_Manager : MonoBehaviour
             //Debug.Log("Enemy_Manager::OnTriggerEnter() - Moving to Beginning of Course");
             mana.currentMana -= 2 * health;
             other = coll.gameObject;
-            waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
-            gameObject.transform.position = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Waves>().enemySpawnPoint.gameObject.transform.position;
+            waypoint = firstWaypoint;
+            gameObject.transform.position = spawnPos;
         }
         else
         {
@@ -106,5 +112,4 @@ public class Enemy_Manager : MonoBehaviour
             nearbyTowers.Remove(other.gameObject);
         }
     }
-
 }
