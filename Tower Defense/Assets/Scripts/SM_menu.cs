@@ -143,5 +143,8 @@ public class SM_menu : MonoBehaviour
         PlayerPrefs.SetFloat("HighScore1", 0);
         PlayerPrefs.SetFloat("HighScore2", 0);
         PlayerPrefs.SetFloat("HighScore3", 0);
+        scorePage.GetComponent<Text>().text =  "1. " + PlayerPrefs.GetFloat("HighScore1").ToString("F2") + "\n" +
+                                               "2. " + PlayerPrefs.GetFloat("HighScore2").ToString("F2") + "\n" +
+                                               "3. " + PlayerPrefs.GetFloat("HighScore3").ToString("F2");
     }
 }

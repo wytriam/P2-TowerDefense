@@ -64,8 +64,8 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
         {
             announce("You Lose.");
             saveScore();
-            resetScore();
             openGameOver();
+            resetScore();
         }
     }
 

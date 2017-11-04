@@ -20,7 +20,9 @@ public class Mana : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (!noMana && currentMana <= 0)
+        if (noMana) return;
+
+        if (currentMana <= 0)
         {
             noMana = true;
             return;
