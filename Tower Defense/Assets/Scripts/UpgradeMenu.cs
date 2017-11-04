@@ -32,6 +32,11 @@ public class UpgradeMenu : MonoBehaviour {
         towerToUpgrade = tower;
     }
 
+    public void closeMenu()
+    {
+        menu.SetActive(false);
+    }
+
     public void selectMagicTower()
     {
         towerToUpgrade.setCostandPrefab(100, magicTower[towerTier]);
