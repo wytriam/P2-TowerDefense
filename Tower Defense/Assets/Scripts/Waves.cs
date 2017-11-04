@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Waves : MonoBehaviour
 {
+    [Header("Monsters go here")]
     public GameObject[] waves;
 
     public GameObject firstWaypoint;
+    public GameObject[] alternateWaypoints;
     public GameObject enemySpawnPoint;
+    public GameObject[] alternateSpawns;
     public float enemiesPerSecond = 0.5f;
     public float timeBetweenWaves = 5f;
     public int enemiesPerWave; // how many monsters are in a wave
@@ -47,6 +50,10 @@ public class Waves : MonoBehaviour
             if (spawnCount % enemiesPerWave == 0)
             {
                 index++;
+                if (alternateWaypoints.Length != 0)
+                    firstWaypoint = alternateWaypoints[index % alternateWaypoints.Length];
+                if (alternateSpawns.Length != 0)
+                    spawnPoint = alternateSpawns[index % alternateSpawns.Length].GetComponent<WytriamSTD.Spawn>();
                 spawnCount = 0;
             }
             if (spawnCount % enemiesPerWave == 0 && index != 0)
