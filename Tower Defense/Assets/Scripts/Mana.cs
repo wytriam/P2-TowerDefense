@@ -8,7 +8,7 @@ public class Mana : MonoBehaviour
     public float startingMana;
     public float manaPerSecond;
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool noMana = false;
 
 	// Use this for initialization
