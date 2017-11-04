@@ -136,12 +136,4 @@ public class SM_menu : MonoBehaviour
         showButtons();
         activePage.SetActive(false);
     }
-
-    public void resetScores()
-    {
-        PlayerPrefs.SetFloat("score", 0);
-        PlayerPrefs.SetFloat("HighScore1", 0);
-        PlayerPrefs.SetFloat("HighScore2", 0);
-        PlayerPrefs.SetFloat("HighScore3", 0);
-    }
 }
