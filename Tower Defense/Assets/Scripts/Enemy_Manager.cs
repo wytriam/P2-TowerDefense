@@ -50,7 +50,8 @@ public class Enemy_Manager : MonoBehaviour
             foreach (GameObject tower in nearbyTowers)
                 tower.GetComponent<Tower_Manager>().deregister(gameObject);
             mana.currentMana += manaForKill;
-            sm.score += (int)manaForKill;
+            if (sm != null)
+                sm.score += (int)manaForKill;
             enemycounter.deregister(gameObject);
             Destroy(gameObject);
         }

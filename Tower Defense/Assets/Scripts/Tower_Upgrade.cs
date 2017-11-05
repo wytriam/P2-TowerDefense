@@ -61,7 +61,8 @@ public class Tower_Upgrade : MonoBehaviour
             tm.deregisterAll();
 
         scene_manager.GetComponent<Mana>().currentMana -= costToUpgrade;
-        scene_manager.GetComponent<SM_tower_defense>().displayScore();
+        if(scene_manager.GetComponent<SM_tower_defense>() != null)
+            scene_manager.GetComponent<SM_tower_defense>().displayMana();
 
         // delete the old tower
         Destroy(gameObject);

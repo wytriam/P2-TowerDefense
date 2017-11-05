@@ -88,6 +88,12 @@ public class SM_menu : MonoBehaviour
         SceneManager.LoadScene(NextSceneName);
     }
 
+    // Play button is pushed
+    public void tutorial()
+    {
+        SceneManager.LoadScene("tutorial");
+    }
+
     // High Scores button is pushed
     public void highScores()
     {

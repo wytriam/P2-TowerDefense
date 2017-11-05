@@ -52,7 +52,7 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
 
     void FixedUpdate()
     {
-        manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
+        displayMana();
         displayScore();
         if (!waves.isSpawning && enemies.allEnemiesKilled)
         {
@@ -75,6 +75,11 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     public void displayScore()
     {
         scoreDisplay.text = "Score: " + score.ToString("F2");
+    }
+
+    public void displayMana()
+    {
+        manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
     }
 
     void toggleTime()
