@@ -33,5 +33,11 @@ namespace WytriamSTD
             //Debug.Log("Scene_Manager::announce() - " + announcement);
             Announcements.getInstance().DisplayAnnouncement(announcement);
         }
+
+        public void announce(string announcement, int duration)
+        {
+            //Debug.Log("Scene_Manager::announce() - " + announcement);
+            Announcements.getInstance().DisplayAnnouncement(announcement, duration);
+        }
     }
 }

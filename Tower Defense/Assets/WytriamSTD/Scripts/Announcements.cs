@@ -24,6 +24,7 @@ namespace WytriamSTD
         }
 
         public float announcementDuration = 5.0f;
+        public float defaultDuration = 5.0f;
 
         private List<string> announcementLog;
         private Text anncmntText;
@@ -52,6 +53,7 @@ namespace WytriamSTD
                 if (timer >= announcementDuration)
                 {
                     anncmntText.enabled = false;
+                    announcementDuration = defaultDuration;
                     timer = 0.0f;
                 }
             }
@@ -72,7 +74,18 @@ namespace WytriamSTD
             if (!announcementLog.Contains(announcement))
                 announcementLog.Add(announcement);
         }
-        
+
+        // Display an announcement to the screen for a fixed duration. If this announcement is not on the log, it will be added to the log
+        public void DisplayAnnouncement(string announcement, int duration)
+        {
+            //Debug.Log("Announcements::DisplayAnnouncement() - " + announcement);
+            anncmntText.text = announcement;
+            announcementDuration = duration;
+            anncmntText.enabled = true;
+            if (!announcementLog.Contains(announcement))
+                announcementLog.Add(announcement);
+        }
+
         // Display an announcement from the announcementLog at location index to the screen.
         public void DisplayAnnouncement(int index)
         {
