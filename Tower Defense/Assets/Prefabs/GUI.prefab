@@ -98,6 +98,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1230554905012314
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224515099581240754}
+  - component: {fileID: 222948088848258116}
+  - component: {fileID: 114245939118959462}
+  m_Layer: 5
+  m_Name: priceDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1234008968781656
 GameObject:
   m_ObjectHideFlags: 1
@@ -196,13 +213,14 @@ GameObject:
   - component: {fileID: 222527204388928786}
   - component: {fileID: 114784590587001154}
   - component: {fileID: 114654268662384562}
+  - component: {fileID: 114151364958685452}
   m_Layer: 5
   m_Name: Slowing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1469680610950030
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +372,7 @@ GameObject:
   - component: {fileID: 222582946460108584}
   - component: {fileID: 114620003075480074}
   - component: {fileID: 114861126371809752}
+  - component: {fileID: 114644862196577584}
   m_Layer: 5
   m_Name: Curse
   m_TagString: Untagged
@@ -372,6 +391,7 @@ GameObject:
   - component: {fileID: 222840569132619842}
   - component: {fileID: 114919774861030242}
   - component: {fileID: 114924323594597460}
+  - component: {fileID: 114675538637575776}
   m_Layer: 5
   m_Name: Magic
   m_TagString: Untagged
@@ -425,6 +445,7 @@ GameObject:
   - component: {fileID: 222830751732048578}
   - component: {fileID: 114918785577103072}
   - component: {fileID: 114967441352696840}
+  - component: {fileID: 114699266246847552}
   m_Layer: 5
   m_Name: Fire
   m_TagString: Untagged
@@ -613,6 +634,52 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114151364958685452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392277158218452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1db6d726c6791a44acf3e55b63abd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeMenuGUI: {fileID: 1469680610950030}
+  TowerType: Slowing
+--- !u!114 &114245939118959462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230554905012314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.51724136, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: ' Mana'
 --- !u!114 &114273651159070078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -780,6 +847,11 @@ MonoBehaviour:
   - {fileID: 1356158236618314, guid: ae8d0fdbd3ea42d468ffa1402a00322b, type: 2}
   - {fileID: 1847229740819916, guid: 0d84342ce8a090640ab5a2d4be5bee2a, type: 2}
   - {fileID: 1208884352219288, guid: 449ee7e7d42a8b4468e17faad35af35f, type: 2}
+  priceDisplay: {fileID: 114245939118959462}
+  baseMagicCost: 100
+  baseFireCost: 150
+  baseSlowingCost: 200
+  baseCurseCost: 300
 --- !u!114 &114513046129810344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1038,6 +1110,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114644862196577584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1861262573372772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1db6d726c6791a44acf3e55b63abd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeMenuGUI: {fileID: 1469680610950030}
+  TowerType: Curse
 --- !u!114 &114654268662384562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1117,6 +1202,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114675538637575776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1879621462503720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1db6d726c6791a44acf3e55b63abd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeMenuGUI: {fileID: 1469680610950030}
+  TowerType: Magic
 --- !u!114 &114690898946795476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1133,6 +1231,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114699266246847552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1951353839497068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1db6d726c6791a44acf3e55b63abd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeMenuGUI: {fileID: 1469680610950030}
+  TowerType: Fire
 --- !u!114 &114709919317837034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1802,6 +1913,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1286472616760838}
+--- !u!222 &222948088848258116
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230554905012314}
 --- !u!222 &222964921911730352
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -2138,6 +2255,24 @@ RectTransform:
   m_AnchoredPosition: {x: -80, y: -15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224515099581240754
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230554905012314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -128, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224957646096052806}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -128}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224616907958951338
 RectTransform:
   m_ObjectHideFlags: 1
@@ -2257,16 +2392,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1951353839497068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224237470939402414}
   m_Father: {fileID: 224957646096052806}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 80, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224880817652028814
@@ -2302,6 +2437,7 @@ RectTransform:
   - {fileID: 224280107509521918}
   - {fileID: 224073268259336382}
   - {fileID: 224494954212929130}
+  - {fileID: 224515099581240754}
   m_Father: {fileID: 4529997667318806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

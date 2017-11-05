@@ -31,6 +31,7 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     void Start()
     {
         Time.timeScale = 0;
+        announce("Press Space to begin!");
 
         mana = GetComponent<Mana>();
         waves = GetComponent<Waves>();
@@ -52,7 +53,7 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     void FixedUpdate()
     {
         manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
-        scoreDisplay.text = "Score: " + score.ToString("F2");
+        displayScore();
         if (!waves.isSpawning && enemies.allEnemiesKilled)
         {
             announce("You win!");
@@ -67,6 +68,11 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
             openGameOver();
             resetScore();
         }
+    }
+
+    public void displayScore()
+    {
+        scoreDisplay.text = "Score: " + score.ToString("F2");
     }
 
     void toggleTime()

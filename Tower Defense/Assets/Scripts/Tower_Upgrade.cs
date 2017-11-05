@@ -39,7 +39,10 @@ public class Tower_Upgrade : MonoBehaviour
         if (scene_manager.GetComponent<Mana>().currentMana >= costToUpgrade)
         {
             upgrade();
-            scene_manager.GetComponent<Mana>().currentMana -= costToUpgrade;
+        }
+        else
+        {
+            scene_manager.GetComponent<SM_tower_defense>().announce("You do not have enough mana. \nThis upgrade costs " + costToUpgrade + " mana.");
         }
     }
 
@@ -56,6 +59,9 @@ public class Tower_Upgrade : MonoBehaviour
         Tower_Manager tm = gameObject.GetComponent<Tower_Manager>();
         if (tm != null)
             tm.deregisterAll();
+
+        scene_manager.GetComponent<Mana>().currentMana -= costToUpgrade;
+        scene_manager.GetComponent<SM_tower_defense>().displayScore();
 
         // delete the old tower
         Destroy(gameObject);

@@ -13,15 +13,21 @@ public class UpgradeMenu : MonoBehaviour {
     public GameObject[] slowingTower;
     public GameObject[] curseTower;
 
+    public Text priceDisplay;
+
+    public int baseMagicCost = 100;
+    public int baseFireCost = 150;
+    public int baseSlowingCost = 200;
+    public int baseCurseCost = 300;
+
     private GameObject menu;
     private int towerTier;
-    //private SM_tower_defense sm;
     
     // Use this for initialization
 	void Start ()
     {
         menu = transform.GetChild(0).gameObject;
-        //sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
+        priceDisplay.enabled = false;
         menu.SetActive(false);
 	}
 	
@@ -39,29 +45,55 @@ public class UpgradeMenu : MonoBehaviour {
 
     public void selectMagicTower()
     {
-        towerToUpgrade.setCostandPrefab(100, magicTower[towerTier]);
+        towerToUpgrade.setCostandPrefab(baseMagicCost * (towerTier + 1), magicTower[towerTier]);
         towerToUpgrade.checkUpgrade();
         menu.SetActive(false);
     }
 
     public void selectFireTower()
     {
-        towerToUpgrade.setCostandPrefab(150 * (towerTier + 1), fireTower[towerTier]);
+        towerToUpgrade.setCostandPrefab(baseFireCost * (towerTier + 1), fireTower[towerTier]);
         towerToUpgrade.checkUpgrade();
         menu.SetActive(false);
     }
 
     public void selectSlowingTower()
     {
-        towerToUpgrade.setCostandPrefab(200 * (towerTier + 1), slowingTower[towerTier]);
+        towerToUpgrade.setCostandPrefab(baseSlowingCost * (towerTier + 1), slowingTower[towerTier]);
         towerToUpgrade.checkUpgrade();
         menu.SetActive(false);
     }
 
     public void selectCurseTower()
     {
-        towerToUpgrade.setCostandPrefab(300 * (towerTier + 1), curseTower[towerTier]);
+        towerToUpgrade.setCostandPrefab(baseCurseCost * (towerTier + 1), curseTower[towerTier]);
         towerToUpgrade.checkUpgrade();
         menu.SetActive(false);
     }
+
+    public void displayPrice(string towerType)
+    {
+        switch(towerType)
+        {
+            case "Magic":
+                priceDisplay.text = (baseMagicCost * (towerTier + 1)).ToString() + " Mana";
+                break;
+            case "Fire":
+                priceDisplay.text = (baseFireCost * (towerTier + 1)).ToString() + " Mana";
+                break;
+            case "Slowing":
+                priceDisplay.text = (baseSlowingCost * (towerTier + 1)).ToString() + " Mana";
+                break;
+            case "Curse":
+                priceDisplay.text = (baseCurseCost * (towerTier + 1)).ToString() + " Mana";
+                break;
+        }
+        priceDisplay.enabled = true;
+    }
+
+    public void hidePrice()
+    {
+        priceDisplay.enabled = false;
+    }
+
 }

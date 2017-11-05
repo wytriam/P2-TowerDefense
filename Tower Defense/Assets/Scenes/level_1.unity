@@ -1051,7 +1051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMana: 0
   startingMana: 150
-  manaPerSecond: 1
+  manaPerSecond: 5
   noMana: 0
 --- !u!114 &1164787773
 MonoBehaviour:
@@ -1092,7 +1092,9 @@ MonoBehaviour:
   - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
   - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
   firstWaypoint: {fileID: 833400905}
+  alternateWaypoints: []
   enemySpawnPoint: {fileID: 993505832}
+  alternateSpawns: []
   enemiesPerSecond: 0.5
   timeBetweenWaves: 10
   enemiesPerWave: 5
@@ -1116,6 +1118,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114967441352696840, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4529997667318806, guid: 6245de837eb96b745a66237c901c6c14, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1147,6 +1154,11 @@ Prefab:
     - target: {fileID: 4529997667318806, guid: 6245de837eb96b745a66237c901c6c14, type: 2}
       propertyPath: m_RootOrder
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 224515099581240754, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -128
       objectReference: {fileID: 0}
     - target: {fileID: 224979164605659554, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -1222,6 +1234,26 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 157.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224494954212929130, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 249
+      objectReference: {fileID: 0}
+    - target: {fileID: 224494954212929130, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 187.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114967441352696840, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114967441352696840, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6245de837eb96b745a66237c901c6c14, type: 2}
