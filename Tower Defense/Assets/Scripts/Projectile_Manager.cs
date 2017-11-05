@@ -8,11 +8,13 @@ public class Projectile_Manager : MonoBehaviour
     public float speed = 4f;
     public float duration = 2f;
     public int damageOnHit = 1;
+    public float maxDist = 100f;
     public GameObject deathSplosion;
     public GameObject effect;
 
     private bool seekAndDestroy;
     private Vector3 lastPos;
+    private Vector3 startingPos;
     private GameObject target;
     private float lifeTimer = 0f;
 
@@ -21,6 +23,7 @@ public class Projectile_Manager : MonoBehaviour
 	void Start ()
     {
         seekAndDestroy = false;
+        startingPos = gameObject.transform.position;
 	}
 	
 	// Update is called once per frame
@@ -46,7 +49,7 @@ public class Projectile_Manager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        else if (lastPos.y >= maxHeight)
+        else if (lastPos.y >= startingPos.y + maxHeight)
         {
             // find the nearest enemy and prepare to attack it
             seekAndDestroy = true;
@@ -80,6 +83,10 @@ public class Projectile_Manager : MonoBehaviour
             }
         }
         gameObject.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+
+        // destroys projectile if target is too far away
+        if (distance > maxDist)
+            Destroy(gameObject);
     }
 
     public void ParticlesOnDeath()

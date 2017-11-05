@@ -57,7 +57,8 @@ public class SM_menu : MonoBehaviour
         }
 
         activePage = creditsPage;
-        credits();
+        if (showCreditsAtStart)
+            credits();
     }
 
     // Update is called once per frame

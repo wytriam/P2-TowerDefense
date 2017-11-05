@@ -154,4 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
   speed: 2
-  health: 15
+  health: 7
+  manaForKill: 10
+  damageMultiplier: 1
+  firstWaypoint: {fileID: 0}
+  spawnPos: {x: 0, y: 0, z: 0}
