@@ -57,6 +57,8 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
         if (!waves.isSpawning && enemies.allEnemiesKilled)
         {
             announce("You win!");
+            if (menus.GetComponent<UpgradeMenu>().menuOpen)
+                menus.GetComponent<UpgradeMenu>().closeMenu();
             saveScore();
             openNextLevel();
         }
@@ -64,9 +66,9 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
         if (mana.noMana)
         {
             announce("You Lose.");
-            saveScore();
+            if (menus.GetComponent<UpgradeMenu>().menuOpen)
+                menus.GetComponent<UpgradeMenu>().closeMenu();
             openGameOver();
-            resetScore();
         }
     }
 
@@ -94,6 +96,11 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     }
 
     void saveScore()
+    {
+        PlayerPrefs.SetFloat("score", score);
+    }
+
+    void saveHighScore()
     {
         PlayerPrefs.SetFloat("score", score);
         float temp = score;
@@ -124,10 +131,12 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
                 temp = temp1;
             }
         }
+
     }
 
-    void resetScore()
+    public void resetScore()
     {
+        saveHighScore();
         score = 0;
         PlayerPrefs.SetFloat("score", 0);
     }

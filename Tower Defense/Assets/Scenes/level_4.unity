@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85180436a834e143a3acd2900e1faf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: level_5
+  nextSceneName: menu_credits
   manaDisplay: {fileID: 1442753061}
   scoreDisplay: {fileID: 1442753060}
   menus: {fileID: 1442753059}
@@ -2108,6 +2108,56 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.y
       value: 187.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224874337230609550, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224874337230609550, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224874337230609550, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224874337230609550, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224874337230609550, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224874337230609550, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 224874337230609550, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861262573372772, guid: 6245de837eb96b745a66237c901c6c14, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392277158218452, guid: 6245de837eb96b745a66237c901c6c14, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114971784871837356, guid: 6245de837eb96b745a66237c901c6c14,
+        type: 2}
+      propertyPath: m_Text
+      value: 'View Game Credits
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6245de837eb96b745a66237c901c6c14, type: 2}

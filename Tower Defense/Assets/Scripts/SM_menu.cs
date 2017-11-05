@@ -8,6 +8,8 @@ public class SM_menu : MonoBehaviour
 {
     public string NextSceneName;
 
+    public bool showCreditsAtStart;
+
     private GameObject returnButton;
     private GameObject[] buttons;
     private GameObject activePage;
@@ -55,6 +57,7 @@ public class SM_menu : MonoBehaviour
         }
 
         activePage = creditsPage;
+        credits();
     }
 
     // Update is called once per frame

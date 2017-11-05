@@ -36,6 +36,7 @@ public class NextLevelMenu : MonoBehaviour
 
     public void returnMainMenu()
     {
+        sm.resetScore();
         SceneManager.LoadScene("menu");
     }
 

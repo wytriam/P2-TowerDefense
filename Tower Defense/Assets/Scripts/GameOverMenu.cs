@@ -36,6 +36,7 @@ public class GameOverMenu : MonoBehaviour {
 
     public void returnMainMenu()
     {
+        sm.resetScore();
         SceneManager.LoadScene("menu");
     }
 

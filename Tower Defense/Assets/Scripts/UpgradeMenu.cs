@@ -20,6 +20,8 @@ public class UpgradeMenu : MonoBehaviour {
     public int baseSlowingCost = 200;
     public int baseCurseCost = 300;
 
+    public bool menuOpen;
+
     private GameObject menu;
     private int towerTier;
     
@@ -34,6 +36,7 @@ public class UpgradeMenu : MonoBehaviour {
     public void openMenu(Tower_Upgrade tower, int tier)
     {
         menu.SetActive(true);
+        menuOpen = true;
         towerTier = tier - 1;
         towerToUpgrade = tower;
     }
@@ -41,6 +44,7 @@ public class UpgradeMenu : MonoBehaviour {
     public void closeMenu()
     {
         menu.SetActive(false);
+        menuOpen = false;
     }
 
     public void selectMagicTower()
@@ -55,6 +59,8 @@ public class UpgradeMenu : MonoBehaviour {
         towerToUpgrade.setCostandPrefab(baseFireCost * (towerTier + 1), fireTower[towerTier]);
         towerToUpgrade.checkUpgrade();
         menu.SetActive(false);
+        menuOpen = false;
+
     }
 
     public void selectSlowingTower()
@@ -62,6 +68,8 @@ public class UpgradeMenu : MonoBehaviour {
         towerToUpgrade.setCostandPrefab(baseSlowingCost * (towerTier + 1), slowingTower[towerTier]);
         towerToUpgrade.checkUpgrade();
         menu.SetActive(false);
+        menuOpen = false;
+
     }
 
     public void selectCurseTower()
@@ -69,6 +77,8 @@ public class UpgradeMenu : MonoBehaviour {
         towerToUpgrade.setCostandPrefab(baseCurseCost * (towerTier + 1), curseTower[towerTier]);
         towerToUpgrade.checkUpgrade();
         menu.SetActive(false);
+        menuOpen = false;
+
     }
 
     public void displayPrice(string towerType)
