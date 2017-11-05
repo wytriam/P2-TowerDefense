@@ -45,4 +45,10 @@ public class NextLevelMenu : MonoBehaviour
     {
         SceneManager.LoadScene(sm.nextSceneName);
     }
+
+    public void openCredits()
+    {
+        sm.resetScore();
+        SceneManager.LoadScene(sm.nextSceneName);
+    }
 }
