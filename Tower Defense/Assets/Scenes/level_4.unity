@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85180436a834e143a3acd2900e1faf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: menu_credits
+  nextSceneName: level_5
   manaDisplay: {fileID: 1442753061}
   scoreDisplay: {fileID: 1442753060}
   menus: {fileID: 1442753059}
@@ -2155,9 +2155,7 @@ Prefab:
     - target: {fileID: 114971784871837356, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_Text
-      value: 'View Game Credits
-
-'
+      value: Next Level
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6245de837eb96b745a66237c901c6c14, type: 2}
