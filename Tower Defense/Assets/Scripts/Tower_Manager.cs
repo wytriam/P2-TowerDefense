@@ -59,6 +59,7 @@ public class Tower_Manager : MonoBehaviour
             deregister(enemy);
             enemy.GetComponent<Enemy_Manager>().deregisterTower(gameObject);
         }
+        isFiring = false;
     }
 
     public void shoot()

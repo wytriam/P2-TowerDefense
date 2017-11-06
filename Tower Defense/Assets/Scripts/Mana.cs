@@ -31,7 +31,7 @@ public class Mana : MonoBehaviour
         }
 
 
-        if (generatingMana && Time.timeScale != 0)
-            currentMana += (manaPerSecond) * Time.fixedDeltaTime;
+        if (generatingMana)
+            currentMana += (manaPerSecond) * Time.fixedDeltaTime * Time.timeScale;
     }
 }

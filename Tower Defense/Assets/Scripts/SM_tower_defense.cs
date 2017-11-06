@@ -69,7 +69,7 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
             changeTime();
 
         if(!mana.noMana)
-            score += (mana.manaPerSecond) * Time.fixedDeltaTime;
+            score += (mana.manaPerSecond) * Time.fixedDeltaTime * Time.timeScale;
 
     }
 

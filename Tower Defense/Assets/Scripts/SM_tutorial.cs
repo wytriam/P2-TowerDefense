@@ -21,6 +21,11 @@ public class SM_tutorial : WytriamSTD.Scene_Manager
 
     private bool tutorialComplete = false;
 
+    private int tabCount = 0;
+    private int spaceCount = 0;
+
+    private int timeScale = 1;
+
     private Waves waves;
     private Mana mana;
     private EnemyCounter enemyCounter;
@@ -39,6 +44,18 @@ public class SM_tutorial : WytriamSTD.Scene_Manager
     void Update ()
     {
         manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            spaceCount++;
+            toggleTime();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            tabCount++;
+            changeTime();
+        }
 
         if (!canMove)
         {
@@ -91,16 +108,24 @@ public class SM_tutorial : WytriamSTD.Scene_Manager
         }
         announce("When you run out of mana, it\'s game over.", 2);
         yield return new WaitForSeconds(2);
+        announce("Fortunately, you regenerate mana.", 2);
+        mana.manaPerSecond = 2;
+        mana.generatingMana = true;
+        mana.currentMana = 1;
+        mana.noMana = false;
+        yield return new WaitForSeconds(2);
+        announce("You can also manipulate time. Hit tab to cycle between 1x, 2x, and 4x speed.", 3);
+        yield return new WaitForSeconds(3);
+        while (tabCount < 3)
+            yield return new WaitForFixedUpdate();
+        announce("You can also pause and unpause tab with the space button.", 3);
+        yield return new WaitForSeconds(3);
+        while (spaceCount < 2)
+            yield return new WaitForFixedUpdate();
         announce("Here's some more mana. Click on that turret tower to upgrade it and defend yourself", 3);
         mana.currentMana = 150;
-        mana.noMana = false;
         while(!enemyCounter.allEnemiesKilled)
         {
-            if (mana.currentMana < 100)
-            {
-                announce("Here's some more mana. Click on that tower to upgrade the tower and defend yourself", 3);
-                mana.currentMana = 150;
-            }
             yield return new WaitForFixedUpdate();
         }
         announce("Congratulations! You've killed all the enemies and finished the tutorial.\nEnjoy the game!");
@@ -109,4 +134,24 @@ public class SM_tutorial : WytriamSTD.Scene_Manager
         announce("Click anywhere to return to the main menu");
         yield return null;
     }
+
+    void toggleTime()
+    {
+        if (Time.timeScale == 0)
+            Time.timeScale = timeScale;
+        else if (Time.timeScale == timeScale)
+            Time.timeScale = 0;
+    }
+
+    void changeTime()
+    {
+        if (timeScale == 1)
+            timeScale = 2;
+        else if (timeScale == 2)
+            timeScale = 4;
+        else if (timeScale == 4)
+            timeScale = 1;
+        Time.timeScale = timeScale;
+    }
+
 }
