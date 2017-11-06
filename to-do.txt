@@ -1,17 +1,21 @@
-movement when Time.timeScale == 0;
-
-SPLASH SCREEN
-
 ADD MUSIC - Thomas/Sean
+
+SOUND FX - convert my sound fx from m4a to .wav (or get some from freesound.org)
 
 display waves - Thomas
 
 lights level 2 - Sean
 
-slow slows too much - Thomas
+	slow slows too much - Thomas - I don't know why this keeps stacking. asd;lfjkas;dlfkja;sgna;gja;
+
+	Drift when Time.timeScale is set to 0 - Thomas - I don't know what's going on here. Known bug. 
+
+	movement when Time.timeScale == 0;
 
 Image for upgrade menu?
 
 CREATE BIRMINGHAM MODE WITH STUPID MOUSELOOK AND GOD TOWERS THAT COST 0 MANA TO CREATE -- do this last, only if we have time
 
 TURN OFF RESET HIGH SCORES BUTTON
+
+UPDATE CREDITS

@@ -20,6 +20,9 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
 
     private int timeScale = 1;
 
+    [HideInInspector]
+    public bool notStarted = true;
+
     void Awake()
     {
         // If the PlayerPrefs score already exists, read it
@@ -34,7 +37,7 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     void Start()
     {
         hearAnnouncements();
-        announce("Press Space to begin!");
+        announce("Press Enter to begin!");
 
         mana = GetComponent<Mana>();
         waves = GetComponent<Waves>();
@@ -42,20 +45,26 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
 
         displayMana();
         displayScore();
-
-        waves.StartCoroutine("spawnWaves");
-        Time.timeScale = 0;
     }
 
     void Update()
     {
+        if (notStarted)
+        {
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                waves.StartCoroutine("spawnWaves");
+                notStarted = false;
+                mana.generatingMana = true;
+            }
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
             toggleTime();
 
         if (Input.GetKeyDown(KeyCode.Tab))
-        {
             changeTime();
-        }
 
         if(!mana.noMana)
             score += (mana.manaPerSecond) * Time.fixedDeltaTime;

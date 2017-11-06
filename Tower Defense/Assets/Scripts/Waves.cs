@@ -50,7 +50,7 @@ public class Waves : MonoBehaviour
         while (index < waves.Length)
         {
             if (spawnCount % enemiesInWave == 0 && index != 0)
-                GetComponent<WytriamSTD.Scene_Manager>().announce("Next Wave!");
+                GetComponent<WytriamSTD.Scene_Manager>().announce("Wave " + (index+1) + " of " + waves.Length);
             currentPrefab = waves[index];
             spawnEnemy();
             if (spawnCount % enemiesInWave == 0)

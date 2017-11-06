@@ -35,9 +35,9 @@ public class Effect : MonoBehaviour
         {
             if (enemy.isSlowed)         // slowing doesn't stack
                 Destroy(gameObject);
+            enemy.isSlowed = true;
             prevEnemySpeed = enemy.speed;   
             enemy.speed /= 2;
-            enemy.isSlowed = true;
         }
         if (curse)
             enemy.damageMultiplier *= 2;

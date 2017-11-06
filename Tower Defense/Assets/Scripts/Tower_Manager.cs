@@ -19,31 +19,22 @@ public class Tower_Manager : MonoBehaviour
 	
     IEnumerator firing()
     {
-        Debug.Log("Beginning Coroutine firing");
-        isFiring = true;        // this line is messing up the coroutine for some reason. 
-        Debug.Log("isFiring is now true");
+        isFiring = true;        
         while(isFiring)
         {
-            Debug.Log("About to shoot projectile");
             shoot();
             yield return new WaitForSeconds(1 / rateOfFire);
         }
-        Debug.Log("Ending Coroutine firing");
         StopCoroutine("firing");
     }
 
     public void register(GameObject enemy)
     {
-        Debug.Log("Registering Enemy");
         enemiesInRange.Add(enemy);
-        Debug.Log("Enemy registered");
         if (!isFiring)
         {
-            Debug.Log("Starting Coroutine firing");
             StartCoroutine("firing");
         }
-        else
-            Debug.Log("Huh??????");
     }
 
     public void deregister(GameObject enemy)

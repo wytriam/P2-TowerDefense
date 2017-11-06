@@ -11,6 +11,9 @@ public class Mana : MonoBehaviour
     [HideInInspector]
     public bool noMana = false;
 
+    [HideInInspector]
+    public bool generatingMana = false;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -20,17 +23,15 @@ public class Mana : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
-        if (currentMana < 0)
-            currentMana = 0;
-
-        if (noMana) return;
-
         if (currentMana <= 0)
         {
+            currentMana = 0;
+            generatingMana = false;
             noMana = true;
-            return;
         }
-        else if (Time.timeScale != 0)
+
+
+        if (generatingMana && Time.timeScale != 0)
             currentMana += (manaPerSecond) * Time.fixedDeltaTime;
     }
 }
