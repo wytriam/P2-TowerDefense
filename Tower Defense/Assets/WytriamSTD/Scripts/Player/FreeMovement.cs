@@ -32,9 +32,6 @@ public class FreeMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
             moveDirection *= sprintMultiplier;
 
-        if (Time.timeScale == 1)
-            characterController.Move(moveDirection * Time.deltaTime);
-        else if(Time.timeScale == 0)
-            characterController.Move(moveDirection * 0.0167f);
+        characterController.Move(moveDirection * Time.unscaledDeltaTime);
     }
 }

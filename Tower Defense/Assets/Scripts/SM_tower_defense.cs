@@ -17,6 +17,8 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     private Waves waves;
     private EnemyCounter enemies;
 
+    private int timeScale = 1;
+
     void Awake()
     {
         // If the PlayerPrefs score already exists, read it
@@ -44,6 +46,11 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     {
         if (Input.GetKeyDown(KeyCode.Space))
             toggleTime();
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            changeTime();
+        }
 
         if(!mana.noMana)
             score += (mana.manaPerSecond) * Time.fixedDeltaTime;
@@ -85,9 +92,20 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     void toggleTime()
     {
         if (Time.timeScale == 0)
-            Time.timeScale = 1;
-        else if (Time.timeScale == 1)
+            Time.timeScale = timeScale;
+        else if (Time.timeScale == timeScale)
             Time.timeScale = 0;
+    }
+
+    void changeTime()
+    {
+        if (timeScale == 1)
+            timeScale = 2;
+        else if (timeScale == 2)
+            timeScale = 4;
+        else if (timeScale == 4)
+            timeScale = 1;
+        Time.timeScale = timeScale;
     }
 
     void openNextLevel()
