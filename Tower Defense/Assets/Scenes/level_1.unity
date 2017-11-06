@@ -970,7 +970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMana: 0
   startingMana: 150
-  manaPerSecond: 10
+  manaPerSecond: 5
   noMana: 0
 --- !u!114 &1164787773
 MonoBehaviour:

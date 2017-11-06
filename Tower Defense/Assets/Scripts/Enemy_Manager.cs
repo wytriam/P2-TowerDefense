@@ -18,6 +18,9 @@ public class Enemy_Manager : MonoBehaviour
     [HideInInspector]
     public Vector3 spawnPos;
 
+    [HideInInspector]
+    public bool isSlowed;
+
     private Vector3 lastPos;
 
     private List<GameObject> nearbyTowers;

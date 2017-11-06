@@ -31,7 +31,12 @@ public class Effect : MonoBehaviour
     IEnumerator effect()
     {
         if (slowing)
+        {
+            if (enemy.isSlowed)         // slowing doesn't stack
+                Destroy(gameObject);   
             enemy.speed /= 2;
+            enemy.isSlowed = true;
+        }
         if (curse)
             enemy.damageMultiplier *= 2;
         while (true)
@@ -43,7 +48,10 @@ public class Effect : MonoBehaviour
             if (timer > effectDuration)
             {
                 if (slowing)
+                {
                     enemy.speed *= 2;
+                    enemy.isSlowed = true;
+                }
                 if (curse)
                     enemy.damageMultiplier /= 2;
                 Destroy(gameObject);

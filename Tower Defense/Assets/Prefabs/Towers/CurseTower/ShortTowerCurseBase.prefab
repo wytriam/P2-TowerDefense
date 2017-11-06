@@ -354,7 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradesToPrefab: {fileID: 1215452197493464, guid: 09824a0018c55f14e93bc35098c24a96,
     type: 2}
-  costToUpgrade: 100
+  costToUpgrade: 150
   towerTier: 0
   useMenu: 0
   upgradeMenu: {fileID: 0}
