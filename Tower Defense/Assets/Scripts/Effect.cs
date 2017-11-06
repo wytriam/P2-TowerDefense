@@ -14,6 +14,7 @@ public class Effect : MonoBehaviour
     [HideInInspector]
     public Enemy_Manager enemy;
     private float timer = 0;
+    private float prevEnemySpeed = 0;
 
 	// Use this for initialization
 	void Start ()
@@ -33,7 +34,8 @@ public class Effect : MonoBehaviour
         if (slowing)
         {
             if (enemy.isSlowed)         // slowing doesn't stack
-                Destroy(gameObject);   
+                Destroy(gameObject);
+            prevEnemySpeed = enemy.speed;   
             enemy.speed /= 2;
             enemy.isSlowed = true;
         }
@@ -49,7 +51,7 @@ public class Effect : MonoBehaviour
             {
                 if (slowing)
                 {
-                    enemy.speed *= 2;
+                    enemy.speed = prevEnemySpeed;
                     enemy.isSlowed = false;
                 }
                 if (curse)

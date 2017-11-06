@@ -358,42 +358,42 @@ Prefab:
     - target: {fileID: 224401626732552374, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 329
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224401626732552374, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 202.5
+      value: 204
       objectReference: {fileID: 0}
     - target: {fileID: 224669628368456836, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 329
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224669628368456836, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 202.5
+      value: 204
       objectReference: {fileID: 0}
     - target: {fileID: 224957646096052806, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 329
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224957646096052806, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 202.5
+      value: 204
       objectReference: {fileID: 0}
     - target: {fileID: 224257395194325092, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 329
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224257395194325092, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 202.5
+      value: 204
       objectReference: {fileID: 0}
     - target: {fileID: 1861262573372772, guid: 6245de837eb96b745a66237c901c6c14, type: 2}
       propertyPath: m_IsActive
@@ -682,8 +682,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
+  - {fileID: 1131615522394630, guid: 99370586e4835334c89af4cbb60eaee8, type: 2}
+  - {fileID: 1131615522394630, guid: 99370586e4835334c89af4cbb60eaee8, type: 2}
+  - {fileID: 1131615522394630, guid: 99370586e4835334c89af4cbb60eaee8, type: 2}
+  - {fileID: 1131615522394630, guid: 99370586e4835334c89af4cbb60eaee8, type: 2}
+  - {fileID: 1131615522394630, guid: 99370586e4835334c89af4cbb60eaee8, type: 2}
+  - {fileID: 1131615522394630, guid: 99370586e4835334c89af4cbb60eaee8, type: 2}
+  - {fileID: 1131615522394630, guid: 99370586e4835334c89af4cbb60eaee8, type: 2}
+  - {fileID: 1131615522394630, guid: 99370586e4835334c89af4cbb60eaee8, type: 2}
+  - {fileID: 1769437351941808, guid: 7f4b5e2df8cb27f41bd86c5ae16e25ea, type: 2}
+  - {fileID: 1769437351941808, guid: 7f4b5e2df8cb27f41bd86c5ae16e25ea, type: 2}
   firstWaypoint: {fileID: 1277405782}
   alternateWaypoints:
   - {fileID: 1277405782}
@@ -694,7 +702,7 @@ MonoBehaviour:
   - {fileID: 1132291004}
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
-  enemiesPerWave: 1
+  enemiesPerWave: 05000000050000000a0000000a0000000f0000000f00000014000000140000000300000003000000
   isSpawning: 0
 --- !u!114 &465749753
 MonoBehaviour:
@@ -755,12 +763,12 @@ Prefab:
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 329
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 202.5
+      value: 204
       objectReference: {fileID: 0}
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
