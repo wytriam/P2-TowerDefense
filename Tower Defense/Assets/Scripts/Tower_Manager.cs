@@ -28,38 +28,6 @@ public class Tower_Manager : MonoBehaviour
             shoot();
             yield return new WaitForSeconds(1 / rateOfFire);
         }
-        StopCoroutine("firing");
-    }
-
-    public void register(GameObject enemy)
-    {
-        enemiesInRange.Add(enemy);
-        if (!isFiring)
-        {
-            StartCoroutine("firing");
-        }
-    }
-
-    public void deregister(GameObject enemy)
-    {
-        enemiesInRange.Remove(enemy);
-        if (enemiesInRange.Count == 0)
-        {
-            isFiring = false;
-        }
-    }
-
-    public void deregisterAll()
-    {
-        //foreach (GameObject enemy in enemiesInRange)
-        int iteratations = enemiesInRange.Count;
-        for (int i=0;i<iteratations;i++)
-        {
-            GameObject enemy = enemiesInRange[0];
-            deregister(enemy);
-            enemy.GetComponent<Enemy_Manager>().deregisterTower(gameObject);
-        }
-        isFiring = false;
     }
 
     public void shoot()
@@ -72,18 +40,24 @@ public class Tower_Manager : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
-            Debug.Log("Enemy entered Field of Range");
+            if (!isFiring)
+                StartCoroutine("firing");
     }
 
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
-            Debug.Log("Enemy in Field of Range");
+            if (!isFiring)
+                StartCoroutine("firing");
     }
 
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
-            Debug.Log("Enemy left Field of Range");
+            if (isFiring)
+            {
+                StopCoroutine("firing");
+                isFiring = false;
+            }
     }
 }

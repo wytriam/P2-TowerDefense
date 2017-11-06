@@ -54,12 +54,6 @@ public class Tower_Upgrade : MonoBehaviour
         upgrade.transform.rotation = gameObject.transform.rotation;
         upgrade.transform.localScale = gameObject.transform.localScale;
 
-        // check to see if Tower_Manager exists
-        // If it does, deregister all enemies that tower is aware of
-        Tower_Manager tm = gameObject.GetComponent<Tower_Manager>();
-        if (tm != null)
-            tm.deregisterAll();
-
         scene_manager.GetComponent<Mana>().currentMana -= costToUpgrade;
         if(scene_manager.GetComponent<SM_tower_defense>() != null)
             scene_manager.GetComponent<SM_tower_defense>().displayMana();

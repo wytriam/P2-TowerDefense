@@ -61,8 +61,6 @@ public class Enemy_Manager : MonoBehaviour
     IEnumerator deathSequence()
     {
         deathStarted = true;
-        foreach (GameObject tower in nearbyTowers)
-            tower.GetComponent<Tower_Manager>().deregister(gameObject);
         mana.currentMana += manaForKill;
         if (sm != null)
             sm.score += (int)manaForKill;
@@ -84,15 +82,8 @@ public class Enemy_Manager : MonoBehaviour
     public void OnTriggerEnter(Collider coll)
     {
         GameObject other = coll.gameObject.transform.root.gameObject;
-        if (other.tag == "Tower")
-        {
-            //Debug.Log("Enemy_Manager::OnTriggerEnter() - Registering with Tower");
-            coll.gameObject.GetComponent<Tower_Manager>().register(this.gameObject);
-            nearbyTowers.Add(other.gameObject);
-        }
         if (other.tag == "Projectile")
         {
-            //Debug.Log("Enemy_Manager::OnTriggerEnter - Got hit by projectile");
             Projectile_Manager p = other.gameObject.GetComponent<Projectile_Manager>();
             p.ParticlesOnDeath();
             health -= p.damageOnHit * damageMultiplier;
@@ -106,28 +97,10 @@ public class Enemy_Manager : MonoBehaviour
         }
         else if (other.tag == "EndPoint")
         {
-            //Debug.Log("Enemy_Manager::OnTriggerEnter() - Moving to Beginning of Course");
             mana.currentMana -= 2 * health;
             other = coll.gameObject;
             waypoint = firstWaypoint;
             gameObject.transform.position = spawnPos;
-        }
-        else
-        {
-            //Debug.Log("Enemy_Manager::OnTriggerEnter() - Unknown Collision Detected: " + other.tag);
-        }
-
-    }
-
-    public void OnTriggerExit(Collider coll)
-    {
-        GameObject other = coll.gameObject.transform.root.gameObject;
-        if (other.tag == "Tower")
-        {
-            // Tell tower enemy is out of range for firing
-            //Debug.Log("Enemy_Manager::OnTriggerExit() - Deregistering with Tower");
-            coll.gameObject.GetComponent<Tower_Manager>().deregister(this.gameObject);
-            nearbyTowers.Remove(other.gameObject);
         }
     }
 }
