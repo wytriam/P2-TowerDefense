@@ -61,6 +61,8 @@ public class Enemy_Manager : MonoBehaviour
     IEnumerator deathSequence()
     {
         deathStarted = true;
+        // HACKY SOLUTION - send enemy flying upwards to activate OnTriggerExit() in tower
+        transform.position = transform.position + new Vector3(0, 1000, 0);
         mana.currentMana += manaForKill;
         if (sm != null)
             sm.score += (int)manaForKill;
@@ -72,11 +74,6 @@ public class Enemy_Manager : MonoBehaviour
             yield return null;
         Destroy(gameObject);
 
-    }
-
-    public void deregisterTower(GameObject tower)
-    {
-        nearbyTowers.Remove(tower);
     }
 
     public void OnTriggerEnter(Collider coll)
