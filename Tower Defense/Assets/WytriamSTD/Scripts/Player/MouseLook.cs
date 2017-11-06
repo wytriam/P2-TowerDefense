@@ -59,7 +59,7 @@ public class MouseLook : MonoBehaviour
                 transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
             }
         }
-        else
+        else if(!lockCameraWithMouse)
         {
             if (axes == RotationAxes.MouseXAndY)
             {
