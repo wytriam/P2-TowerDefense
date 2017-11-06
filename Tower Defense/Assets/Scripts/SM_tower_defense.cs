@@ -32,14 +32,18 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
 
     void Start()
     {
-        Time.timeScale = 0;
+        hearAnnouncements();
         announce("Press Space to begin!");
 
         mana = GetComponent<Mana>();
         waves = GetComponent<Waves>();
         enemies = GetComponent<EnemyCounter>();
 
+        displayMana();
+        displayScore();
+
         waves.StartCoroutine("spawnWaves");
+        Time.timeScale = 0;
     }
 
     void Update()
@@ -111,11 +115,13 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     void openNextLevel()
     {
         menus.GetComponent<NextLevelMenu>().openMenu();
+        muteAnnoucements();
     }
 
     void openGameOver()
     {
         menus.GetComponent<GameOverMenu>().openMenu();
+        muteAnnoucements();
     }
 
     void saveScore()

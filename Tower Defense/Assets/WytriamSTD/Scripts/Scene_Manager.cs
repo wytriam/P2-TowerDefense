@@ -39,5 +39,15 @@ namespace WytriamSTD
             //Debug.Log("Scene_Manager::announce() - " + announcement);
             Announcements.getInstance().DisplayAnnouncement(announcement, duration);
         }
+
+        public void muteAnnoucements()
+        {
+            Announcements.getInstance().disableAnnouncements();
+        }
+
+        public void hearAnnouncements()
+        {
+            Announcements.getInstance().enableAnnouncements();
+        }
     }
 }

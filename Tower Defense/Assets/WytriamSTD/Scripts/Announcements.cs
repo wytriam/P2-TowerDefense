@@ -29,6 +29,7 @@ namespace WytriamSTD
         private List<string> announcementLog;
         private Text anncmntText;
         private float timer = 0.0f;
+        private bool allowAnnouncements = true;
 
         void Awake()
         {
@@ -62,12 +63,14 @@ namespace WytriamSTD
         // Add an announcement to the announcement log. This will not display the announcement on screen. 
         public void WriteNewAnnoucement(string announcement)
         {
+            if (!allowAnnouncements) return;
             announcementLog.Add(announcement);
         }
 
         // Display an announcement to the screen. If this announcement is not on the log, it will be added to the log
         public void DisplayAnnouncement(string announcement)
         {
+            if (!allowAnnouncements) return;
             //Debug.Log("Announcements::DisplayAnnouncement() - " + announcement);
             anncmntText.text = announcement;
             anncmntText.enabled = true;
@@ -78,6 +81,7 @@ namespace WytriamSTD
         // Display an announcement to the screen for a fixed duration. If this announcement is not on the log, it will be added to the log
         public void DisplayAnnouncement(string announcement, int duration)
         {
+            if (!allowAnnouncements) return;
             //Debug.Log("Announcements::DisplayAnnouncement() - " + announcement);
             anncmntText.text = announcement;
             announcementDuration = duration;
@@ -89,8 +93,19 @@ namespace WytriamSTD
         // Display an announcement from the announcementLog at location index to the screen.
         public void DisplayAnnouncement(int index)
         {
+            if (!allowAnnouncements) return;
             anncmntText.text = announcementLog[index];
             anncmntText.enabled = true;
+        }
+
+        public void disableAnnouncements()
+        {
+            allowAnnouncements = false;
+        }
+
+        public void enableAnnouncements()
+        {
+            allowAnnouncements = true;
         }
     }
 }
