@@ -9,6 +9,7 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
     public Text manaDisplay;
     public Text scoreDisplay;
     public GameObject menus;
+    public float levelBonus = 100;
 
     [HideInInspector]
     public float score;
@@ -70,6 +71,7 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
             announce("You win!");
             if (menus.GetComponent<UpgradeMenu>().menuOpen)
                 menus.GetComponent<UpgradeMenu>().closeMenu();
+            score += levelBonus;
             saveScore();
             openNextLevel();
         }

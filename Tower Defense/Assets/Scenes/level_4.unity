@@ -1227,6 +1227,7 @@ MonoBehaviour:
   manaDisplay: {fileID: 1442753061}
   scoreDisplay: {fileID: 1442753060}
   menus: {fileID: 1442753059}
+  levelBonus: 1000
   score: 0
 --- !u!4 &808342238
 Transform:
