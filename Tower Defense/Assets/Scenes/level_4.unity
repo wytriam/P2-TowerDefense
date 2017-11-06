@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMana: 0
-  startingMana: 150000
+  startingMana: 451
   manaPerSecond: 5
   noMana: 0
   generatingMana: 0
