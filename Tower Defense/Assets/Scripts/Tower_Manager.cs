@@ -10,11 +10,14 @@ public class Tower_Manager : MonoBehaviour
     private List<GameObject> enemiesInRange;
     public bool isFiring = false;
 
+    private AudioSource sound;
+
     // Use this for initialization
     void Start ()
     {
         spawnScript = GetComponent<WytriamSTD.Spawn>();
         enemiesInRange = new List<GameObject>();
+        sound = GetComponent<AudioSource>();
 	}
 	
     IEnumerator firing()
@@ -60,7 +63,8 @@ public class Tower_Manager : MonoBehaviour
 
     public void shoot()
     {
-        Debug.Log("Projectile shot");
+        sound.mute = false;
+        sound.Play();
         spawnScript.spawn();
     }
 }

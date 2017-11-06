@@ -70,9 +70,8 @@ public class Enemy_Manager : MonoBehaviour
         AudioSource sound = GetComponent<AudioSource>();
         sound.mute = false;
         sound.Play();
-        //while (sound.isPlaying)
-        //yield return null;
-        yield return new WaitForSeconds(0.3f);
+        while (sound.isPlaying)
+            yield return null;
         Destroy(gameObject);
 
     }
