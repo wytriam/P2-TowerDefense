@@ -28,6 +28,8 @@ public class Enemy_Manager : MonoBehaviour
     private EnemyCounter enemycounter;
     private SM_tower_defense sm;
 
+    private bool deathStarted = false;
+
     // Use this for initialization
     void Start()
     {
@@ -56,8 +58,22 @@ public class Enemy_Manager : MonoBehaviour
             if (sm != null)
                 sm.score += (int)manaForKill;
             enemycounter.deregister(gameObject);
-            Destroy(gameObject);
+            if (!deathStarted)
+                StartCoroutine("deathSequence");
         }
+
+    }
+
+    IEnumerator deathSequence()
+    {
+        deathStarted = true;
+        AudioSource sound = GetComponent<AudioSource>();
+        sound.mute = false;
+        sound.Play();
+        //while (sound.isPlaying)
+        //yield return null;
+        yield return new WaitForSeconds(0.3f);
+        Destroy(gameObject);
 
     }
 
