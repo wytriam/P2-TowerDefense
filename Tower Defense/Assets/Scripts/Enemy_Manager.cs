@@ -52,12 +52,6 @@ public class Enemy_Manager : MonoBehaviour
         }
         if (health <= 0)
         {
-            foreach (GameObject tower in nearbyTowers)
-                tower.GetComponent<Tower_Manager>().deregister(gameObject);
-            mana.currentMana += manaForKill;
-            if (sm != null)
-                sm.score += (int)manaForKill;
-            enemycounter.deregister(gameObject);
             if (!deathStarted)
                 StartCoroutine("deathSequence");
         }
@@ -67,6 +61,12 @@ public class Enemy_Manager : MonoBehaviour
     IEnumerator deathSequence()
     {
         deathStarted = true;
+        foreach (GameObject tower in nearbyTowers)
+            tower.GetComponent<Tower_Manager>().deregister(gameObject);
+        mana.currentMana += manaForKill;
+        if (sm != null)
+            sm.score += (int)manaForKill;
+        enemycounter.deregister(gameObject);
         AudioSource sound = GetComponent<AudioSource>();
         sound.mute = false;
         sound.Play();
