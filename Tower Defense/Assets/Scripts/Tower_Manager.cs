@@ -68,4 +68,22 @@ public class Tower_Manager : MonoBehaviour
         sound.Play();
         spawnScript.spawn();
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+            Debug.Log("Enemy entered Field of Range");
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+            Debug.Log("Enemy in Field of Range");
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+            Debug.Log("Enemy left Field of Range");
+    }
 }
