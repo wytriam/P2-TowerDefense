@@ -530,7 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18d8040c6908f04098bd5edef44c959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 0}
+  spawnPrefab: {fileID: 1308953224557846, guid: 814a4d6c05b83b44994f54890446a127,
+    type: 2}
   spawnAtStart: 0
   spawnWhenTriggered: 0
   spawnScale: {x: 1, y: 1, z: 1}
@@ -545,8 +546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78a1351cd0eef74abd059ba2feaf194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1308953224557846, guid: 814a4d6c05b83b44994f54890446a127, type: 2}
   rateOfFire: 0.5
+  isFiring: 0
 --- !u!135 &135829271024894576
 SphereCollider:
   m_ObjectHideFlags: 1

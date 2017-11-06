@@ -932,8 +932,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78a1351cd0eef74abd059ba2feaf194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1308953224557846, guid: 832dd79cf0bbb7f4b9938ffc31016bff, type: 2}
   rateOfFire: 0.05
+  isFiring: 0
 --- !u!114 &114758765113190360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18d8040c6908f04098bd5edef44c959, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPrefab: {fileID: 1308953224557846, guid: 34d0a01cb56d48b45b8c993e5d694be3,
+  spawnPrefab: {fileID: 1308953224557846, guid: 832dd79cf0bbb7f4b9938ffc31016bff,
     type: 2}
   spawnAtStart: 0
   spawnWhenTriggered: 0

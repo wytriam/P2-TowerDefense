@@ -326,29 +326,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
         type: 2}
-      propertyPath: scene_manager
-      value: 
-      objectReference: {fileID: 1164787769}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradesToPrefab
-      value: 
-      objectReference: {fileID: 1588081942744776, guid: 3fc11b9c679b4884b91f2a215344aad7,
-        type: 2}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradeMenu
-      value: 
-      objectReference: {fileID: 1994206529}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
       propertyPath: useMenu
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: costToUpgrade
-      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1c48cea3a98b548a1854942402c44d, type: 2}
@@ -463,23 +442,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
         type: 2}
-      propertyPath: scene_manager
-      value: 
-      objectReference: {fileID: 1164787769}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradeMenu
-      value: 
-      objectReference: {fileID: 1994206529}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
       propertyPath: useMenu
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: costToUpgrade
-      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1c48cea3a98b548a1854942402c44d, type: 2}
@@ -529,23 +493,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
         type: 2}
-      propertyPath: scene_manager
-      value: 
-      objectReference: {fileID: 1164787769}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradeMenu
-      value: 
-      objectReference: {fileID: 1994206529}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
       propertyPath: useMenu
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: costToUpgrade
-      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1c48cea3a98b548a1854942402c44d, type: 2}
@@ -591,29 +540,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
         type: 2}
-      propertyPath: scene_manager
-      value: 
-      objectReference: {fileID: 1164787769}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradesToPrefab
-      value: 
-      objectReference: {fileID: 1588081942744776, guid: 3fc11b9c679b4884b91f2a215344aad7,
-        type: 2}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradeMenu
-      value: 
-      objectReference: {fileID: 1994206529}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
       propertyPath: useMenu
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: costToUpgrade
-      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1c48cea3a98b548a1854942402c44d, type: 2}
@@ -688,7 +616,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4673095063311040, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4673095063311040, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -903,23 +831,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
         type: 2}
-      propertyPath: scene_manager
-      value: 
-      objectReference: {fileID: 1164787769}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradeMenu
-      value: 
-      objectReference: {fileID: 1994206529}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
       propertyPath: useMenu
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: costToUpgrade
-      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1c48cea3a98b548a1854942402c44d, type: 2}
@@ -1092,18 +1005,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
   - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
   - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
-  - {fileID: 1896710913047422, guid: 4646f015cb2a0eb488f1c681858b2cdf, type: 2}
+  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
+  - {fileID: 1885326985787864, guid: bd510c15bb5dde746a6a7a44bd0089fb, type: 2}
   firstWaypoint: {fileID: 833400905}
   alternateWaypoints: []
   enemySpawnPoint: {fileID: 993505832}
   alternateSpawns: []
   enemiesPerSecond: 0.5
   timeBetweenWaves: 10
-  enemiesPerWave: 5
+  enemiesPerWave: 03000000050000000500000003000000
   isSpawning: 0
 --- !u!114 &1164787775
 MonoBehaviour:
@@ -1726,29 +1638,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
         type: 2}
-      propertyPath: scene_manager
-      value: 
-      objectReference: {fileID: 1164787769}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradesToPrefab
-      value: 
-      objectReference: {fileID: 1588081942744776, guid: 3fc11b9c679b4884b91f2a215344aad7,
-        type: 2}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradeMenu
-      value: 
-      objectReference: {fileID: 1994206529}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
       propertyPath: useMenu
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: costToUpgrade
-      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1c48cea3a98b548a1854942402c44d, type: 2}
@@ -1957,23 +1848,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
         type: 2}
-      propertyPath: scene_manager
-      value: 
-      objectReference: {fileID: 1164787769}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradeMenu
-      value: 
-      objectReference: {fileID: 1994206529}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
       propertyPath: useMenu
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: costToUpgrade
-      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1c48cea3a98b548a1854942402c44d, type: 2}
@@ -2034,29 +1910,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
         type: 2}
-      propertyPath: scene_manager
-      value: 
-      objectReference: {fileID: 1164787769}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradesToPrefab
-      value: 
-      objectReference: {fileID: 1588081942744776, guid: 3fc11b9c679b4884b91f2a215344aad7,
-        type: 2}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: upgradeMenu
-      value: 
-      objectReference: {fileID: 1994206529}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
       propertyPath: useMenu
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114228219233006760, guid: ad1c48cea3a98b548a1854942402c44d,
-        type: 2}
-      propertyPath: costToUpgrade
-      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad1c48cea3a98b548a1854942402c44d, type: 2}

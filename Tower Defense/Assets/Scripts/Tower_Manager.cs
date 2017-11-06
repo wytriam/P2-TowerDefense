@@ -4,44 +4,46 @@ using UnityEngine;
 
 public class Tower_Manager : MonoBehaviour
 {
-    public GameObject projectile;
     public float rateOfFire = 2.0f;
 
     private WytriamSTD.Spawn spawnScript;
-    private float timer = 0.0f;
     private List<GameObject> enemiesInRange;
-    private bool fire = false;
+    public bool isFiring = false;
 
     // Use this for initialization
     void Start ()
     {
         spawnScript = GetComponent<WytriamSTD.Spawn>();
-        spawnScript.setSpawnPrefab(projectile);
         enemiesInRange = new List<GameObject>();
-        timer = rateOfFire;
 	}
 	
-	// Update is called once per frame
-	void Update ()
+    IEnumerator firing()
     {
-        if (fire)
+        Debug.Log("Beginning Coroutine firing");
+        isFiring = true;        // this line is messing up the coroutine for some reason. 
+        Debug.Log("isFiring is now true");
+        while(isFiring)
         {
-            timer += Time.fixedDeltaTime;
-            if (timer > rateOfFire)
-            {
-                shoot();
-                timer = 0f;
-            }
+            Debug.Log("About to shoot projectile");
+            shoot();
+            yield return new WaitForSeconds(1 / rateOfFire);
         }
-        else
-            timer = 0;
-
-	}
+        Debug.Log("Ending Coroutine firing");
+        StopCoroutine("firing");
+    }
 
     public void register(GameObject enemy)
     {
+        Debug.Log("Registering Enemy");
         enemiesInRange.Add(enemy);
-        fire = true;
+        Debug.Log("Enemy registered");
+        if (!isFiring)
+        {
+            Debug.Log("Starting Coroutine firing");
+            StartCoroutine("firing");
+        }
+        else
+            Debug.Log("Huh??????");
     }
 
     public void deregister(GameObject enemy)
@@ -49,8 +51,7 @@ public class Tower_Manager : MonoBehaviour
         enemiesInRange.Remove(enemy);
         if (enemiesInRange.Count == 0)
         {
-            fire = false;
-            timer = rateOfFire;
+            isFiring = false;
         }
     }
 
@@ -68,6 +69,7 @@ public class Tower_Manager : MonoBehaviour
 
     public void shoot()
     {
+        Debug.Log("Projectile shot");
         spawnScript.spawn();
     }
 }

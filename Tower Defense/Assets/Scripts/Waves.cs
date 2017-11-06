@@ -13,7 +13,7 @@ public class Waves : MonoBehaviour
     public GameObject[] alternateSpawns;
     public float enemiesPerSecond = 0.5f;
     public float timeBetweenWaves = 5f;
-    public int enemiesPerWave; // how many monsters are in a wave
+    public int[] enemiesPerWave; // how many monsters are in a wave
 
     [HideInInspector]
     public bool isSpawning = false;
@@ -22,11 +22,15 @@ public class Waves : MonoBehaviour
     private GameObject currentPrefab;
     private int index;
     private int spawnCount;
+    private int enemiesInWave;
 
     void Awake()
     {
         spawnPoint = enemySpawnPoint.GetComponent<WytriamSTD.Spawn>();
         index = 0;
+        enemiesInWave = enemiesPerWave[index];
+        if (enemiesPerWave.Length != waves.Length)
+            Debug.Log("Waves not properly set up - enemiesPerWave and waves length not equal");
     }
 
     void spawnEnemy()
@@ -45,11 +49,11 @@ public class Waves : MonoBehaviour
         isSpawning = true;
         while (index < waves.Length)
         {
-            if (spawnCount % enemiesPerWave == 0 && index != 0)
+            if (spawnCount % enemiesInWave == 0 && index != 0)
                 GetComponent<WytriamSTD.Scene_Manager>().announce("Next Wave!");
             currentPrefab = waves[index];
             spawnEnemy();
-            if (spawnCount % enemiesPerWave == 0)
+            if (spawnCount % enemiesInWave == 0)
             {
                 index++;
                 if (alternateWaypoints.Length != 0)
@@ -57,8 +61,9 @@ public class Waves : MonoBehaviour
                 if (alternateSpawns.Length != 0)
                     spawnPoint = alternateSpawns[index % alternateSpawns.Length].GetComponent<WytriamSTD.Spawn>();
                 spawnCount = 0;
+                enemiesInWave = enemiesPerWave[index % enemiesPerWave.Length];
             }
-            if (spawnCount % enemiesPerWave == 0 && index != 0)
+            if (spawnCount % enemiesInWave == 0 && index != 0)
                 yield return new WaitForSeconds(timeBetweenWaves);
             else
                 yield return new WaitForSeconds(1 / enemiesPerSecond);

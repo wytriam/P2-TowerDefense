@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1308953224557846, guid: 34d0a01cb56d48b45b8c993e5d694be3, type: 2}
-  rateOfFire: 0.5
+  rateOfFire: 2
 --- !u!114 &114892708527892008
 MonoBehaviour:
   m_ObjectHideFlags: 1
