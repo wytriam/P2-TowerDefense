@@ -101,7 +101,6 @@ public class Enemy_Manager : MonoBehaviour
         }
         if (other.tag == "Waypoint")
         {
-            Debug.Log("Enemy_Manager::OnTriggerEnter() - Changing Waypoint");
             other = coll.gameObject.transform.parent.gameObject;
             waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
         }

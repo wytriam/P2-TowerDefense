@@ -89,7 +89,6 @@ public class SM_menu : MonoBehaviour
     // Play button is pushed
     public void play()
     {
-        Debug.Log("SM_menu::play() - Button Pushed");
         SceneManager.LoadScene(NextSceneName);
     }
 

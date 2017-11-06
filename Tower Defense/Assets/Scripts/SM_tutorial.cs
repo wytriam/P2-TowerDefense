@@ -8,6 +8,9 @@ public class SM_tutorial : WytriamSTD.Scene_Manager
 {
     public Text manaDisplay;
 
+    [HideInInspector]
+    public bool towerLookedAt = false;
+
     private bool usedW = false;
     private bool usedA = false;
     private bool usedS = false;
@@ -66,26 +69,38 @@ public class SM_tutorial : WytriamSTD.Scene_Manager
 
     IEnumerator tutorial()
     {
+        announce("Welcome to the tutorial!", 2);
+        yield return new WaitForSeconds(2);
+        announce("In front of you is your Wizzzard Tower. You need to protect this!", 3);
+        yield return new WaitForSeconds(3);
         announce("Move around with W, A, S, D, Q, and E", 2);
         yield return new WaitForSeconds(2);
         while (!canMove)
         {
-            Debug.Log("Waiting for user to test all controls");
             yield return new WaitForFixedUpdate();
         }
+        announce("You can look around by holding the Right Mouse Button and moving the mouse.\nTry to find your turret tower!", 3);
+        yield return new WaitForSeconds(3);
+        while (!towerLookedAt)
+            yield return new WaitForFixedUpdate();
         waves.StartCoroutine("spawnWaves");
-        announce("Enemies will attack your tower.\nIf they reach your tower, they will steal your mana and start over.");
+        announce("Enemies will attack your Wizzzard Tower.\nIf they reach your Tower, they will steal your mana and start over.");
         while (!mana.noMana)
         {
             yield return new WaitForFixedUpdate();
         }
         announce("When you run out of mana, it\'s game over.", 2);
         yield return new WaitForSeconds(2);
-        announce("Here's some more mana. Click on that tower to upgrade the tower and defend yourself", 3);
+        announce("Here's some more mana. Click on that turret tower to upgrade it and defend yourself", 3);
         mana.currentMana = 150;
         mana.noMana = false;
         while(!enemyCounter.allEnemiesKilled)
         {
+            if (mana.currentMana < 100)
+            {
+                announce("Here's some more mana. Click on that tower to upgrade the tower and defend yourself", 3);
+                mana.currentMana = 150;
+            }
             yield return new WaitForFixedUpdate();
         }
         announce("Congratulations! You've killed all the enemies and finished the tutorial.\nEnjoy the game!");
