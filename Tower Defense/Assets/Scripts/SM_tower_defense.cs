@@ -45,6 +45,8 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
 
         displayMana();
         displayScore();
+
+        Time.timeScale = 1;
     }
 
     void Update()
