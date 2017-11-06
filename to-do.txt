@@ -13,3 +13,5 @@ slow slows too much - Thomas
 Image for upgrade menu?
 
 CREATE BIRMINGHAM MODE WITH STUPID MOUSELOOK AND GOD TOWERS THAT COST 0 MANA TO CREATE -- do this last, only if we have time
+
+TURN OFF RESET HIGH SCORES BUTTON
