@@ -96,7 +96,7 @@ public class SM_tutorial : WytriamSTD.Scene_Manager
         {
             yield return new WaitForFixedUpdate();
         }
-        announce("You can look around by holding the Right Mouse Button and moving the mouse.\nTry to find your turret tower!", 3);
+        announce("You can look around by holding the Right Mouse Button and moving the mouse.\nTry to find your turret tower! \n(and mouse over it, please)", 3);
         yield return new WaitForSeconds(3);
         while (!towerLookedAt)
             yield return new WaitForFixedUpdate();
