@@ -1,13 +1,15 @@
 movement when Time.timeScale == 0;
 
-ADD MUSIC
-
-CREATE BIRMINGHAM MODE WITH STUPID MOUSELOOK AND GOD TOWERS THAT COST 0 MANA TO CREATE
 SPLASH SCREEN
-change font color on level 3
 
-slow slows too much
+ADD MUSIC - Thomas/Sean
 
-display waves
+display waves - Thomas
 
-lights level 2
+lights level 2 - Sean
+
+slow slows too much - Thomas
+
+Image for upgrade menu?
+
+CREATE BIRMINGHAM MODE WITH STUPID MOUSELOOK AND GOD TOWERS THAT COST 0 MANA TO CREATE -- do this last, only if we have time
