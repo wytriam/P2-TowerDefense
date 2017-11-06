@@ -2,8 +2,6 @@ ADD MUSIC - Thomas/Sean
 
 SOUND FX - convert my sound fx from m4a to .wav (or get some from freesound.org)
 
-display waves - Thomas
-
 lights level 2 - Sean
 
 	slow slows too much - Thomas - I don't know why this keeps stacking. asd;lfjkas;dlfkja;sgna;gja;
@@ -19,3 +17,9 @@ CREATE BIRMINGHAM MODE WITH STUPID MOUSELOOK AND GOD TOWERS THAT COST 0 MANA TO 
 TURN OFF RESET HIGH SCORES BUTTON
 
 UPDATE CREDITS
+
+-- MISC PROJECT BULLSHIT INDEPENDENT OF MAKING A GOOD GAME
+Fill out Rubric
+Upload FULL gameplay vid to YouTube
+Peer Evaluations
+zipped project <100 MB
