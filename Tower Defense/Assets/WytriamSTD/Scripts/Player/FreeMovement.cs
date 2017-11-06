@@ -23,6 +23,8 @@ public class FreeMovement : MonoBehaviour
         // Handle Movement
         // adapated from https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (Time.timeScale == 0)
+            moveDirection = Vector3.zero;
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirection *= speed;
         if (Input.GetKey(KeyCode.E))
