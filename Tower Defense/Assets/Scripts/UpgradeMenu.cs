@@ -37,6 +37,7 @@ public class UpgradeMenu : MonoBehaviour {
     {
         menu.SetActive(true);
         menuOpen = true;
+        priceDisplay.enabled = false;
         towerTier = tier - 1;
         towerToUpgrade = tower;
     }
