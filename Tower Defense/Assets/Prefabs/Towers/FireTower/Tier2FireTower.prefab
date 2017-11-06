@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 114288246743046882}
   - component: {fileID: 65824457255260516}
   m_Layer: 11
-  m_Name: Tier2DoTTower
+  m_Name: Tier2FireTower
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,7 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78a1351cd0eef74abd059ba2feaf194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rateOfFire: 0.3
+  rateOfFire: 2
   isFiring: 0
 --- !u!114 &114061719436371700
 MonoBehaviour:
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradesToPrefab: {fileID: 1208884352219288, guid: dbc3231302211d34990a1b80b3a420a4,
     type: 2}
-  costToUpgrade: 1000
+  costToUpgrade: 800
   towerTier: 0
   useMenu: 0
   upgradeMenu: {fileID: 0}

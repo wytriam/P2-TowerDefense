@@ -3296,11 +3296,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
   speed: 3
-  health: 10
-  manaForKill: 15
+  health: 30
+  manaForKill: 90
   damageMultiplier: 1
   firstWaypoint: {fileID: 0}
   spawnPos: {x: 0, y: 0, z: 0}
+  isSlowed: 0
 --- !u!137 &137062920705002828
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

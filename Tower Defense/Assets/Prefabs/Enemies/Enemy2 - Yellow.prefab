@@ -3297,10 +3297,11 @@ MonoBehaviour:
   waypoint: {fileID: 0}
   speed: 3
   health: 15
-  manaForKill: 15
+  manaForKill: 45
   damageMultiplier: 1
   firstWaypoint: {fileID: 0}
   spawnPos: {x: 0, y: 0, z: 0}
+  isSlowed: 0
 --- !u!137 &137031010016580132
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

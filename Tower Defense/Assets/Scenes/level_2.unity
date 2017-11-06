@@ -1032,13 +1032,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
+  - {fileID: 1885326985787864, guid: bd510c15bb5dde746a6a7a44bd0089fb, type: 2}
+  - {fileID: 1885326985787864, guid: bd510c15bb5dde746a6a7a44bd0089fb, type: 2}
+  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
+  - {fileID: 1060023716411068, guid: 7ed07adee89297d46931df076c98e3a3, type: 2}
   firstWaypoint: {fileID: 1846873783}
   alternateWaypoints: []
   enemySpawnPoint: {fileID: 1715070548}
   alternateSpawns: []
   enemiesPerSecond: 0.5
-  timeBetweenWaves: 5
-  enemiesPerWave: 10
+  timeBetweenWaves: 10
+  enemiesPerWave: 0500000003000000050000000a00000003000000
   isSpawning: 0
 --- !u!114 &1548397604
 MonoBehaviour:

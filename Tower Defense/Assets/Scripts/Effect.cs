@@ -50,7 +50,7 @@ public class Effect : MonoBehaviour
                 if (slowing)
                 {
                     enemy.speed *= 2;
-                    enemy.isSlowed = true;
+                    enemy.isSlowed = false;
                 }
                 if (curse)
                     enemy.damageMultiplier /= 2;

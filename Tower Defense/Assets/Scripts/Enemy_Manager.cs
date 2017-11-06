@@ -9,7 +9,7 @@ public class Enemy_Manager : MonoBehaviour
     public float health = 5f;
     public float manaForKill = 10f;
 
-    [HideInInspector]
+    //[HideInInspector]
     public float damageMultiplier = 1f;
 
     [HideInInspector]
@@ -18,7 +18,7 @@ public class Enemy_Manager : MonoBehaviour
     [HideInInspector]
     public Vector3 spawnPos;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isSlowed;
 
     private Vector3 lastPos;
