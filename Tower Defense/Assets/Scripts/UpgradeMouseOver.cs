@@ -23,13 +23,11 @@ public class UpgradeMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("OnPointerEnter called");
         menu.displayPrice(TowerType);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("OnPointerExit called");
         menu.hidePrice();
     }
 

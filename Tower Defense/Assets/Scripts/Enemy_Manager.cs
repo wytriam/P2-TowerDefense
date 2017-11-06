@@ -9,7 +9,7 @@ public class Enemy_Manager : MonoBehaviour
     public float health = 5f;
     public float manaForKill = 10f;
 
-    //[HideInInspector]
+    [HideInInspector]
     public float damageMultiplier = 1f;
 
     [HideInInspector]
@@ -18,10 +18,10 @@ public class Enemy_Manager : MonoBehaviour
     [HideInInspector]
     public Vector3 spawnPos;
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool isSlowed;
 
-    private Vector3 lastPos;
+    //private Vector3 lastPos;
 
     private List<GameObject> nearbyTowers;
     private Mana mana;
@@ -41,7 +41,7 @@ public class Enemy_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lastPos = gameObject.transform.position;
+        //lastPos = gameObject.transform.position;
         if (waypoint != null)
         {
             Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, speed * Time.deltaTime);
