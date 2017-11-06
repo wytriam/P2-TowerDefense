@@ -10,6 +10,8 @@ public class SM_menu : MonoBehaviour
 
     public bool showCreditsAtStart;
 
+    public bool showHighScoresAtStart;
+
     private GameObject returnButton;
     private GameObject[] buttons;
     private GameObject activePage;
@@ -59,6 +61,9 @@ public class SM_menu : MonoBehaviour
         activePage = creditsPage;
         if (showCreditsAtStart)
             credits();
+
+        else if (showHighScoresAtStart)
+            highScores();
     }
 
     // Update is called once per frame

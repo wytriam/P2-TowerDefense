@@ -414,7 +414,7 @@ Prefab:
     - target: {fileID: 224401626732552374, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 206
+      value: 205.5
       objectReference: {fileID: 0}
     - target: {fileID: 224669628368456836, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -424,7 +424,7 @@ Prefab:
     - target: {fileID: 224669628368456836, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 206
+      value: 205.5
       objectReference: {fileID: 0}
     - target: {fileID: 224957646096052806, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -434,7 +434,7 @@ Prefab:
     - target: {fileID: 224957646096052806, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 206
+      value: 205.5
       objectReference: {fileID: 0}
     - target: {fileID: 224257395194325092, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -444,7 +444,7 @@ Prefab:
     - target: {fileID: 224257395194325092, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 206
+      value: 205.5
       objectReference: {fileID: 0}
     - target: {fileID: 1861262573372772, guid: 6245de837eb96b745a66237c901c6c14, type: 2}
       propertyPath: m_IsActive
@@ -498,7 +498,7 @@ Prefab:
     - target: {fileID: 114971784871837356, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_Text
-      value: View Credits
+      value: View High Scores
       objectReference: {fileID: 0}
     - target: {fileID: 224616907958951338, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -881,6 +881,7 @@ MonoBehaviour:
   startingMana: 1000
   manaPerSecond: 5
   noMana: 0
+  generatingMana: 0
 --- !u!114 &465749754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,6 +899,7 @@ MonoBehaviour:
   menus: {fileID: 302910974}
   levelBonus: 5000
   score: 0
+  notStarted: 1
 --- !u!4 &465749755
 Transform:
   m_ObjectHideFlags: 0
@@ -1011,7 +1013,7 @@ Prefab:
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 206
+      value: 205.5
       objectReference: {fileID: 0}
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
