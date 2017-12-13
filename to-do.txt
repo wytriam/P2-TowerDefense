@@ -4,15 +4,18 @@ lights level 2 - Sean
 
 Image for upgrade menu?
 
+EnemyAI - DEFENDER
+
+EnemeyAI - BOMBER
+
+Nerf FireTower
+
+Buff enemies overall
+
+Break out from straight lines
+
 TURN OFF RESET HIGH SCORES BUTTON
 
 UPDATE CREDITS
 
 -- MISC PROJECT BULLSHIT INDEPENDENT OF MAKING A GOOD GAME
-Fill out Rubric
-Upload FULL gameplay vid to YouTube
-Peer Evaluations
-zipped project <100 MB
-
-https://freesound.org/people/potentjello/sounds/194081/
-https://freesound.org/people/newagesoup/sounds/377830/
