@@ -11,6 +11,8 @@ public class Tower_Manager : MonoBehaviour
     public bool isFiring = false;
     [HideInInspector]
     public bool canFire = true;
+    [HideInInspector]
+    public bool beingBlocked = false;
 
     private AudioSource sound;
 

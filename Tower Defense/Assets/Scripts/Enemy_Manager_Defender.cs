@@ -19,6 +19,10 @@ public class Enemy_Manager_Defender : MonoBehaviour
     private EnemyCounter enemycounter;
     private SM_tower_defense sm;
     private EnemyNavigation nav;
+    private Animation anim;
+
+    [HideInInspector]
+    public int waitTime = 4;
 
     private bool deathStarted = false;
 
@@ -31,6 +35,7 @@ public class Enemy_Manager_Defender : MonoBehaviour
         enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
         sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
         nav = GetComponent<EnemyNavigation>();
+        anim = GetComponentInChildren<Animation>();
         enemycounter.register(gameObject);
     }
 
@@ -63,15 +68,6 @@ public class Enemy_Manager_Defender : MonoBehaviour
 
     }
 
-    IEnumerator DisableNav(float seconds)
-    {
-        nav.navEnabled = false;
-        yield return new WaitForSeconds(seconds);
-        nav.navEnabled = true;
-        StopCoroutine("ApproachTower");
-        StopCoroutine("WaitThenMove");
-    }
-
     public void OnTriggerEnter(Collider coll)
     {
         GameObject other = coll.gameObject.transform.root.gameObject;
@@ -98,21 +94,28 @@ public class Enemy_Manager_Defender : MonoBehaviour
         }
         else if (other.tag == "Tower")
         {
-
-            StartCoroutine(DisableNav(8));
-            StartCoroutine(ApproachTower(other.gameObject));
+            if (!other.GetComponent<Tower_Manager>().beingBlocked)
+                StartCoroutine(ApproachTower(other.gameObject));
         }
     }
 
     IEnumerator ApproachTower(GameObject tower)
     {
+        nav.navEnabled = false;
+        tower.GetComponent<Tower_Manager>().beingBlocked = true;
         // get really close to that tower
-        while (Vector3.Distance(transform.position, tower.transform.position) > 2)
+        while (Vector3.Distance(transform.position, tower.transform.position) > 3)
         {
             Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, tower.transform.position, nav.speed * Time.deltaTime);
             gameObject.transform.position = movement;
             gameObject.transform.LookAt(tower.transform);
             yield return null;
         }
+        anim.Stop();
+        yield return new WaitForSeconds(waitTime);
+        anim.Play();
+        nav.navEnabled = true;
+        tower.GetComponent<Tower_Manager>().beingBlocked = false;
+        StopCoroutine("ApproachTower");
     }
 }

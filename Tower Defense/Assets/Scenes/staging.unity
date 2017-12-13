@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 1414301094263624, guid: 93538911401faff45a4618667ce17cc7, type: 2}
+  - {fileID: 1605853895446458, guid: 30f848e48b2f9cd449d11bb1c78c259d, type: 2}
   firstWaypoint: {fileID: 535022048}
   alternateWaypoints: []
   enemySpawnPoint: {fileID: 1298199708}
