@@ -63,11 +63,12 @@ public class Enemy_Manager_Defender : MonoBehaviour
 
     }
 
-    IEnumerator WaitThenMove(float seconds, GameObject object_)
+    IEnumerator WaitThenMove(float seconds)
     {
+        nav.movingAllowed = false;
         yield return new WaitForSeconds(seconds);
-        nav.waypoint = object_.gameObject.GetComponent<Waypoint>().nextWaypoint;
-        yield return null;
+        nav.movingAllowed = true;
+        StopCoroutine("WaitThenMove");
     }
 
     public void OnTriggerEnter(Collider coll)
@@ -96,7 +97,7 @@ public class Enemy_Manager_Defender : MonoBehaviour
         }
         else if (other.tag == "Tower")
         {
-            StartCoroutine(WaitThenMove(8, other));
+            StartCoroutine(WaitThenMove(8));
         }
     }
 }
