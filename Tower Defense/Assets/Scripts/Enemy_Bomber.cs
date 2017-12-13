@@ -8,6 +8,7 @@ public class Enemy_Bomber : MonoBehaviour
     public float speed = 2.0f;
     public float health = 5f;
     public float manaForKill = 10f;
+    public GameObject explosionSystem;
 
     [HideInInspector]
     public float damageMultiplier = 1f;
@@ -106,6 +107,7 @@ public class Enemy_Bomber : MonoBehaviour
             deathStarted = true;
             health = 0;
             other.GetComponent<Tower_Manager>().disableTower();
+            Instantiate(explosionSystem, transform.position, Quaternion.Euler(0, 0, 0));
             StartCoroutine("bomberSequence");
         }
     }
