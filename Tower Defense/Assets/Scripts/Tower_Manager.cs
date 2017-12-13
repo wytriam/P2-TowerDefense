@@ -9,6 +9,7 @@ public class Tower_Manager : MonoBehaviour
     private WytriamSTD.Spawn spawnScript;
     private List<GameObject> enemiesInRange;
     public bool isFiring = false;
+    private bool canFire = true;
 
     private AudioSource sound;
 
@@ -39,6 +40,7 @@ public class Tower_Manager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (!canFire) return;
         if (other.gameObject.tag == "Enemy")
             if (!isFiring)
                 StartCoroutine("firing");
@@ -46,6 +48,7 @@ public class Tower_Manager : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
+        if (!canFire) return;
         if (other.gameObject.tag == "Enemy")
             if (!isFiring)
                 StartCoroutine("firing");
@@ -59,5 +62,24 @@ public class Tower_Manager : MonoBehaviour
                 StopCoroutine("firing");
                 isFiring = false;
             }
+    }
+
+    // disables the tower for 5 seconeds
+    public void disableTower()
+    {
+        canFire = false;
+        if (isFiring)
+        {
+            StopCoroutine("firing");
+            isFiring = false;
+        }
+        StartCoroutine("TowerPowerCycle");
+    }
+
+    IEnumerator TowerPowerCycle()
+    {
+        yield return new WaitForSeconds(5);
+        canFire = true;
+        StopCoroutine("TowerPowerCycle");
     }
 }

@@ -14,6 +14,8 @@ Buff enemies overall
 
 Break out from straight lines
 
+Make numbers appear when enemy hit Wizzzard Tower.
+
 TURN OFF RESET HIGH SCORES BUTTON
 
 UPDATE CREDITS
