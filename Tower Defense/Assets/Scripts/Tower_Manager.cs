@@ -9,7 +9,8 @@ public class Tower_Manager : MonoBehaviour
     private WytriamSTD.Spawn spawnScript;
     private List<GameObject> enemiesInRange;
     public bool isFiring = false;
-    private bool canFire = true;
+    [HideInInspector]
+    public bool canFire = true;
 
     private AudioSource sound;
 

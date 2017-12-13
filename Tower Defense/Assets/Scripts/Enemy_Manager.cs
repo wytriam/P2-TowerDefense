@@ -4,19 +4,11 @@ using UnityEngine;
 
 public class Enemy_Manager : MonoBehaviour
 {
-    public GameObject waypoint;
-    public float speed = 2.0f;
     public float health = 5f;
     public float manaForKill = 10f;
 
     [HideInInspector]
     public float damageMultiplier = 1f;
-
-    [HideInInspector]
-    public GameObject firstWaypoint;
-
-    [HideInInspector]
-    public Vector3 spawnPos;
 
     [HideInInspector]
     public bool isSlowed;
@@ -27,6 +19,7 @@ public class Enemy_Manager : MonoBehaviour
     private Mana mana;
     private EnemyCounter enemycounter;
     private SM_tower_defense sm;
+    private EnemyNavigation nav;
 
     private bool deathStarted = false;
 
@@ -37,19 +30,13 @@ public class Enemy_Manager : MonoBehaviour
         mana = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Mana>();
         enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
         sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
+        nav = GetComponent<EnemyNavigation>();
         enemycounter.register(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //lastPos = gameObject.transform.position;
-        if (waypoint != null)
-        {
-            Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, speed * Time.deltaTime);
-            gameObject.transform.position = movement;
-            gameObject.transform.LookAt(waypoint.transform);
-        }
         if (health <= 0)
         {
             if (!deathStarted)
@@ -61,6 +48,7 @@ public class Enemy_Manager : MonoBehaviour
     IEnumerator deathSequence()
     {
         deathStarted = true;
+        nav.movingAllowed = false;
         // HACKY SOLUTION - send enemy flying upwards to activate OnTriggerExit() in tower
         transform.position = transform.position + new Vector3(0, 1000, 0);
         mana.currentMana += manaForKill;
@@ -90,14 +78,14 @@ public class Enemy_Manager : MonoBehaviour
         if (other.tag == "Waypoint")
         {
             other = coll.gameObject.transform.parent.gameObject;
-            waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
+            nav.waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
         }
         else if (other.tag == "EndPoint")
         {
             mana.currentMana -= 2 * health;
             other = coll.gameObject;
-            waypoint = firstWaypoint;
-            gameObject.transform.position = spawnPos;
+            nav.waypoint = nav.firstWaypoint;
+            gameObject.transform.position = nav.spawnPos;
         }
     }
 }

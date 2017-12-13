@@ -13,6 +13,8 @@ public class Effect : MonoBehaviour
 
     [HideInInspector]
     public Enemy_Manager enemy;
+    [HideInInspector]
+    public EnemyNavigation nav;
     private float timer = 0;
     private float prevEnemySpeed = 0;
 
@@ -20,6 +22,7 @@ public class Effect : MonoBehaviour
 	void Start ()
     {
         enemy = this.transform.root.gameObject.GetComponent<Enemy_Manager>();
+        nav = this.transform.root.gameObject.GetComponent<EnemyNavigation>();
         if (enemy == null)
         {
             Debug.Log("Not attached to an enemey");
@@ -36,8 +39,8 @@ public class Effect : MonoBehaviour
             if (enemy.isSlowed)         // slowing doesn't stack
                 Destroy(gameObject);
             enemy.isSlowed = true;
-            prevEnemySpeed = enemy.speed;   
-            enemy.speed /= 2;
+            prevEnemySpeed = nav.speed;   
+            nav.speed /= 2;
         }
         if (curse)
             enemy.damageMultiplier *= 2;
@@ -51,7 +54,7 @@ public class Effect : MonoBehaviour
             {
                 if (slowing)
                 {
-                    enemy.speed = prevEnemySpeed;
+                    nav.speed = prevEnemySpeed;
                     enemy.isSlowed = false;
                 }
                 if (curse)

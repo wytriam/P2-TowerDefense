@@ -188,6 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4349530114831662}
   - component: {fileID: 114404208868081812}
+  - component: {fileID: 114129365458713582}
   - component: {fileID: 65408368660984682}
   - component: {fileID: 54527125154873034}
   - component: {fileID: 82748110008078650}
@@ -3364,6 +3365,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114129365458713582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131615522394630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8cc496f61f6bb40a4670acc12f1f45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoint: {fileID: 0}
+  speed: 2
+  firstWaypoint: {fileID: 0}
+  spawnPos: {x: 0, y: 0, z: 0}
+  movingAllowed: 1
 --- !u!114 &114404208868081812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3375,13 +3392,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40393447782c614a90e2fefd1b5646c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoint: {fileID: 0}
-  speed: 3
   health: 30
   manaForKill: 90
   damageMultiplier: 1
-  firstWaypoint: {fileID: 0}
-  spawnPos: {x: 0, y: 0, z: 0}
   isSlowed: 0
 --- !u!137 &137062920705002828
 SkinnedMeshRenderer:

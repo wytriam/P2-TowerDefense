@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4788650416462496}
   - component: {fileID: 198681067977657982}
   - component: {fileID: 199681902341832448}
+  - component: {fileID: 114998262784612338}
   m_Layer: 0
   m_Name: BomberExplosion
   m_TagString: Untagged
@@ -41,6 +42,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114998262784612338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1702812906650880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5ac5c5ab8da53c46b41418140c43af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
 --- !u!198 &198681067977657982
 ParticleSystem:
   m_ObjectHideFlags: 1
