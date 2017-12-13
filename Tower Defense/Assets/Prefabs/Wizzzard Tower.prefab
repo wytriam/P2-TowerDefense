@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4310827262706518}
   - component: {fileID: 114193093096602352}
   - component: {fileID: 65328794669345644}
+  - component: {fileID: 114704919442648960}
   m_Layer: 10
   m_Name: Wizzzard Tower
   m_TagString: EndPoint
@@ -845,7 +846,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1632890297866356}
-  m_Text: 'HELLO '
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -858,7 +859,7 @@ TextMesh:
   m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190335
 --- !u!114 &114193093096602352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -871,3 +872,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextWaypoint: {fileID: 0}
+--- !u!114 &114704919442648960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239570404820600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9ce4b21e02fa846a0f8138f640a2dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

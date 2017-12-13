@@ -16,6 +16,7 @@ public class TextStuff : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         manaStatusText.transform.LookAt(cam.transform);
+        manaStatusText.transform.rotation *= Quaternion.Euler(0, 180, 0);
         if (manaStatusText.text != "")
         {
             StartCoroutine(WaitForKill());
@@ -35,6 +36,7 @@ public class TextStuff : MonoBehaviour {
 
     public void ResetTo(string text)
     {
+        StopCoroutine(WaitForKill());
         manaStatusText.transform.position = startingPosition;
         manaStatusText.text = text;
     }

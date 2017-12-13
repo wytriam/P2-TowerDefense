@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Enemy_Manager : MonoBehaviour
 {
+
+    TextStuff textyPoo;
+    public GameObject waypoint;
+    public float speed = 2.0f;
     public float health = 5f;
     public float manaForKill = 10f;
 
@@ -26,6 +30,7 @@ public class Enemy_Manager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        textyPoo = FindObjectOfType<TextStuff>();
         nearbyTowers = new List<GameObject>();
         mana = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Mana>();
         enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
@@ -83,6 +88,7 @@ public class Enemy_Manager : MonoBehaviour
         else if (other.tag == "EndPoint")
         {
             mana.currentMana -= 2 * health;
+            textyPoo.ResetTo("-" + (2 * health));
             other = coll.gameObject;
             nav.waypoint = nav.firstWaypoint;
             gameObject.transform.position = nav.spawnPos;
