@@ -3377,10 +3377,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {fileID: 0}
-  speed: 2
+  speed: 4
   firstWaypoint: {fileID: 0}
   spawnPos: {x: 0, y: 0, z: 0}
-  movingAllowed: 1
+  navEnabled: 1
 --- !u!114 &114332032719320200
 MonoBehaviour:
   m_ObjectHideFlags: 1
