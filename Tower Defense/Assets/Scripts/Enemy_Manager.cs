@@ -53,7 +53,7 @@ public class Enemy_Manager : MonoBehaviour
     IEnumerator deathSequence()
     {
         deathStarted = true;
-        nav.movingAllowed = false;
+        nav.navEnabled = false;
         // HACKY SOLUTION - send enemy flying upwards to activate OnTriggerExit() in tower
         transform.position = transform.position + new Vector3(0, 1000, 0);
         mana.currentMana += manaForKill;

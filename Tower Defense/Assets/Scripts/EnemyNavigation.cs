@@ -14,13 +14,13 @@ public class EnemyNavigation : MonoBehaviour
     public Vector3 spawnPos;
 
     [HideInInspector]
-    public bool movingAllowed = true;
+    public bool navEnabled = true;
 
     // Update is called once per frame
     void Update()
     {
         //lastPos = gameObject.transform.position;
-        if (movingAllowed && waypoint != null)
+        if (navEnabled && waypoint != null)
         {
             Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, waypoint.transform.position, speed * Time.deltaTime);
             gameObject.transform.position = movement;

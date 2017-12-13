@@ -63,11 +63,12 @@ public class Enemy_Manager_Defender : MonoBehaviour
 
     }
 
-    IEnumerator WaitThenMove(float seconds)
+    IEnumerator DisableNav(float seconds)
     {
-        nav.movingAllowed = false;
+        nav.navEnabled = false;
         yield return new WaitForSeconds(seconds);
-        nav.movingAllowed = true;
+        nav.navEnabled = true;
+        StopCoroutine("ApproachTower");
         StopCoroutine("WaitThenMove");
     }
 
@@ -97,7 +98,21 @@ public class Enemy_Manager_Defender : MonoBehaviour
         }
         else if (other.tag == "Tower")
         {
-            StartCoroutine(WaitThenMove(8));
+
+            StartCoroutine(DisableNav(8));
+            StartCoroutine(ApproachTower(other.gameObject));
+        }
+    }
+
+    IEnumerator ApproachTower(GameObject tower)
+    {
+        // get really close to that tower
+        while (Vector3.Distance(transform.position, tower.transform.position) > 2)
+        {
+            Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, tower.transform.position, nav.speed * Time.deltaTime);
+            gameObject.transform.position = movement;
+            gameObject.transform.LookAt(tower.transform);
+            yield return null;
         }
     }
 }

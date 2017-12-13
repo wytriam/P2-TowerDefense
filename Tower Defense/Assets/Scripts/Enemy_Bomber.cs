@@ -93,14 +93,23 @@ public class Enemy_Bomber : MonoBehaviour
             // also fire off the bomber particle effect
             deathStarted = true;
             health = 0;
-            other.GetComponent<Tower_Manager>().disableTower();
-            Instantiate(explosionSystem, transform.position, Quaternion.Euler(0, 0, 0));
-            StartCoroutine("bomberSequence");
+            StartCoroutine("bomberSequence", other.gameObject);
         }
     }
 
-    IEnumerator bomberSequence()
+    IEnumerator bomberSequence(GameObject tower)
     {
+        // get really close to that tower
+        while (Vector3.Distance(transform.position, tower.transform.position) > 2)
+        {
+            Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, tower.transform.position, nav.speed * Time.deltaTime);
+            gameObject.transform.position = movement;
+            gameObject.transform.LookAt(tower.transform);
+            yield return null;
+        }
+        Instantiate(explosionSystem, transform.position, Quaternion.Euler(0, 0, 0));
+        tower.GetComponent<Tower_Manager>().disableTower();
+
         // HACKY SOLUTION - send enemy flying upwards to activate OnTriggerExit() in tower
         transform.position = transform.position + new Vector3(0, 1000, 0);
         enemycounter.deregister(gameObject);
