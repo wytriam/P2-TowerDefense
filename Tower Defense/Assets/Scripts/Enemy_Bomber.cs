@@ -53,7 +53,7 @@ public class Enemy_Bomber : MonoBehaviour
         deathStarted = true;
         // HACKY SOLUTION - send enemy flying upwards to activate OnTriggerExit() in tower
         transform.position = transform.position + new Vector3(0, 1000, 0);
-        mana.currentMana += manaForKill;
+        //mana.currentMana += manaForKill;
         if (sm != null)
             sm.score += (int)manaForKill;
         enemycounter.deregister(gameObject);
