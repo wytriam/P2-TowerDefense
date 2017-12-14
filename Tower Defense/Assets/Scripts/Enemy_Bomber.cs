@@ -21,6 +21,7 @@ public class Enemy_Bomber : MonoBehaviour
     private EnemyNavigation nav;
 
     private bool deathStarted = false;
+    private bool isBombing = false;
 
     // Use this for initialization
     void Start()
@@ -46,6 +47,10 @@ public class Enemy_Bomber : MonoBehaviour
 
     IEnumerator deathSequence()
     {
+        // end the bomber sequence if running
+        if (isBombing)
+            StopCoroutine("bomberSequence");
+
         deathStarted = true;
         // HACKY SOLUTION - send enemy flying upwards to activate OnTriggerExit() in tower
         transform.position = transform.position + new Vector3(0, 1000, 0);
@@ -91,14 +96,13 @@ public class Enemy_Bomber : MonoBehaviour
             if (!other.gameObject.GetComponent<Tower_Manager>().canFire) return;
             // decide whether or not to blow up. For our purposes, we will go boom immeadiately
             // also fire off the bomber particle effect
-            deathStarted = true;
-            health = 0;
             StartCoroutine("bomberSequence", other.gameObject);
         }
     }
 
     IEnumerator bomberSequence(GameObject tower)
     {
+        isBombing = true;
         // get really close to that tower
         while (Vector3.Distance(transform.position, tower.transform.position) > 2)
         {

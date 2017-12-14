@@ -21,6 +21,8 @@ public class Enemy_Manager_Defender : MonoBehaviour
     private EnemyNavigation nav;
     private Animation anim;
 
+    private GameObject isDefending = null;
+
     [HideInInspector]
     public int waitTime = 4;
 
@@ -52,6 +54,11 @@ public class Enemy_Manager_Defender : MonoBehaviour
 
     IEnumerator deathSequence()
     {
+        if (isDefending != null)
+        {
+            StopCoroutine("ApproachTower");
+            isDefending.GetComponent<Tower_Manager>().beingBlocked = false;
+        }
         deathStarted = true;
         // GOOD SOLUTION - send enemy flying upwards to activate OnTriggerExit() in tower
         transform.position = transform.position + new Vector3(0, 1000, 0);
@@ -101,6 +108,7 @@ public class Enemy_Manager_Defender : MonoBehaviour
 
     IEnumerator ApproachTower(GameObject tower)
     {
+        isDefending = tower;
         nav.navEnabled = false;
         tower.GetComponent<Tower_Manager>().beingBlocked = true;
         // get really close to that tower
@@ -116,6 +124,7 @@ public class Enemy_Manager_Defender : MonoBehaviour
         anim.Play();
         nav.navEnabled = true;
         tower.GetComponent<Tower_Manager>().beingBlocked = false;
+        isDefending = null;
         StopCoroutine("ApproachTower");
     }
 }
