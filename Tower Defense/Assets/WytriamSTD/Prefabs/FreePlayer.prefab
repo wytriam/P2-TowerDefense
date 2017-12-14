@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8627e68f350c84843b5634a3040183e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockCameraWithMouse: 1
+  lockCameraWithMouse: 0
   axes: 0
   sensitivityX: 15
   sensitivityY: 15
