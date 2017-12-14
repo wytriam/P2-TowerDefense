@@ -1031,7 +1031,7 @@ MonoBehaviour:
   alternateSpawns: []
   enemiesPerSecond: 2
   timeBetweenWaves: 5
-  enemiesPerWave: 060000000300000008000000020000000600000006000000
+  enemiesPerWave: 08000000060000000a00000003000000080000000a000000
   isSpawning: 0
 --- !u!114 &1164787775
 MonoBehaviour:

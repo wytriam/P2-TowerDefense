@@ -81,6 +81,7 @@ public class Tower_Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         canFire = true;
+        beingBlocked = false;
         StopCoroutine("TowerPowerCycle");
     }
 }

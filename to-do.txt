@@ -8,8 +8,6 @@ Nerf FireTower
 
 Buff enemies overall
 
-Fix Effect (EnemyEffectMgr)
-
 UPDATE CREDITS
 
 -- MISC PROJECT BULLSHIT INDEPENDENT OF MAKING A GOOD GAME

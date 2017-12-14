@@ -3394,7 +3394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d96a2e17a8759c429435e54d5977efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   manaForKill: 50
   damageMultiplier: 1
   isSlowed: 0

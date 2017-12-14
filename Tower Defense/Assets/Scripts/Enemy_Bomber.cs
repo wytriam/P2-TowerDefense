@@ -102,6 +102,7 @@ public class Enemy_Bomber : MonoBehaviour
     IEnumerator bomberSequence(GameObject tower)
     {
         isBombing = true;
+        tower.GetComponent<Tower_Manager>().beingBlocked = true;
         // get really close to that tower
         while (Vector3.Distance(transform.position, tower.transform.position) > 2)
         {
@@ -109,6 +110,11 @@ public class Enemy_Bomber : MonoBehaviour
             gameObject.transform.position = movement;
             gameObject.transform.LookAt(tower.transform);
             yield return null;
+        }
+        if (tower.GetComponent<Tower_Manager>().beingBlocked)
+        {
+            isBombing = false;
+            StopCoroutine("bomberSequence");
         }
         Instantiate(explosionSystem, transform.position, Quaternion.Euler(0, 0, 0));
         tower.GetComponent<Tower_Manager>().disableTower();

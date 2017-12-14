@@ -855,7 +855,7 @@ Prefab:
     - target: {fileID: 224257395194325092, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 278.5
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224257395194325092, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -875,7 +875,7 @@ Prefab:
     - target: {fileID: 224401626732552374, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 278.5
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224401626732552374, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -885,7 +885,7 @@ Prefab:
     - target: {fileID: 224669628368456836, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 278.5
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224669628368456836, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -900,7 +900,7 @@ Prefab:
     - target: {fileID: 224957646096052806, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 278.5
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224957646096052806, guid: 6245de837eb96b745a66237c901c6c14,
         type: 2}
@@ -1077,10 +1077,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
   - {fileID: 1885326985787864, guid: bd510c15bb5dde746a6a7a44bd0089fb, type: 2}
+  - {fileID: 1605853895446458, guid: 30f848e48b2f9cd449d11bb1c78c259d, type: 2}
+  - {fileID: 1414301094263624, guid: 93538911401faff45a4618667ce17cc7, type: 2}
   - {fileID: 1885326985787864, guid: bd510c15bb5dde746a6a7a44bd0089fb, type: 2}
-  - {fileID: 1172927535962464, guid: badba0151590a894c93512e8a31ac36b, type: 2}
   - {fileID: 1060023716411068, guid: 7ed07adee89297d46931df076c98e3a3, type: 2}
   firstWaypoint: {fileID: 1846873783}
   alternateWaypoints: []
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   alternateSpawns: []
   enemiesPerSecond: 0.5
   timeBetweenWaves: 10
-  enemiesPerWave: 0500000003000000050000000a00000003000000
+  enemiesPerWave: 0400000006000000050000000a00000006000000
   isSpawning: 0
 --- !u!114 &1548397604
 MonoBehaviour:
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85180436a834e143a3acd2900e1faf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: level_3
+  nextSceneName: menu_credits
   manaDisplay: {fileID: 1340044686}
   scoreDisplay: {fileID: 1340044685}
   menus: {fileID: 1340044684}
@@ -1260,7 +1260,7 @@ Prefab:
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 278.5
+      value: 278
       objectReference: {fileID: 0}
     - target: {fileID: 224975757099549500, guid: 999086e81011884449cec98ee66256dd,
         type: 2}
@@ -1403,6 +1403,16 @@ Prefab:
     - target: {fileID: 4673095063311040, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114548890043518882, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1,
+        type: 2}
+      propertyPath: spawnRandomly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114548890043518882, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1,
+        type: 2}
+      propertyPath: randomRange
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1, type: 2}
