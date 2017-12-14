@@ -7,6 +7,7 @@ public class Enemy_Bomber : MonoBehaviour
     public float health = 5f;
     public float manaForKill = 10f;
     public GameObject explosionSystem;
+    ManaText textyPoo;
 
     [HideInInspector]
     public float damageMultiplier = 1f;
@@ -26,6 +27,7 @@ public class Enemy_Bomber : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        textyPoo = FindObjectOfType<ManaText>();
         mana = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Mana>();
         enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
         sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
@@ -85,6 +87,7 @@ public class Enemy_Bomber : MonoBehaviour
         else if (other.tag == "EndPoint")
         {
             mana.currentMana -= 2 * health;
+            textyPoo.AddText("-2" + (2 * health));
             other = coll.gameObject;
             nav.SetWaypoint(nav.firstWaypoint);
             gameObject.transform.position = nav.spawnPos;

@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: 4310827262706518}
   - component: {fileID: 114193093096602352}
   - component: {fileID: 65328794669345644}
-  - component: {fileID: 114704919442648960}
   m_Layer: 10
   m_Name: Wizzzard Tower
   m_TagString: EndPoint
@@ -140,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4975073165893854}
   - component: {fileID: 23016632971478188}
-  - component: {fileID: 102362927754922578}
+  - component: {fileID: 114709768447550496}
   m_Layer: 10
   m_Name: DamageText
   m_TagString: Untagged
@@ -377,7 +376,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1632890297866356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 14, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4310827262706518}
@@ -839,27 +838,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 12, z: 5}
   m_Center: {x: 0, y: 6, z: 0}
---- !u!102 &102362927754922578
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1632890297866356}
-  m_Text: 
-  m_OffsetZ: 0
-  m_CharacterSize: 1
-  m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
-  m_TabSize: 4
-  m_FontSize: 0
-  m_FontStyle: 0
-  m_RichText: 1
-  m_Font: {fileID: 0}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4278190335
 --- !u!114 &114193093096602352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -872,14 +850,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextWaypoint: {fileID: 0}
---- !u!114 &114704919442648960
+--- !u!114 &114709768447550496
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1239570404820600}
+  m_GameObject: {fileID: 1632890297866356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a9ce4b21e02fa846a0f8138f640a2dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textItem: {fileID: 1914494067209722, guid: f6f8a96675c0b3a488876e30e6a3e440, type: 2}
