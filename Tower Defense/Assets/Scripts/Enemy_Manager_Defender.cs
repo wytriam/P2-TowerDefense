@@ -82,14 +82,14 @@ public class Enemy_Manager_Defender : MonoBehaviour
         if (other.tag == "Waypoint")
         {
             other = coll.gameObject.transform.parent.gameObject;
-            nav.waypoint = other.gameObject.GetComponent<Waypoint>().nextWaypoint;
+            nav.SetWaypoint(other.gameObject.GetComponent<Waypoint>().nextWaypoint);
         }
         else if (other.tag == "EndPoint")
         {
             mana.currentMana -= 2 * health;
             textyPoo.ResetTo("-" + (2 * health));
             other = coll.gameObject;
-            nav.waypoint = nav.firstWaypoint;
+            nav.SetWaypoint(nav.firstWaypoint);
             gameObject.transform.position = nav.spawnPos;
         }
         else if (other.tag == "Tower")

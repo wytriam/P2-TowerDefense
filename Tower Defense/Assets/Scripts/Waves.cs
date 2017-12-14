@@ -37,7 +37,7 @@ public class Waves : MonoBehaviour
     {
         spawnPoint.setSpawnPrefab(currentPrefab);
         GameObject enemy = spawnPoint.spawn();
-        enemy.GetComponent<EnemyNavigation>().waypoint = firstWaypoint;
+        enemy.GetComponent<EnemyNavigation>().SetWaypoint(firstWaypoint);
         enemy.GetComponent<EnemyNavigation>().firstWaypoint = firstWaypoint;
         enemy.GetComponent<EnemyNavigation>().spawnPos = spawnPoint.getSpawnPos();
         spawnCount++;

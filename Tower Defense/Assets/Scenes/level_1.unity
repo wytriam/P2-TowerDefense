@@ -646,6 +646,16 @@ Prefab:
       propertyPath: m_Name
       value: Enemy SpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 114548890043518882, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1,
+        type: 2}
+      propertyPath: spawnRandomly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114548890043518882, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1,
+        type: 2}
+      propertyPath: randomRange
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff3c0e4be7aea7c419b0e2e1d43bd4b1, type: 2}
   m_IsPrefabParent: 0
@@ -1019,8 +1029,8 @@ MonoBehaviour:
   alternateWaypoints: []
   enemySpawnPoint: {fileID: 993505832}
   alternateSpawns: []
-  enemiesPerSecond: 0.5
-  timeBetweenWaves: 10
+  enemiesPerSecond: 2
+  timeBetweenWaves: 5
   enemiesPerWave: 060000000300000008000000040000000600000006000000
   isSpawning: 0
 --- !u!114 &1164787775
