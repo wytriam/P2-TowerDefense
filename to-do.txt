@@ -4,7 +4,12 @@ lights level 2 - Sean
 
 Image for upgrade menu?
 
-Buff enemies overall
+Anchor menu from the center, not the edges (annoying but straightforward)
+
+Balance Enemies (Still a little easier)
+
+Have most enemies be defenders, with some really fast low life standard AI? 
+	Up difficulty by constantly trying to interfere with tower's ability to shoot effectively
 
 UPDATE CREDITS
 
