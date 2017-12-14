@@ -934,8 +934,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4096681775166662}
   - component: {fileID: 114259754147872708}
-  - component: {fileID: 114220989832222180}
   - component: {fileID: 65768025800802710}
+  - component: {fileID: 114220989832222180}
+  - component: {fileID: 114470592561985970}
   - component: {fileID: 54898428417808538}
   - component: {fileID: 82034557335376954}
   m_Layer: 8
@@ -3376,8 +3377,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8cc496f61f6bb40a4670acc12f1f45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoint: {fileID: 0}
+  waypoint: {x: 0, y: 0, z: 0}
   speed: 2
+  randomRange: 1
   firstWaypoint: {fileID: 0}
   spawnPos: {x: 0, y: 0, z: 0}
   navEnabled: 1
@@ -3397,6 +3399,20 @@ MonoBehaviour:
   damageMultiplier: 1
   isSlowed: 0
   waitTime: 4
+--- !u!114 &114470592561985970
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1605853895446458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4c1751f3e4ac544905f591c5be2028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 1
+  dotOn: 0
+  isSlowed: 0
 --- !u!137 &137013827963546810
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

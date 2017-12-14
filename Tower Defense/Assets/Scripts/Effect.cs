@@ -12,7 +12,7 @@ public class Effect : MonoBehaviour
     public float curseIntensity = 2f;
 
     [HideInInspector]
-    public Enemy_Manager enemy;
+    public EnemyEffectMgr enemy;
     [HideInInspector]
     public EnemyNavigation nav;
     private float timer = 0;
@@ -21,7 +21,7 @@ public class Effect : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        enemy = this.transform.root.gameObject.GetComponent<Enemy_Manager>();
+        enemy = this.transform.root.gameObject.GetComponent<EnemyEffectMgr>();
         nav = this.transform.root.gameObject.GetComponent<EnemyNavigation>();
         if (enemy == null)
         {
@@ -44,11 +44,11 @@ public class Effect : MonoBehaviour
         }
         if (curse)
             enemy.damageMultiplier *= 2;
+        if (damageOverTime)
+            enemy.dotOn = true;
         while (true)
         {
             // put effect here
-            if (damageOverTime)
-                enemy.health -= DoTdamage * enemy.damageMultiplier;
             timer += 1;
             if (timer > effectDuration)
             {

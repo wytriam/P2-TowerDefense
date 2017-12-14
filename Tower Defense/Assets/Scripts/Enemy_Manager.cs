@@ -7,15 +7,10 @@ public class Enemy_Manager : MonoBehaviour
 
     TextStuff textyPoo;
     public GameObject waypoint;
-    public float speed = 2.0f;
     public float health = 5f;
     public float manaForKill = 10f;
 
-    [HideInInspector]
-    public float damageMultiplier = 1f;
 
-    [HideInInspector]
-    public bool isSlowed;
 
     //private Vector3 lastPos;
 
@@ -23,8 +18,10 @@ public class Enemy_Manager : MonoBehaviour
     private EnemyCounter enemycounter;
     private SM_tower_defense sm;
     private EnemyNavigation nav;
+    private EnemyEffectMgr eem;
 
     private bool deathStarted = false;
+    private bool dot = false;
 
     // Use this for initialization
     void Start()
@@ -34,6 +31,7 @@ public class Enemy_Manager : MonoBehaviour
         enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
         sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
         nav = GetComponent<EnemyNavigation>();
+        eem = GetComponent<EnemyEffectMgr>();
         enemycounter.register(gameObject);
     }
 
@@ -44,6 +42,10 @@ public class Enemy_Manager : MonoBehaviour
         {
             if (!deathStarted)
                 StartCoroutine("deathSequence");
+        }
+        if (eem.dotOn && !dot)
+        {
+            StartCoroutine("DamageOverTime");
         }
 
     }
@@ -74,7 +76,7 @@ public class Enemy_Manager : MonoBehaviour
         {
             Projectile_Manager p = other.gameObject.GetComponent<Projectile_Manager>();
             p.ParticlesOnDeath();
-            health -= p.damageOnHit * damageMultiplier;
+            health -= p.damageOnHit * eem.damageMultiplier;
             Instantiate(p.effect, gameObject.transform);
             Destroy(other.gameObject);
         }
@@ -91,5 +93,20 @@ public class Enemy_Manager : MonoBehaviour
             nav.SetWaypoint(nav.firstWaypoint);
             gameObject.transform.position = nav.spawnPos;
         }
+    }
+
+    IEnumerator DamageOverTime()
+    {
+        dot = true;
+        int timeElapsed = 0;
+        while (timeElapsed < 4)
+        {
+            health -= 1 * eem.damageMultiplier;
+            yield return new WaitForSeconds(1);
+            timeElapsed++;
+        }
+        eem.dotOn = false;
+        dot = false;
+        StopCoroutine("DamageOverTime");
     }
 }
