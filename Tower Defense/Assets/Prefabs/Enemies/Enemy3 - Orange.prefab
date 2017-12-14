@@ -3406,7 +3406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoint: {x: 0, y: 0, z: 0}
-  speed: 2
+  speed: 5
   randomRange: 1
   firstWaypoint: {fileID: 0}
   spawnPos: {x: 0, y: 0, z: 0}

@@ -98,12 +98,12 @@ public class SM_tower_defense : WytriamSTD.Scene_Manager
 
     public void displayScore()
     {
-        scoreDisplay.text = "Score: " + score.ToString("F2");
+        scoreDisplay.text = "Score: " + score.ToString("F0");
     }
 
     public void displayMana()
     {
-        manaDisplay.text = "Mana: " + mana.currentMana.ToString("F2");
+        manaDisplay.text = "Mana: " + mana.currentMana.ToString("F0");
     }
 
     void toggleTime()
