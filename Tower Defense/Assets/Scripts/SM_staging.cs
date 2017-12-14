@@ -6,7 +6,6 @@ public class SM_staging : WytriamSTD.Scene_Manager
 {
     private Mana mana;
     private Waves waves;
-    private EnemyCounter enemies;
 
     private bool notStarted = true;
     private int timeScale = 1;
@@ -19,7 +18,6 @@ public class SM_staging : WytriamSTD.Scene_Manager
 
         mana = GetComponent<Mana>();
         waves = GetComponent<Waves>();
-        enemies = GetComponent<EnemyCounter>();
     }
 
     void Update()

@@ -26,7 +26,6 @@ public class Enemy_Bomber : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        nearbyTowers = new List<GameObject>();
         mana = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Mana>();
         enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
         sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();

@@ -32,7 +32,7 @@ namespace WytriamSTD
             if (spawnRandomly)
             {
                 Vector3 randomSpawn = new Vector3(transform.position.x + Random.Range(-randomRange, randomRange),
-                                                    transform.position.y + Random.Range(-randomRange, randomRange),
+                                                    transform.position.y,// + Random.Range(-randomRange, randomRange),
                                                     transform.position.z + Random.Range(-randomRange, randomRange));
                 go = Instantiate(spawnPrefab, randomSpawn, gameObject.transform.rotation);
                 go.transform.localScale = spawnScale;

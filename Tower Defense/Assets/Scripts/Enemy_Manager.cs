@@ -19,7 +19,6 @@ public class Enemy_Manager : MonoBehaviour
 
     //private Vector3 lastPos;
 
-    private List<GameObject> nearbyTowers;
     private Mana mana;
     private EnemyCounter enemycounter;
     private SM_tower_defense sm;
@@ -31,7 +30,6 @@ public class Enemy_Manager : MonoBehaviour
     void Start()
     {
         textyPoo = FindObjectOfType<TextStuff>();
-        nearbyTowers = new List<GameObject>();
         mana = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Mana>();
         enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
         sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();

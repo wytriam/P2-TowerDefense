@@ -4,20 +4,17 @@ lights level 2 - Sean
 
 Image for upgrade menu?
 
-EnemyAI - DEFENDER
-
-EnemeyAI - BOMBER
-
 Nerf FireTower
 
 Buff enemies overall
 
-Break out from straight lines
-
-Make numbers appear when enemy hit Wizzzard Tower.
+Fix Effect (EnemyEffectMgr)
 
 TURN OFF RESET HIGH SCORES BUTTON
 
 UPDATE CREDITS
 
 -- MISC PROJECT BULLSHIT INDEPENDENT OF MAKING A GOOD GAME
+YouTube Video
+Rubric
+Peer Eval

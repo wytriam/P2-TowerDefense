@@ -26,7 +26,7 @@ public class EnemyNavigation : MonoBehaviour
     void Update()
     {
         //lastPos = gameObject.transform.position;
-        if (navEnabled && waypoint != null)
+        if (navEnabled)
         {
             Vector3 movement = Vector3.MoveTowards(gameObject.transform.position, waypoint, speed * Time.deltaTime);
             gameObject.transform.position = movement;
@@ -38,8 +38,8 @@ public class EnemyNavigation : MonoBehaviour
     public void SetWaypoint(GameObject _waypoint)
     {
         waypoint =  new Vector3(_waypoint.transform.position.x + Random.Range(-randomRange, randomRange),
-                                     _waypoint.transform.position.y + Random.Range(-randomRange, randomRange),
-                                     _waypoint.transform.position.z + Random.Range(-randomRange, randomRange));
+                                _waypoint.transform.position.y, //+ Random.Range(-randomRange, randomRange),
+                                _waypoint.transform.position.z + Random.Range(-randomRange, randomRange));
 
     }
 }

@@ -7,7 +7,6 @@ public class Tower_Manager : MonoBehaviour
     public float rateOfFire = 2.0f;
 
     private WytriamSTD.Spawn spawnScript;
-    private List<GameObject> enemiesInRange;
     public bool isFiring = false;
     [HideInInspector]
     public bool canFire = true;
@@ -20,7 +19,6 @@ public class Tower_Manager : MonoBehaviour
     void Start ()
     {
         spawnScript = GetComponent<WytriamSTD.Spawn>();
-        enemiesInRange = new List<GameObject>();
         sound = GetComponent<AudioSource>();
 	}
 	

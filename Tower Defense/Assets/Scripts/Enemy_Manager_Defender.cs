@@ -14,7 +14,6 @@ public class Enemy_Manager_Defender : MonoBehaviour
     [HideInInspector]
     public bool isSlowed;
 
-    private List<GameObject> nearbyTowers;
     private Mana mana;
     private EnemyCounter enemycounter;
     private SM_tower_defense sm;
@@ -32,7 +31,6 @@ public class Enemy_Manager_Defender : MonoBehaviour
     void Start()
     {
         textyPoo = FindObjectOfType<TextStuff>();
-        nearbyTowers = new List<GameObject>();
         mana = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<Mana>();
         enemycounter = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<EnemyCounter>();
         sm = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SM_tower_defense>();
@@ -123,7 +121,8 @@ public class Enemy_Manager_Defender : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         anim.Play();
         nav.navEnabled = true;
-        tower.GetComponent<Tower_Manager>().beingBlocked = false;
+        if (tower != null)
+           tower.GetComponent<Tower_Manager>().beingBlocked = false;
         isDefending = null;
         StopCoroutine("ApproachTower");
     }
