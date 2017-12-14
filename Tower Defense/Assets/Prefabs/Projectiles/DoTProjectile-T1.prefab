@@ -193,7 +193,7 @@ MonoBehaviour:
   maxHeight: 6
   speed: 20
   duration: 2
-  damageOnHit: 0
+  damageOnHit: 1
   maxDist: 100
   deathSplosion: {fileID: 1808461087675824, guid: 9ae8530cc8b08d34d837ec1376ded39a,
     type: 2}
